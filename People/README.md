@@ -61,7 +61,7 @@ python3 tools/build_people.py
 
 Then commit and push. That's it — no HTML or JavaScript to touch.
 
-> `js/people-data.js` is **generated**. Don't edit it by hand; the script
+> `js/people-data.json` is **generated**. Don't edit it by hand; the script
 > overwrites it every run.
 
 ---

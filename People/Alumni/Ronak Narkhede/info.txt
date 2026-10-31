@@ -14,7 +14,7 @@
 # ──────────────────────────────────────────────────────────────────
 
 Name: Ronak Narkhede
-Role: 
+Role: M.S. Robotics (MnRI), 2026
 Email:
 Website:
 LinkedIn:

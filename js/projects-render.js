@@ -12,6 +12,9 @@
   'use strict';
 
   var ROOT = 'projects/';
+  // Always revalidate with the server so an edit shows up immediately
+  // instead of waiting out the CDN cache.
+  var FRESH = { cache: 'no-cache' };
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -152,7 +155,7 @@
     if (mount) mount.appendChild(el('p', null, msg));
   }
 
-  fetch(ROOT + 'index.json')
+  fetch(ROOT + 'index.json', FRESH)
     .then(function (r) {
       if (!r.ok) throw new Error('index.json: HTTP ' + r.status);
       return r.json();
@@ -160,7 +163,7 @@
     .then(function (index) {
       var list = index.projects || [];
       return Promise.all(list.map(function (entry) {
-        return fetch(ROOT + entry.slug + '/project.json')
+        return fetch(ROOT + entry.slug + '/project.json', FRESH)
           .then(function (r) {
             if (!r.ok) throw new Error(entry.slug + ': HTTP ' + r.status);
             return r.json();

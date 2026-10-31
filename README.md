@@ -35,14 +35,14 @@ parameter to filter those out.
 ```
 .
 ├── index.html              Home
-├── people.html             People   (content from js/people-data.js)
+├── people.html             People   (content from js/people-data.json)
 ├── projects.html           Projects (content from the projects/ folder)
 ├── contact.html            Contact
 ├── css/
 │   └── style.css           All styling, including the maroon/gold palette
 ├── js/
 │   ├── site.js             Mobile nav + automatic photo fallbacks
-│   ├── people-data.js      GENERATED from People/ — do not edit
+│   ├── people-data.json    GENERATED from People/ — do not edit
 │   ├── people-render.js    Builds the People page from that data
 │   └── projects-render.js  Builds the Projects page from projects/
 ├── People/                 <-- ONE FOLDER PER PERSON
@@ -53,7 +53,7 @@ parameter to filter those out.
 │   │       └── photo.jpg   Any size; resized on build
 │   └── Alumni/_past-members.txt   Long roster: just names + degrees
 ├── tools/
-│   └── build_people.py     People/ -> js/people-data.js + images/people/
+│   └── build_people.py     People/ -> js/people-data.json + images/people/
 ├── projects/               <-- ONE FOLDER PER PROJECT
 │   ├── README.md           How to add or edit a project
 │   ├── index.json          Project order and active/past status
@@ -87,7 +87,7 @@ People/PhD_Students/Ethan Foley/
 └── ethan.jpg         any size — resized automatically
 ```
 
-The script writes `js/people-data.js` and web-sized copies into
+The script writes `js/people-data.json` and web-sized copies into
 `images/people/`. **Both are generated — never edit them by hand.** Someone
 without a photo gets a maroon tile with their initials, so the layout never
 breaks while you're collecting images.

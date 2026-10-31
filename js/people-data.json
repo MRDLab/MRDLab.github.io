@@ -1,10 +1,4 @@
-/* GENERATED FILE — DO NOT EDIT BY HAND.
-   Source: the People/ folder (one info.txt per person).
-   Rebuild: python3 tools/build_people.py
-*/
-
-window.MRD = window.MRD || {};
-window.MRD.people = {
+{
   "lead": {
     "name": "Timothy M. Kowalewski, Ph.D.",
     "role": "Professor of Mechanical Engineering · Principal Investigator",
@@ -77,12 +71,12 @@ window.MRD.people = {
   "alumniCards": [
     {
       "name": "Jared Schultz",
-      "role": "Former Lab Member",
+      "role": "M.S. Robotics (MnRI), 2026",
       "photo": "jared-schultz.jpg"
     },
     {
       "name": "Ronak Narkhede",
-      "role": "Former Lab Member",
+      "role": "M.S. Robotics (MnRI), 2026",
       "photo": ""
     }
   ],
@@ -227,5 +221,6 @@ window.MRD.people = {
       "name": "Astrini Sie",
       "degree": "M.S.M.E. 2013"
     }
-  ]
-};
+  ],
+  "_generated": "GENERATED FILE — do not edit. Source: People/. Rebuild: python3 tools/build_people.py"
+}

@@ -1,13 +1,16 @@
-/* Builds the People page from js/people-data.js. No editing needed here —
-   change the roster in people-data.js instead. */
+/* Builds the People page from js/people-data.json.
+
+   That file is generated from the People/ folder by tools/build_people.py —
+   edit the info.txt files there, not this script and not the JSON. */
 
 (function () {
   'use strict';
 
-  var data = (window.MRD && window.MRD.people) || null;
-  if (!data) return;
-
   var PHOTO_DIR = 'images/people/';
+  var DATA_URL = 'js/people-data.json';
+  // Revalidate with the server so a freshly added photo or bio shows up
+  // right away instead of waiting out the browser/CDN cache.
+  var FRESH = { cache: 'no-cache' };
 
   // Degree and generational suffixes are not part of the name.
   var SUFFIXES = /^(phd|md|ms|msme|bs|bsme|dsc|scd|jr|sr|ii|iii|iv)$/i;
@@ -92,6 +95,10 @@
     return card;
   }
 
+  /* ---- Page ------------------------------------------------------------- */
+
+  function render(data) {
+
   /* ---- Lead faculty ---------------------------------------------------- */
   var leadMount = document.getElementById('lead-faculty');
   if (leadMount && data.lead) {
@@ -139,5 +146,23 @@
   }
 
   // Re-arm fallbacks for the <img> elements we just created.
-  if (window.MRD.initPhotoFallbacks) window.MRD.initPhotoFallbacks();
+  if (window.MRD && window.MRD.initPhotoFallbacks) window.MRD.initPhotoFallbacks();
+
+  }  /* end render() */
+
+  fetch(DATA_URL, FRESH)
+    .then(function (r) {
+      if (!r.ok) throw new Error(DATA_URL + ': HTTP ' + r.status);
+      return r.json();
+    })
+    .then(render)
+    .catch(function (err) {
+      console.error(err);
+      var mount = document.getElementById('lead-faculty');
+      if (mount) {
+        mount.appendChild(el('p', null,
+          'The roster could not be loaded. If you are opening this file ' +
+          'directly, run a local server instead: python3 -m http.server 8000'));
+      }
+    });
 })();

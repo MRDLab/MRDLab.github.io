@@ -5,10 +5,10 @@ Build the People page data from the People/ folder.
     python3 tools/build_people.py
 
 Reads   People/<Group>/<Person Name>/info.txt   (+ any photo in that folder)
-Writes  js/people-data.js                       (what the website renders)
+Writes  js/people-data.json                     (what the website renders)
         images/people/<slug>.jpg                (web-sized copy of each photo)
 
-Edit the info.txt files, run this, commit. Never edit js/people-data.js by
+Edit the info.txt files, run this, commit. Never edit js/people-data.json by
 hand — this script overwrites it.
 """
 
@@ -21,7 +21,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PEOPLE_DIR = os.path.join(ROOT, "People")
-OUT_JS = os.path.join(ROOT, "js", "people-data.js")
+OUT_JSON = os.path.join(ROOT, "js", "people-data.json")
 PHOTO_OUT = os.path.join(ROOT, "images", "people")
 
 MAX_PHOTO_PX = 800          # longest edge of the copy we publish
@@ -261,19 +261,14 @@ def main():
                 os.remove(os.path.join(PHOTO_OUT, f))
                 print(f"  removed stale photo images/people/{f}")
 
-    body = json.dumps(data, indent=2, ensure_ascii=False)
-    with open(OUT_JS, "w", encoding="utf-8") as fh:
-        fh.write(
-            "/* GENERATED FILE — DO NOT EDIT BY HAND.\n"
-            "   Source: the People/ folder (one info.txt per person).\n"
-            "   Rebuild: python3 tools/build_people.py\n"
-            "*/\n\n"
-            "window.MRD = window.MRD || {};\n"
-            "window.MRD.people = " + body + ";\n"
-        )
+    data["_generated"] = "GENERATED FILE — do not edit. Source: People/. " \
+                         "Rebuild: python3 tools/build_people.py"
+    with open(OUT_JSON, "w", encoding="utf-8") as fh:
+        json.dump(data, fh, indent=2, ensure_ascii=False)
+        fh.write("\n")
 
     n_group = sum(len(g["members"]) for g in groups)
-    print(f"Wrote {os.path.relpath(OUT_JS, ROOT)}")
+    print(f"Wrote {os.path.relpath(OUT_JSON, ROOT)}")
     print(f"  lead:         {lead['name'] if lead else '(none)'}")
     for g in groups:
         print(f"  {g['title']:26} {len(g['members'])}")
