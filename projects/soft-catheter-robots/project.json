@@ -6,7 +6,7 @@
     "The research objective of this work was to establish and validate a mathematical framework for the inverse design of universal soft robots: robots that deliver exceptional force and power densities, and that can be produced by robotic, automated manufacturing via 3D printed materials exploiting highly anisotropic elastomers, inextensible fibers, and beam elements.",
     "The method is multiscale inverse design — generating actuator geometry fitted to a specific patient anatomy taken from CT. Anatomy centerlines are computed automatically via VMTK, convex blending maps the initial centerline to the desired one as a function of joint angle, and a Frenet–Serret parametrization fits the actuator surface to those centerlines."
   ],
-  "researchers": "Mark Gilbertson, Gillian McDonald",
+  "researchers": "Mark Gilbertson, Gillian McDonald, Chaitanya Awasthi, Orla Gotthelf, Yusra Farhat Ullah, Ronak Narkhede, Timothy M. Kowalewski",
   "media": [
     {
       "type": "image",
