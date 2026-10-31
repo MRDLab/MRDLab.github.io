@@ -1,0 +1,7 @@
+# Display order for Clinical Collaborators.
+# One folder name per line; anyone unlisted is appended alphabetically.
+
+Andrew Grande
+Michael Loushin
+Javier Navarro Rueda
+Robert Sweet

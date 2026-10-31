@@ -110,6 +110,20 @@
     var textCol = el('div', 'project-text-col');
     (data.body || []).forEach(function (p) { textCol.appendChild(el('p', null, p)); });
 
+    // Prominent calls to action — a live demo, a partner announcement.
+    // Rendered as buttons, above the credit line.
+    if ((data.links || []).length) {
+      var linkRow = el('p', 'project-links');
+      data.links.forEach(function (l, i) {
+        var a = el('a', 'btn ' + (i === 0 ? 'btn-maroon' : 'btn-outline'), l.label);
+        a.href = l.url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        linkRow.appendChild(a);
+      });
+      textCol.appendChild(linkRow);
+    }
+
     if (data.researchers) {
       var r = el('p', 'researchers');
       r.appendChild(el('strong', null, 'Researchers: '));

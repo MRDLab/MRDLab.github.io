@@ -1,0 +1,22 @@
+# ──────────────────────────────────────────────────────────────────
+#  Andrew Grande
+# ──────────────────────────────────────────────────────────────────
+#  Clinical collaborator — not a member of the lab. Details gathered
+#  from their institutional profile; correct anything out of date.
+#
+#  PHOTO: optional. Drop an image in this folder only if you have the
+#  person's permission to publish it; otherwise the card shows their
+#  initials, which is perfectly fine for a collaborator listing.
+#
+#  WHEN DONE:   python3 tools/build_people.py
+# ──────────────────────────────────────────────────────────────────
+
+Name: Andrew W. Grande, MD
+Role: Professor of Neurosurgery, University of Minnesota
+Website: https://med.umn.edu/bio/andrew-grande
+
+Bio:
+Cerebrovascular and endovascular neurosurgeon. Co-director of Neurosurgery and
+associate director of the residency programme, and co-director of the Earl
+Grande Stroke, Stem Cell and Neuroimaging Laboratory. Provides the clinical
+guidance behind the lab's endovascular navigation work.

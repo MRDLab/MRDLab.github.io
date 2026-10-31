@@ -147,12 +147,15 @@ p { margin: 0 0 1.1em; }
   min-width: 0;
 }
 .brand .title {
+  display: block;
   font-size: 1.42rem;
   font-weight: 700;
   line-height: 1.15;
   color: var(--maroon);
   letter-spacing: -.005em;
+  text-decoration: none;
 }
+.brand .title:hover { color: var(--maroon-light); }
 /* Official University wordmark + unit name, the way UMN brands its units.
    The department has no standalone banner image — its own site sets the unit
    name as text beside the campus wordmark, so this mirrors that. */
@@ -163,6 +166,15 @@ p { margin: 0 0 1.1em; }
   margin-top: 8px;
   min-width: 0;
 }
+/* UMN brand policy: the wordmark links to the College, the unit name to the
+   department. Separate targets, so they are separate anchors. */
+.brand .sub .umn {
+  display: block;
+  line-height: 0;
+  flex: none;
+  border-radius: 2px;
+}
+.brand .sub .umn:hover { opacity: .78; }
 .brand .sub img {
   height: 23px;
   width: auto;
@@ -177,7 +189,9 @@ p { margin: 0 0 1.1em; }
   padding-left: 11px;
   border-left: 2px solid var(--gold);
   line-height: 1.2;
+  text-decoration: none;
 }
+.brand .sub .dept:hover { color: var(--maroon); text-decoration: underline; }
 
 /* Lab logo, pinned top-right on every page */
 .brand-logo {
@@ -352,6 +366,22 @@ p { margin: 0 0 1.1em; }
   border-color: var(--maroon);
 }
 .btn-maroon:hover { background: var(--maroon-light); color: #fff; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--maroon);
+  border-color: var(--rule);
+}
+.btn-outline:hover { border-color: var(--maroon); background: var(--paper-warm); }
+
+/* Project call-to-action row (live demo, partner announcement) */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 0;
+}
+.project-links .btn { padding: 11px 20px; font-size: .9rem; }
 
 /* ------------------------------------------------------------ sections -- */
 

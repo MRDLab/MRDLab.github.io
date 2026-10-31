@@ -1,0 +1,22 @@
+# ──────────────────────────────────────────────────────────────────
+#  Robert Sweet
+# ──────────────────────────────────────────────────────────────────
+#  Clinical collaborator — not a member of the lab. Details gathered
+#  from their institutional profile; correct anything out of date.
+#
+#  PHOTO: optional. Drop an image in this folder only if you have the
+#  person's permission to publish it; otherwise the card shows their
+#  initials, which is perfectly fine for a collaborator listing.
+#
+#  WHEN DONE:   python3 tools/build_people.py
+# ──────────────────────────────────────────────────────────────────
+
+Name: Robert M. Sweet, MD, FACS
+Role: Professor of Urology and Surgery, University of Washington
+Website: https://urology.uw.edu/people/faculty/robert-sweet
+
+Bio:
+Executive Director of the WWAMI Institute for Simulation in Healthcare (WISH)
+and Director of the Center for Research in Education and Simulation Technologies
+(CREST), and Chief of the Division of Healthcare Simulation Science. A long-time
+collaborator on surgical simulation and skills assessment.

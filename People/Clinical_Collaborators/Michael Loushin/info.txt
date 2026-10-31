@@ -1,0 +1,22 @@
+# ──────────────────────────────────────────────────────────────────
+#  Michael Loushin
+# ──────────────────────────────────────────────────────────────────
+#  Clinical collaborator — not a member of the lab. Details gathered
+#  from their institutional profile; correct anything out of date.
+#
+#  PHOTO: optional. Drop an image in this folder only if you have the
+#  person's permission to publish it; otherwise the card shows their
+#  initials, which is perfectly fine for a collaborator listing.
+#
+#  WHEN DONE:   python3 tools/build_people.py
+# ──────────────────────────────────────────────────────────────────
+
+Name: Michael Loushin, MD
+Role: Professor of Anesthesiology, University of Minnesota
+Lab Role: Visible Heart® Laboratories
+Website: https://med.umn.edu/bio/michael-loushin
+
+Bio:
+Associate Director of the Visible Heart® Laboratories, working on cardiovascular
+physiology and anatomy, 3D anatomical modelling, medical device development, and
+hands-on clinical education.

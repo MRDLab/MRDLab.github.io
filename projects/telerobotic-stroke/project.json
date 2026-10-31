@@ -1,0 +1,35 @@
+{
+  "title": "Telerobotic Stroke Intervention",
+  "tagline": "UMN · Minnesota Robotics Institute · Medtronic",
+  "summary": "An inexpensive telerobotic system that would let a surgeon treat stroke patients remotely — a partnership between the University of Minnesota, the Minnesota Robotics Institute, and Medtronic.",
+  "body": [
+    "Mechanical thrombectomy works, but only if the patient reaches a surgeon in time. For people far from a comprehensive stroke centre, that is often the part that fails. The question that started this project came from a neurosurgeon: could an inexpensive robot let him treat those patients without them being transported first?",
+    "The lab is building that robot with the Minnesota Robotics Institute and Medtronic. The system lets a surgeon insert and rotate a guidewire remotely, with artificial intelligence — imitation learning and reinforcement learning — gradually taking over the routine steps of the procedure so the clinician can concentrate on the decisions that matter.",
+    "A first working prototype was demonstrated in November 2025, with Dr. Andrew Grande driving guidewires robotically from a phone while Medtronic's leadership watched. The partnership spans neurosurgery, mechanical engineering, and computer science, and involves more than fifteen graduate and undergraduate students across those departments."
+  ],
+  "links": [
+    { "label": "Try the interactive demo", "url": "https://telebot.cse.umn.edu" },
+    { "label": "Read the announcement", "url": "https://cse.umn.edu/mnri/news/mnri-partners-medtronic-remote-stroke-treatment-research" }
+  ],
+  "researchers": "Timothy M. Kowalewski",
+  "media": [
+    {
+      "type": "image",
+      "file": "medtronic-demo.jpg",
+      "alt": "A researcher demonstrating the telerobotic guidewire prototype on a table to a group of Medtronic leaders and students",
+      "caption": "Demonstrating the first working prototype to Medtronic leadership, November 2025."
+    },
+    {
+      "type": "image",
+      "file": "iphone-control.jpg",
+      "alt": "Two people looking at a phone being used to control the guidewire robot",
+      "caption": "Driving the guidewire remotely from a phone."
+    },
+    {
+      "type": "image",
+      "file": "bench-demo.jpg",
+      "alt": "The benchtop guidewire robot and laptop set up in a meeting room with observers around it",
+      "caption": "The benchtop setup used for the demonstration."
+    }
+  ]
+}

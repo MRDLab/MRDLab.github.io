@@ -2,6 +2,10 @@
   "_readme": "Order and status of every project. The site renders them in this order. status is 'active' or 'past'. Each slug must match a folder name containing a project.json.",
   "projects": [
     {
+      "slug": "telerobotic-stroke",
+      "status": "active"
+    },
+    {
       "slug": "tesa-open-h",
       "status": "active"
     },

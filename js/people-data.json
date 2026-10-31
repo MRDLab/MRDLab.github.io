@@ -172,6 +172,73 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Clinical Collaborators",
+      "members": [
+        {
+          "name": "Andrew W. Grande, MD",
+          "role": "Professor of Neurosurgery, University of Minnesota",
+          "roles": [
+            "Professor of Neurosurgery, University of Minnesota"
+          ],
+          "photo": "",
+          "blurb": "Cerebrovascular and endovascular neurosurgeon. Co-director of Neurosurgery and associate director of the residency programme, and co-director of the Earl Grande Stroke, Stem Cell and Neuroimaging Laboratory. Provides the clinical guidance behind the lab's endovascular navigation work.",
+          "links": [
+            {
+              "label": "Portfolio",
+              "url": "https://med.umn.edu/bio/andrew-grande"
+            }
+          ]
+        },
+        {
+          "name": "Michael Loushin, MD",
+          "role": "Professor of Anesthesiology, University of Minnesota",
+          "roles": [
+            "Professor of Anesthesiology, University of Minnesota"
+          ],
+          "photo": "",
+          "labRole": "Visible Heart® Laboratories",
+          "blurb": "Associate Director of the Visible Heart® Laboratories, working on cardiovascular physiology and anatomy, 3D anatomical modelling, medical device development, and hands-on clinical education.",
+          "links": [
+            {
+              "label": "Portfolio",
+              "url": "https://med.umn.edu/bio/michael-loushin"
+            }
+          ]
+        },
+        {
+          "name": "Javier Navarro Rueda, PhD",
+          "role": "Assistant Professor of Surgery, University of Minnesota",
+          "roles": [
+            "Assistant Professor of Surgery, University of Minnesota"
+          ],
+          "photo": "",
+          "labRole": "Visible Heart® Laboratories",
+          "blurb": "Works with the Visible Heart® Laboratories on cardiovascular anatomy and device research.",
+          "links": [
+            {
+              "label": "Portfolio",
+              "url": "https://med.umn.edu/bio/javier-navarro-rueda"
+            }
+          ]
+        },
+        {
+          "name": "Robert M. Sweet, MD, FACS",
+          "role": "Professor of Urology and Surgery, University of Washington",
+          "roles": [
+            "Professor of Urology and Surgery, University of Washington"
+          ],
+          "photo": "",
+          "blurb": "Executive Director of the WWAMI Institute for Simulation in Healthcare (WISH) and Director of the Center for Research in Education and Simulation Technologies (CREST), and Chief of the Division of Healthcare Simulation Science. A long-time collaborator on surgical simulation and skills assessment.",
+          "links": [
+            {
+              "label": "Portfolio",
+              "url": "https://urology.uw.edu/people/faculty/robert-sweet"
+            }
+          ]
+        }
+      ]
     }
   ],
   "alumniCards": [

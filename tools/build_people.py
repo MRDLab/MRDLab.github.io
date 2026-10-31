@@ -37,6 +37,10 @@ GROUPS = [
                                "role": "Master's Student, Robotics (MnRI)"}),
     ("Undergraduate_Students", {"kind": "group", "title": "Undergraduate Researchers",
                                 "role": "Undergraduate Researcher, Mechanical Engineering"}),
+    # External clinicians the lab works with — listed as people, not as an
+    # organisation on the home page's collaborator strip.
+    ("Clinical_Collaborators", {"kind": "group", "title": "Clinical Collaborators",
+                                "role": "Clinical Collaborator"}),
     ("Alumni",                {"kind": "alumni"}),
 ]
 

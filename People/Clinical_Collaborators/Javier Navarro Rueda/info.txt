@@ -1,0 +1,21 @@
+# ──────────────────────────────────────────────────────────────────
+#  Javier Navarro Rueda
+# ──────────────────────────────────────────────────────────────────
+#  Clinical collaborator — not a member of the lab. Details gathered
+#  from their institutional profile; correct anything out of date.
+#
+#  PHOTO: optional. Drop an image in this folder only if you have the
+#  person's permission to publish it; otherwise the card shows their
+#  initials, which is perfectly fine for a collaborator listing.
+#
+#  WHEN DONE:   python3 tools/build_people.py
+# ──────────────────────────────────────────────────────────────────
+
+Name: Javier Navarro Rueda, PhD
+Role: Assistant Professor of Surgery, University of Minnesota
+Lab Role: Visible Heart® Laboratories
+Website: https://med.umn.edu/bio/javier-navarro-rueda
+
+Bio:
+Works with the Visible Heart® Laboratories on cardiovascular anatomy and
+device research.
