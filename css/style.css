@@ -682,7 +682,7 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
 /* Logo plate — white so partner marks keep their own colours */
 .collab .logo {
   position: relative;
-  height: 110px;
+  height: 145px;   /* matches .logo.photo so all cards line up */
   background: #fff;
   border-bottom: 1px solid var(--rule);
   display: grid;
@@ -694,6 +694,21 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
   max-width: 100%;
   width: auto;
   object-fit: contain;
+}
+
+/* Some collaborators publish no standalone logo, so the card uses a photo
+   from their site instead — that fills the plate rather than sitting in it. */
+.collab .logo.photo {
+  padding: 0;
+  background: var(--paper-grey);
+}
+.collab .logo.photo img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: 50% 45%;
 }
 /* Until a logo file is dropped in, show a clean wordmark instead of the
    maroon tile used elsewhere. */
@@ -801,31 +816,43 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
 
 .site-footer {
   color: rgba(255, 255, 255, .82);
-  padding: 46px 0 28px;
+  padding: 32px 0 20px;
   border-top: 4px solid var(--gold);
-  font-size: .92rem;
+  font-size: .9rem;
 }
 .site-footer h4 {
   color: var(--gold);
-  font-size: .8rem;
+  font-size: .76rem;
   letter-spacing: .12em;
   text-transform: uppercase;
-  margin-bottom: .9em;
+  margin-bottom: .7em;
 }
 .site-footer a { color: rgba(255, 255, 255, .88); text-decoration: none; }
 .site-footer a:hover { color: var(--gold); text-decoration: underline; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; }
-.site-footer li { margin-bottom: 7px; }
+.site-footer li { margin-bottom: 5px; }
+.site-footer p { margin-bottom: 0; }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1.4fr;
-  gap: 40px;
-  padding-bottom: 28px;
+  grid-template-columns: 1.6fr 1fr 1.3fr;
+  gap: 32px;
+  padding-bottom: 18px;
 }
+
+/* Official University wordmark, reversed for the maroon ground */
+.footer-umn {
+  padding-bottom: 18px;
+}
+.footer-umn img {
+  width: 300px;
+  max-width: 70%;
+  height: auto;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, .18);
-  padding-top: 20px;
-  font-size: .84rem;
+  padding-top: 14px;
+  font-size: .8rem;
   color: rgba(255, 255, 255, .62);
   display: flex;
   justify-content: space-between;

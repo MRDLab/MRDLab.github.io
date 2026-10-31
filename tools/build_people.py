@@ -270,7 +270,13 @@ def build_person(folder, display_name, default_role):
         person["email"] = info["email"]
 
     links = []
-    for key, label in (("website", "Website"), ("portfolio", "Portfolio"),
+    # "Website" and "Portfolio" were being used interchangeably for the same
+    # thing — a person's own site. Both render as "Portfolio"; if someone has
+    # filled in both, Portfolio: wins so the link isn't duplicated.
+    if info.get("portfolio"):
+        info.pop("website", None)
+
+    for key, label in (("website", "Portfolio"), ("portfolio", "Portfolio"),
                        ("scholar", "Google Scholar"),
                        ("linkedin", "LinkedIn"), ("github", "GitHub")):
         if info.get(key):
