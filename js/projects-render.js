@@ -119,8 +119,11 @@
 
     if ((data.publications || []).length) {
       var details = el('details', 'pubs');
+      // Most projects list the lab's own papers; a project can override the
+      // wording (e.g. "Relevant publications") via publicationsLabel.
       details.appendChild(el('summary', null,
-        'Publications (' + data.publications.length + ')'));
+        (data.publicationsLabel || 'Publications') +
+        ' (' + data.publications.length + ')'));
       var ul = el('ul');
       data.publications.forEach(function (p) {
         var li = document.createElement('li');

@@ -32,6 +32,7 @@ Open that project's `project.json` and edit it. The fields:
 | `researchers` | Credit line under the text |
 | `media` | Images and videos — see below |
 | `publications` | Array of `{ "label": "...", "url": "..." }` |
+| `publicationsLabel` | Optional heading for that list. Defaults to "Publications"; use e.g. "Relevant publications" when the papers are collaborators' rather than the lab's own. |
 
 ## Adding a picture or video
 
