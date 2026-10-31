@@ -7,7 +7,9 @@ One folder per page, so it's always obvious where a picture belongs.
 | `shared/`    | every page     | The lab logo and anything else reused site-wide |
 | `home/`      | `index.html`   | Hero and research-overview imagery |
 | `people/`    | `people.html`  | Headshots, one file per person |
-| `projects/`  | `projects.html`| One photo/figure per research project |
+
+Project images do **not** live here — each project keeps its own media in
+`projects/<slug>/`. See `projects/README.md`.
 
 Each folder has its own README with naming rules and sizes.
 

@@ -109,21 +109,31 @@ window.MRD.people = {
      you have it.                                                            */
   alumni: [
     // Recently graduated — previously listed as current members.
-    // TODO: add each person's degree and graduation year.
-    { name: 'Chaitanya Awasthi',   degree: '' },
-    { name: 'Yusra Farhat Ullah',  degree: '' },
-    { name: 'Travis Beckerle',     degree: '' },
-    { name: 'Nate Davies',         degree: '' },
-    { name: 'Mandi Lye',           degree: '' },
-    { name: 'Matthew Kubala',      degree: '' },
-    { name: 'Adarsh Somayaji',     degree: '' },
-    { name: 'Emily Goldberg',      degree: '' },
-    { name: 'Aditya Koratkar',     degree: '' },
-    { name: 'Sarah Hanson',        degree: '' },
-    { name: 'Faizan Malik',        degree: '' },
-    { name: 'Charles Feng',        degree: '' },
-    { name: 'Khoi Nguyen',         degree: '' },
-    { name: 'Bradley Drahos',      degree: '' },
+    // Degrees below are from the lab's recollection and still need graduation
+    // years; the master's and undergraduate degrees in particular were given
+    // as "I think", so confirm them before treating this as authoritative.
+
+    // Ph.D., Mechanical Engineering
+    { name: 'Chaitanya Awasthi',   degree: 'Ph.D. Mechanical Engineering' },
+    { name: 'Yusra Farhat Ullah',  degree: 'Ph.D. Mechanical Engineering' },
+    { name: 'Travis Beckerle',     degree: 'Ph.D. Mechanical Engineering' },
+    { name: 'Nate Davies',         degree: 'Ph.D. Mechanical Engineering' },
+    { name: 'Mandi Lye',           degree: 'Ph.D. Mechanical Engineering' },
+    { name: 'Matthew Kubala',      degree: 'Ph.D. Mechanical Engineering' },
+    { name: 'Adarsh Somayaji',     degree: 'Ph.D. Mechanical Engineering' },
+
+    // Master's — Minnesota Robotics Institute (MnRI)
+    { name: 'Emily Goldberg',      degree: 'M.S. Robotics (MnRI)' },
+    { name: 'Aditya Koratkar',     degree: 'M.S. Robotics (MnRI)' },
+    { name: 'Sarah Hanson',        degree: 'M.S. Robotics (MnRI)' },
+    { name: 'Faizan Malik',        degree: 'M.S. Robotics (MnRI)' },
+
+    // Undergraduate
+    { name: 'Charles Feng',        degree: 'B.S. Mechanical Engineering' },
+    { name: 'Khoi Nguyen',         degree: 'B.S. Computer Science' },
+
+    // Staff
+    { name: 'Bradley Drahos',      degree: 'Lab Coordinator' },
 
     // Previously listed alumni, with degrees on record.
     { name: 'Orla Gotthelf',       degree: 'Ph.D. 2024' },

@@ -11,14 +11,20 @@ theme): maroon `#7a0019`, gold `#ffcc33`, Open Sans.
 
 ## Pages
 
-| File | Page | What's on it |
-|------|------|--------------|
-| `index.html` | Home | Who we are, research focus areas, active-project summary |
-| `people.html` | People | Lead faculty, current members, alumni |
-| `projects.html` | Projects | The six active research projects |
-| `contact.html` | Contact | Directs all inquiries to `timk@umn.edu` |
+| Nav item | File | What's on it |
+|----------|------|--------------|
+| Home | `index.html` | Who we are, research focus areas, project summary |
+| People | `people.html` | Lead faculty, current members, alumni |
+| Projects | `projects.html` | Current and past research projects |
+| Publications | — | Links straight out to Dr. Kowalewski's Google Scholar profile |
+| Contact | `contact.html` | Directs all inquiries to `timk@umn.edu` |
 
-Archived/past projects are intentionally not included.
+Publications is an external link, not a page — it opens
+[Google Scholar](https://scholar.google.com/citations?user=cNrTOccAAAAJ&hl=en&view_op=list_works&sortby=pubdate)
+in a new tab, sorted newest-first so the UMN-era work leads. Note that a
+Scholar profile covers an author's whole career, so a handful of pre-2012
+papers from his UW PhD appear at the bottom of the list; Scholar has no URL
+parameter to filter those out.
 
 ---
 
@@ -26,23 +32,29 @@ Archived/past projects are intentionally not included.
 
 ```
 .
-├── index.html            Home
-├── people.html           People   (content comes from js/people-data.js)
-├── projects.html         Projects (content is in the HTML)
-├── contact.html          Contact
+├── index.html              Home
+├── people.html             People   (content from js/people-data.js)
+├── projects.html           Projects (content from the projects/ folder)
+├── contact.html            Contact
 ├── css/
-│   └── style.css         All styling, including the maroon/gold palette
+│   └── style.css           All styling, including the maroon/gold palette
 ├── js/
-│   ├── site.js           Mobile nav + automatic photo fallbacks
-│   ├── people-data.js    <-- THE ROSTER. Edit this to update People.
-│   └── people-render.js  Builds the People page from the roster
+│   ├── site.js             Mobile nav + automatic photo fallbacks
+│   ├── people-data.js      <-- THE ROSTER. Edit to update People.
+│   ├── people-render.js    Builds the People page from the roster
+│   └── projects-render.js  Builds the Projects page from projects/
+├── projects/               <-- ONE FOLDER PER PROJECT
+│   ├── README.md           How to add or edit a project
+│   ├── index.json          Project order and active/past status
+│   └── <slug>/
+│       ├── project.json    That project's text, media list, publications
+│       └── *.jpg *.png *.mp4
 ├── images/
-│   ├── README.md         Image conventions
-│   ├── shared/           Logo (used on every page)
-│   ├── home/             Home page imagery
-│   ├── people/           Headshots
-│   └── projects/         Project photos
-└── .nojekyll             Tells GitHub Pages to serve files as-is
+│   ├── README.md           Image conventions
+│   ├── shared/             Logo (used on every page)
+│   ├── home/               Home page imagery
+│   └── people/             Headshots
+└── .nojekyll               Tells GitHub Pages to serve files as-is
 ```
 
 ---
@@ -71,16 +83,25 @@ Entries currently marked `// TODO` are placeholders for the current roster.
 Everyone previously listed as a current member has been moved to the `alumni`
 array; their degrees and graduation years still need filling in.
 
-### Update a project
+### Update a project, or mark one active/past
 
-Edit `projects.html` directly. Each project is one
-`<article class="project">` block. Copy one to add another; they alternate
-image-left / image-right automatically.
+Everything for a project lives in `projects/<slug>/` — its text in
+`project.json`, its pictures and videos alongside it. Edit that file; no HTML
+involved. To flip a project between Current and Past, change its `status` in
+`projects/index.json`.
 
-### Add project or people photos
+All six projects are currently marked `"past"`, so the Projects page shows
+them under **Past Projects** with a "Completed" badge. The **Current Projects**
+section hides itself entirely until something is marked `"active"`.
+
+Full instructions, including how to add media and new projects, are in
+**`projects/README.md`**.
+
+### Add people photos
 
 See `images/README.md` and the README inside each image folder — they list the
-exact filenames each page is looking for.
+exact filenames each page is looking for. Project media does *not* go in
+`images/`; it goes in that project's own folder.
 
 ### Change the contact email
 
@@ -101,8 +122,9 @@ python3 -m http.server 8000
 
 Then open <http://localhost:8000>.
 
-Opening the `.html` files directly with `file://` mostly works, but the People
-page needs the local server, since it loads its roster via JavaScript.
+The People and Projects pages **require** the local server — they load their
+content with `fetch`, which browsers block on `file://` URLs. Opening the HTML
+files directly will show those pages empty.
 
 ---
 
@@ -151,3 +173,12 @@ group has to make the DNS change for a `umn.edu` domain.
   Open Sans webfont from Google Fonts; it degrades to Helvetica if blocked.
 - Headshots on the old site were hosted on Discord links that have since
   expired, so no student photos carried over — they need to be re-collected.
+- Project figures and videos *were* recovered from the old site. The three
+  animated GIFs (15–56 MB each) were converted to MP4, taking 95 MB down to
+  472 KB. Don't commit GIFs — see `projects/README.md` for the command.
+- Publication PDFs are linked to their original `me.umn.edu` URLs rather than
+  mirrored. Those links worked as of October 2026; if that host is retired,
+  they'll need replacing with copies or DOIs.
+- Alumni degrees were supplied from memory and still need graduation years.
+  The master's and undergraduate degrees in particular were given tentatively —
+  confirm them before treating the list as authoritative.

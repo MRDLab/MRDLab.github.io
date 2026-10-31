@@ -1,0 +1,30 @@
+{
+  "title": "In-vivo and Ex-vivo Tissue Characterization",
+  "tagline": "Biomechanics · Simulation",
+  "summary": "Building a database of in-vivo human tissue properties for the next generation of surgical simulators.",
+  "body": [
+    "Accurate properties of living biological tissues are critically important to the advancement of medical simulation science. Two gaps stood in the way: there was no sufficient database of human tissue properties for surgical simulators to draw on, and there were few robotic tools able to measure in-vivo tissue characteristics in the first place.",
+    "This project built both. A further thread examined how tissue properties shift between the living and ex-vivo states — accounting for perfusion, temperature, and related factors — so that the large body of existing ex-vivo data could be made useful for simulator development."
+  ],
+  "researchers": "Luis E. Morales Tenorio, Kelsey J. Devine, Jayme Lee, Timothy M. Kowalewski, Victor H. Barocas, Trevor K. Stephens, Kelsey A. Harper, Mark J. Brown",
+  "media": [
+    {
+      "type": "video",
+      "file": "indenter.mp4",
+      "poster": "indenter-poster.jpg",
+      "alt": "Robotic indenter pressing into a tissue sample to measure its mechanical response",
+      "caption": "Robotic indentation measures tissue stiffness."
+    },
+    {
+      "type": "video",
+      "file": "stretch-test.mp4",
+      "poster": "stretch-test-poster.jpg",
+      "alt": "Tissue sample under a uniaxial stretch test",
+      "caption": "Uniaxial stretch testing of excised tissue."
+    }
+  ],
+  "publications": [
+    { "label": "Tenorio et al. — Biomechanics of Human Tissue (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Tenorio2017Biomechanicsofhuman.pdf" },
+    { "label": "Stephens et al. — Decay of Tissue Mechanical Properties (2016)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Stephens2016DecayTissueMechanical.pdf" }
+  ]
+}

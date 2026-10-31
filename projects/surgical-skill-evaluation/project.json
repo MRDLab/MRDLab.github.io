@@ -1,0 +1,41 @@
+{
+  "title": "Surgical Skill Evaluation",
+  "tagline": "Surgical data science · Machine learning",
+  "summary": "Automated skill measures that work regardless of which training task the tools are performing.",
+  "body": [
+    "How can technical surgical skill be quantified? This project proposed features for automated skill evaluation that stay relevant regardless of which surgical training task the tools are performing, and that can diagnose skill without requiring the complete time series of data from a given trial.",
+    "Open questions driving the work: how much does tool-motion trajectory tell us relative to full video? Which aspects of tool-motion dynamics separate skilled from unskilled performance? And what feedback most efficiently improves a trainee's ability? The group also studied the importance of pre-procedural warm-up in surgery, via the Robotic Readiness Study."
+  ],
+  "researchers": "Jason Kelly, Anna French, Rodney Dockter",
+  "media": [
+    {
+      "type": "image",
+      "file": "suturing.jpg",
+      "alt": "Robotic instruments performing a suturing training task",
+      "caption": "Suturing task."
+    },
+    {
+      "type": "image",
+      "file": "peg-transfer.jpg",
+      "alt": "Robotic instruments performing a peg transfer training task",
+      "caption": "Peg transfer task."
+    },
+    {
+      "type": "image",
+      "file": "circle-cutting.jpg",
+      "alt": "Robotic instruments performing a circle cutting training task",
+      "caption": "Circle cutting task."
+    }
+  ],
+  "publications": [
+    { "label": "Kelly et al. — Video Playback Perception (2019)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Kelly2019VideoPlaybackPerception.pdf" },
+    { "label": "Dockter et al. — Minimally Acceptable Classification (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Dockter2017MinimallyAcceptableClassification.pdf" },
+    { "label": "French et al. — Laparoscopic Skill Classification (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/French2017LaparoscopicSkillClassification.pdf" },
+    { "label": "French et al. — Predicting Surgical Skill (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/french2017predicting.pdf" },
+    { "label": "Lendvay et al. — Virtual Reality Robotic Surgery Warm-up (2013)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Lendvay2013Virtualrealityrobotic.pdf" },
+    { "label": "Lendvay et al. — Crowd-Sourced Assessment (2014)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Lendvay2014CrowdSourcedAssessment.pdf" },
+    { "label": "Lendvay et al. — Crowdsourcing (2015)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/lendvay2015crowdsourcing.pdf" },
+    { "label": "Chen et al. — Crowd-Sourced Assessment (2013)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Chen2013CrowdSourcedAssessment.pdf" },
+    { "label": "White et al. — Crowd-Sourced Assessment (2014)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/White2014CROWDSOURCEDASSESSMENT.pdf" }
+  ]
+}

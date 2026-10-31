@@ -1,0 +1,21 @@
+{
+  "title": "Shared Control",
+  "tagline": "Controls · Human–robot interaction",
+  "summary": "Surgical robots that blend control inputs from both the robot and the surgeon.",
+  "body": [
+    "Despite the wealth of sensory data available during robot-assisted surgery, current surgical operations do not use that data. This project developed intelligent surgical robots that blend control inputs from both the robot and the surgeon, rather than treating the robot as a purely passive teleoperated tool.",
+    "A central focus was shared control of tissue grasping: holding the grasping force in an optimal range throughout a robotic procedure, even when the surgeon receives no force feedback at all."
+  ],
+  "researchers": "Trevor Stephens",
+  "media": [
+    {
+      "type": "image",
+      "file": "collaborative-control.png",
+      "alt": "Control block diagram blending human-in-the-loop position control with automatic force control, with a tissue identification block setting the blending parameter",
+      "caption": "Human position control and automatic force control blended by a tissue-identification term."
+    }
+  ],
+  "publications": [
+    { "label": "Stephens et al. — Blended Shared Control (2018)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/stephens2018blended.pdf" }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Soft Catheter Robots",
+  "tagline": "Soft robotics · Inverse design",
+  "summary": "Inverse-designed soft catheter robots fitted to a patient's own anatomy from CT.",
+  "body": [
+    "The research objective of this work was to establish and validate a mathematical framework for the inverse design of universal soft robots: robots that deliver exceptional force and power densities, and that can be produced by robotic, automated manufacturing via 3D printed materials exploiting highly anisotropic elastomers, inextensible fibers, and beam elements.",
+    "The method is multiscale inverse design — generating actuator geometry fitted to a specific patient anatomy taken from CT. Anatomy centerlines are computed automatically via VMTK, convex blending maps the initial centerline to the desired one as a function of joint angle, and a Frenet–Serret parametrization fits the actuator surface to those centerlines."
+  ],
+  "researchers": "Mark Gilbertson, Gillian McDonald",
+  "media": [
+    {
+      "type": "image",
+      "file": "inverse-design.png",
+      "alt": "Diagram showing a soft robot actuator design derived from a CT scan, with anatomy centerline, robot centerline, and actuator mesh overlaid",
+      "caption": "Actuator geometry generated directly from a patient CT scan."
+    },
+    {
+      "type": "youtube",
+      "id": "E9hgWUBd8Pk",
+      "title": "Soft catheter robot in motion"
+    }
+  ],
+  "publications": [
+    { "label": "Gilbertson et al. — Computational Inverse Design (2018)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2018ComputationalInverseDesign.pdf" },
+    { "label": "Gilbertson et al. — Inverse Design Methodology (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2017InverseDesignMethodology.pdf" },
+    { "label": "Gilbertson et al. — Serially Actuated Locomotion (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2017SeriallyActuatedLocomotion.pdf" },
+    { "label": "Gilbertson et al. — Force Analysis and Modelling (2016)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2016ForceAnalysisAndModelling.pdf" },
+    { "label": "Gilbertson et al. — Soft Passive Valves (2016)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2016SoftPassiveValves.pdf" },
+    { "label": "Awasthi et al. — Generalized Kinematics of Deformable Robots (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Awasthi2017GeneralizedKinematicsDeformable.pdf" },
+    { "label": "IROS 2017 traction poster", "url": "http://www.me.umn.edu/labs/mrd/pdfs/IROS_2017_Poster_Traction.pdf" }
+  ]
+}

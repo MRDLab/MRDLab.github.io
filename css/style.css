@@ -245,6 +245,15 @@ p { margin: 0 0 1.1em; }
   border-bottom-color: var(--gold-deep);
 }
 
+/* Publications leaves the site (Google Scholar) — mark it so that's no surprise */
+.nav a[target="_blank"]::after {
+  content: "↗";
+  font-size: .78em;
+  margin-left: 6px;
+  opacity: .75;
+  vertical-align: baseline;
+}
+
 /* ---------------------------------------------------------------- hero -- */
 
 .hero {
@@ -449,34 +458,102 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
 
 /* ------------------------------------------------------ project blocks -- */
 
-.project {
-  display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 0;
+.project-entry {
   background: var(--paper);
   border: 1px solid var(--rule);
+  border-top: 4px solid var(--maroon);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  overflow: hidden;
+  padding: 30px 34px 34px;
   margin-bottom: 34px;
 }
-.project:nth-child(even) .project-media { order: 2; }
 
-.project-media {
+.project-head { margin-bottom: 24px; }
+.project-head h3 { font-size: 1.45rem; margin-bottom: 0; }
+.project-head .tagline {
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.badge {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
   position: relative;
-  min-height: 280px;
+  top: -2px;
+}
+.badge-past {
+  background: var(--paper-grey);
+  color: var(--ink-faint);
+  border: 1px solid var(--rule);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.project-media-col { display: grid; gap: 16px; }
+.project-text-col p { font-size: .97rem; }
+
+.media-item { margin: 0; }
+.media-item img,
+.media-item video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
   background: var(--paper-grey);
 }
-.project-media img { width: 100%; height: 100%; object-fit: cover; }
-.project-media .placeholder {
+/* Portrait clips (converted from the old site's tall GIFs) shouldn't tower
+   over the text column. */
+.media-item video { max-height: 420px; object-fit: contain; }
+
+.media-item figcaption {
+  font-size: .82rem;
+  color: var(--ink-faint);
+  padding-top: 7px;
+  line-height: 1.45;
+}
+
+/* 16:9 responsive YouTube embed */
+.media-embed {
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  background: #000;
+}
+.media-embed iframe {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.media-placeholder {
   display: grid;
   place-items: center;
   text-align: center;
+  min-height: 220px;
   padding: 24px;
+  border-radius: var(--radius);
   color: rgba(255, 255, 255, .85);
-  font-size: .85rem;
+  font-size: .8rem;
   letter-spacing: .08em;
   text-transform: uppercase;
   background-color: var(--maroon);
@@ -489,25 +566,54 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
     linear-gradient(160deg, var(--maroon-mid) 0%, var(--maroon-dark) 100%);
 }
 
-.project-body { padding: 32px 36px; }
-.project-body h3 { font-size: 1.4rem; }
-.project-body .tagline {
-  font-size: .78rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--maroon);
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-.project-body p { font-size: .97rem; }
-.project-body .researchers {
+.project-text-col .researchers {
   font-size: .88rem;
   color: var(--ink-faint);
   border-top: 1px solid var(--rule);
   padding-top: 14px;
   margin: 18px 0 0;
 }
-.project-body .researchers strong { color: var(--ink-soft); }
+.project-text-col .researchers strong { color: var(--ink-soft); }
+
+/* Collapsible publication list */
+.pubs { margin-top: 18px; }
+.pubs summary {
+  cursor: pointer;
+  font-size: .86rem;
+  font-weight: 700;
+  color: var(--maroon);
+  letter-spacing: .03em;
+  padding: 7px 0;
+  list-style: none;
+}
+.pubs summary::-webkit-details-marker { display: none; }
+.pubs summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform .15s ease;
+}
+.pubs[open] summary::before { transform: rotate(90deg); }
+.pubs summary:hover { color: var(--maroon-light); text-decoration: underline; }
+.pubs ul {
+  margin: 6px 0 0;
+  padding: 0 0 0 22px;
+  font-size: .88rem;
+  color: var(--ink-soft);
+}
+.pubs li { margin-bottom: 7px; line-height: 1.45; }
+
+/* Empty-state note where active projects will go */
+.empty-note {
+  border: 1px dashed var(--rule);
+  border-left: 5px solid var(--gold);
+  border-radius: var(--radius);
+  background: var(--paper-warm);
+  padding: 24px 26px;
+  color: var(--ink-soft);
+  font-size: .95rem;
+}
+.empty-note p:last-child { margin-bottom: 0; }
 
 /* --------------------------------------------------------- contact bits - */
 
@@ -608,9 +714,7 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
 
 @media (max-width: 980px) {
   .grid-4 { grid-template-columns: repeat(3, 1fr); }
-  .project { grid-template-columns: 1fr; }
-  .project:nth-child(even) .project-media { order: 0; }
-  .project-media { min-height: 220px; }
+  .project-grid { grid-template-columns: 1fr; gap: 24px; }
   .contact-grid { grid-template-columns: 1fr; }
   .alumni-list { columns: 2; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -650,7 +754,8 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .alumni-list { columns: 1; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .project-body { padding: 26px 24px; }
+  .project-entry { padding: 24px 20px 26px; }
+  .project-head h3 { font-size: 1.25rem; }
   .contact-cta { padding: 30px 22px; }
   .detail-list li { grid-template-columns: 1fr; gap: 2px; }
 }

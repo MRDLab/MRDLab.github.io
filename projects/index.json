@@ -1,0 +1,11 @@
+{
+  "_readme": "Order and status of every project. The site renders them in this order. status is 'active' or 'past'. Each slug must match a folder name containing a project.json.",
+  "projects": [
+    { "slug": "bioprinting",              "status": "past" },
+    { "slug": "soft-catheter-robots",     "status": "past" },
+    { "slug": "tissue-identification",    "status": "past" },
+    { "slug": "tissue-characterization",  "status": "past" },
+    { "slug": "shared-control",           "status": "past" },
+    { "slug": "surgical-skill-evaluation","status": "past" }
+  ]
+}
