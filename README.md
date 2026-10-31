@@ -17,7 +17,8 @@ theme): maroon `#7a0019`, gold `#ffcc33`, Open Sans.
 |----------|------|--------------|
 | Home | `index.html` | Who we are, research focus areas, project summary |
 | People | `people.html` | Lead faculty, current members, alumni |
-| Projects | `projects.html` | Current and past research projects |
+| Projects | `projects.html` | Research underway now |
+| Past Projects | `past-projects.html` | Completed projects, with media and publications |
 | Publications | — | Links straight out to Dr. Kowalewski's Google Scholar profile |
 | Contact | `contact.html` | Directs all inquiries to `timk@umn.edu` |
 
@@ -36,7 +37,8 @@ parameter to filter those out.
 .
 ├── index.html              Home
 ├── people.html             People   (content from js/people-data.json)
-├── projects.html           Projects (content from the projects/ folder)
+├── projects.html           Current Projects  (from the projects/ folder)
+├── past-projects.html      Past Projects     (same source, status: past)
 ├── contact.html            Contact
 ├── css/
 │   └── style.css           All styling, including the maroon/gold palette
@@ -62,6 +64,7 @@ parameter to filter those out.
 │       └── *.jpg *.png *.mp4
 ├── images/
 │   ├── README.md           Image conventions
+│   ├── collaborators/      Partner logos for the home page strip
 │   ├── shared/             Logo (used on every page)
 │   ├── home/               Home page imagery
 │   └── people/             GENERATED headshots — do not edit
@@ -102,9 +105,10 @@ Everything for a project lives in `projects/<slug>/` — its text in
 involved. To flip a project between Current and Past, change its `status` in
 `projects/index.json`.
 
-All six projects are currently marked `"past"`, so the Projects page shows
-them under **Past Projects** with a "Completed" badge. The **Current Projects**
-section hides itself entirely until something is marked `"active"`.
+Current and past work are **two separate pages**: `projects.html` shows
+entries marked `"active"`, `past-projects.html` shows the rest. All six
+projects are currently `"past"`, so the Current Projects page shows a short
+holding note instead of an empty heading.
 
 Full instructions, including how to add media and new projects, are in
 **`projects/README.md`**.

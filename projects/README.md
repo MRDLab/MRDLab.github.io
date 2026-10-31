@@ -61,14 +61,20 @@ optional.
 
 ## Marking a project active or past
 
-Edit `index.json`. Each entry is `{ "slug": "folder-name", "status": "past" }`.
+Current and past work live on **two separate pages**:
 
-- `"status": "active"` → appears under **Current Projects**
-- `"status": "past"` → appears under **Past Projects** with a "Completed" badge
+| Page | File | Shows |
+|---|---|---|
+| Current Projects | `projects.html` | entries with `"status": "active"` |
+| Past Projects | `past-projects.html` | everything else |
 
-The Current Projects section hides itself entirely while nothing is marked
-active, so the page never shows an empty heading. The order of the array is the
-order on the page.
+Edit `index.json` to move a project between them — each entry is
+`{ "slug": "folder-name", "status": "past" }`. Past entries get a "Completed"
+badge. The order of the array is the order on the page.
+
+If a page has nothing to show it displays a short note instead of an empty
+heading, so the Current Projects page stays presentable while write-ups are
+still being cleared.
 
 ## Adding a whole new project
 

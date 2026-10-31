@@ -1,8 +1,13 @@
-/* Builds the Projects page from the projects/ folder.
+/* Builds a projects page from the projects/ folder.
 
-   projects/index.json       lists every project slug and its status
-   projects/<slug>/project.json  holds that project's text and media list
+   projects/index.json           every project slug and its status
+   projects/<slug>/project.json  that project's text and media list
    projects/<slug>/<file>        the images and videos themselves
+
+   The page decides what it shows via a mount element:
+
+     <div id="projects-list" data-status="active"></div>   current work
+     <div id="projects-list" data-status="past"></div>     completed work
 
    To change a project, edit its project.json. To add one, make a folder,
    add a project.json, and list the slug in index.json. Nothing here needs
@@ -15,6 +20,10 @@
   // Always revalidate with the server so an edit shows up immediately
   // instead of waiting out the CDN cache.
   var FRESH = { cache: 'no-cache' };
+
+  var mount = document.getElementById('projects-list');
+  if (!mount) return;
+  var WANT = mount.getAttribute('data-status') || 'past';
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -94,8 +103,7 @@
     var mediaCol = el('div', 'project-media-col');
     (data.media || []).forEach(function (m) { mediaCol.appendChild(mediaNode(m, dir)); });
     if (!(data.media || []).length) {
-      var ph = el('div', 'media-placeholder', 'Add media to ' + dir);
-      mediaCol.appendChild(ph);
+      mediaCol.appendChild(el('div', 'media-placeholder', 'Add media to ' + dir));
     }
 
     // Text column
@@ -135,24 +143,14 @@
 
   /* ---- Page ------------------------------------------------------------- */
 
-  function renderSection(mountId, entries) {
-    var mount = document.getElementById(mountId);
-    if (!mount) return;
-    var section = mount.closest('section');
-
-    if (!entries.length) {
-      if (section) section.hidden = true;   // nothing to show — hide the heading too
-      return;
+  function showEmptyState() {
+    // The page supplies its own wording; fall back to something sensible.
+    var tpl = document.getElementById('projects-empty');
+    if (tpl) {
+      tpl.hidden = false;
+    } else {
+      mount.appendChild(el('p', null, 'Nothing to show here yet.'));
     }
-    if (section) section.hidden = false;
-    entries.forEach(function (e) {
-      mount.appendChild(projectNode(e.slug, e.status, e.data));
-    });
-  }
-
-  function fail(msg) {
-    var mount = document.getElementById('past-projects');
-    if (mount) mount.appendChild(el('p', null, msg));
   }
 
   fetch(ROOT + 'index.json', FRESH)
@@ -161,8 +159,11 @@
       return r.json();
     })
     .then(function (index) {
-      var list = index.projects || [];
-      return Promise.all(list.map(function (entry) {
+      var wanted = (index.projects || []).filter(function (e) {
+        return WANT === 'active' ? e.status === 'active' : e.status !== 'active';
+      });
+
+      return Promise.all(wanted.map(function (entry) {
         return fetch(ROOT + entry.slug + '/project.json', FRESH)
           .then(function (r) {
             if (!r.ok) throw new Error(entry.slug + ': HTTP ' + r.status);
@@ -179,12 +180,15 @@
     })
     .then(function (all) {
       var ok = all.filter(Boolean);
-      renderSection('active-projects', ok.filter(function (e) { return e.status === 'active'; }));
-      renderSection('past-projects',   ok.filter(function (e) { return e.status !== 'active'; }));
+      if (!ok.length) { showEmptyState(); return; }
+      ok.forEach(function (e) {
+        mount.appendChild(projectNode(e.slug, e.status, e.data));
+      });
     })
     .catch(function (err) {
       console.error(err);
-      fail('Projects could not be loaded. If you are opening this file directly, ' +
-           'run a local server instead: python3 -m http.server 8000');
+      mount.appendChild(el('p', null,
+        'Projects could not be loaded. If you are opening this file directly, ' +
+        'run a local server instead: python3 -m http.server 8000'));
     });
 })();

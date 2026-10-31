@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Past Projects | Medical Robotics and Devices Lab</title>
+<meta name="description" content="Completed research projects from the Medical Robotics and Devices Lab: bioprinting, soft catheter robots, shared control, surgical skill evaluation, tissue identification, and tissue characterization.">
+<link rel="icon" href="images/shared/mrd-logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=5a7c7e4e">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>University of Minnesota &middot; Twin Cities</span>
+    <span><a href="contact.html">Join the lab &rarr;</a></span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="title">Medical Robotics &amp; Devices Lab</span>
+      <span class="sub">Department of Mechanical Engineering</span>
+    </a>
+    <a class="brand-logo" href="index.html" aria-label="MRD Lab home">
+      <img src="images/shared/mrd-logo.png" alt="Medical Robotics and Devices Lab logo">
+    </a>
+  </div>
+</header>
+
+<div class="navbar">
+  <div class="wrap">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="past-projects.html" aria-current="page">Past Projects</a></li>
+        <li><a href="https://scholar.google.com/citations?user=cNrTOccAAAAJ&amp;hl=en&amp;view_op=list_works&amp;sortby=pubdate"
+               target="_blank" rel="noopener">Publications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main id="main">
+
+  <div class="page-head textured">
+    <div class="wrap">
+      <h1>Past Projects</h1>
+      <p>
+        Completed lines of research. Each entry keeps its figures, videos, and
+        publications so the work stays available to anyone who needs it. For
+        work underway now, see
+        <a href="projects.html" style="color:var(--gold-pale);">Current Projects</a>.
+      </p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div id="projects-list" data-status="past"></div>
+
+      <!-- Shown only if no project is marked past in projects/index.json -->
+      <div id="projects-empty" class="empty-note" hidden>
+        <p style="margin-bottom:0;">
+          No completed projects are listed yet. See
+          <a href="projects.html">Current Projects</a> for work underway.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== CTA -->
+  <section class="tight alt">
+    <div class="wrap">
+      <div class="contact-cta textured">
+        <h2>Want to collaborate?</h2>
+        <p>
+          If any of this overlaps with your own work &mdash; clinical, industrial, or
+          academic &mdash; we would be glad to talk.
+        </p>
+        <a class="email" href="mailto:timk@umn.edu">timk@umn.edu</a><br>
+        <a class="btn btn-gold" href="contact.html">Contact the lab</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer textured">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Medical Robotics &amp; Devices Lab</h4>
+        <p style="margin:0 0 10px;">
+          Advancing the emerging field of computational surgery at the
+          University of Minnesota.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="past-projects.html">Past Projects</a></li>
+          <li><a href="https://scholar.google.com/citations?user=cNrTOccAAAAJ&amp;hl=en&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener">Publications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <ul>
+          <li>Mechanical Engineering, Room ME 261</li>
+          <li>111 Church St. SE, Minneapolis, MN 55455</li>
+          <li><a href="mailto:timk@umn.edu">timk@umn.edu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> Medical Robotics and Devices Lab, University of Minnesota.</span>
+      <span>Driven to Discover&reg;</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js?v=edabe808"></script>
+<script src="js/projects-render.js?v=f4df47c5"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

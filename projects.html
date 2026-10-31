@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects | Medical Robotics and Devices Lab</title>
-<meta name="description" content="Research projects from the Medical Robotics and Devices Lab: bioprinting, soft catheter robots, shared control, surgical skill evaluation, tissue identification, and tissue characterization.">
+<title>Current Projects | Medical Robotics and Devices Lab</title>
+<meta name="description" content="Research underway in the Medical Robotics and Devices Lab at the University of Minnesota.">
 <link rel="icon" href="images/shared/mrd-logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=d2be0b51">
+<link rel="stylesheet" href="css/style.css?v=5a7c7e4e">
 </head>
 <body>
 
@@ -40,6 +40,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="people.html">People</a></li>
         <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="past-projects.html">Past Projects</a></li>
         <li><a href="https://scholar.google.com/citations?user=cNrTOccAAAAJ&amp;hl=en&amp;view_op=list_works&amp;sortby=pubdate"
                target="_blank" rel="noopener">Publications</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -52,60 +53,43 @@
 
   <div class="page-head textured">
     <div class="wrap">
-      <h1>Research Projects</h1>
+      <h1>Current Projects</h1>
       <p>
-        Hardware, algorithms, and studies produced by the lab &mdash; from soft
-        robotic catheters and bioprinting through smart surgical instruments and
-        the data science of surgical performance.
+        Research underway in the lab right now. For completed work &mdash; with
+        its figures, videos, and publications &mdash; see
+        <a href="past-projects.html" style="color:var(--gold-pale);">Past Projects</a>.
       </p>
     </div>
   </div>
 
-  <!-- Active work. Hidden automatically while no project is marked
-       "status": "active" in projects/index.json. -->
-  <section id="active-section" hidden>
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Current Projects</h2>
-        <p>Research underway in the lab right now.</p>
-      </div>
-      <div id="active-projects"></div>
-    </div>
-  </section>
-
   <section>
     <div class="wrap">
-      <div class="section-head">
-        <h2>Past Projects</h2>
-        <p>
-          Completed lines of research. Each entry keeps its figures, videos, and
-          publications so the work stays available to anyone who needs it.
-        </p>
-      </div>
-      <div id="past-projects"></div>
-    </div>
-  </section>
+      <div id="projects-list" data-status="active"></div>
 
-  <!-- ====================================================== publications -->
-  <section class="alt tight">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Publications</h2>
+      <!-- Shown only when nothing is marked "active" in projects/index.json -->
+      <div id="projects-empty" class="empty-note" hidden>
         <p>
-          The lab's full publication record is collected on Dr. Kowalewski's
-          Google Scholar profile, newest first.
+          <strong>Write-ups of our current projects are on the way.</strong>
+          Several projects are active in the lab; each one goes up here once it
+          is cleared for publication.
+        </p>
+        <p>
+          In the meantime, the lab's completed work is documented on the
+          <a href="past-projects.html">Past Projects</a> page, and the full
+          publication record is on
+          <a href="https://scholar.google.com/citations?user=cNrTOccAAAAJ&amp;hl=en&amp;view_op=list_works&amp;sortby=pubdate"
+             target="_blank" rel="noopener">Google Scholar</a>.
+        </p>
+        <p style="margin-bottom:0;">
+          Curious what we are working on now? Email
+          <a href="mailto:timk@umn.edu">timk@umn.edu</a>.
         </p>
       </div>
-      <p>
-        <a class="btn btn-maroon"
-           href="https://scholar.google.com/citations?user=cNrTOccAAAAJ&amp;hl=en&amp;view_op=list_works&amp;sortby=pubdate"
-           target="_blank" rel="noopener">View publications on Google Scholar &nearr;</a>
-      </p>
     </div>
   </section>
 
   <!-- ============================================================== CTA -->
-  <section class="tight">
+  <section class="tight alt">
     <div class="wrap">
       <div class="contact-cta textured">
         <h2>Want to collaborate?</h2>
@@ -137,6 +121,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="people.html">People</a></li>
           <li><a href="projects.html">Projects</a></li>
+          <li><a href="past-projects.html">Past Projects</a></li>
           <li><a href="https://scholar.google.com/citations?user=cNrTOccAAAAJ&amp;hl=en&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener">Publications</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -158,7 +143,7 @@
 </footer>
 
 <script src="js/site.js?v=edabe808"></script>
-<script src="js/projects-render.js?v=37d07138"></script>
+<script src="js/projects-render.js?v=f4df47c5"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
