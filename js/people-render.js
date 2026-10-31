@@ -45,6 +45,8 @@
       img.alt = person.name;
       img.loading = 'lazy';
       img.setAttribute('data-fallback-initials', initials(person.name));
+      // Per-person crop tweak, e.g. "50% 10%" or "top".
+      if (person.photoFocus) img.style.objectPosition = person.photoFocus;
       holder.appendChild(img);
     } else {
       var ph = el('div', 'placeholder', initials(person.name));

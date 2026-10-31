@@ -400,6 +400,10 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Faces sit above centre in most portraits — a centred crop lops off the
+     top of people's heads. Override per person with "Photo Focus:" in their
+     info.txt, which sets an inline object-position. */
+  object-position: 50% 22%;
 }
 /* Shown when no photo file is present yet */
 .person .photo .placeholder {
@@ -423,7 +427,17 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
 
 .person .info { padding: 18px 20px 22px; }
 .person .name { font-size: 1.06rem; font-weight: 700; color: var(--maroon-dark); margin: 0 0 3px; }
-.person .role { font-size: .85rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 8px; }
+/* Degrees earned with the lab — maroon, so they read as the card's subject
+   rather than muted metadata. Consecutive lines sit tight together. */
+.person .role {
+  font-size: .85rem;
+  color: var(--maroon);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin: 0 0 3px;
+}
+.person .role:last-of-type { margin-bottom: 10px; }
 /* A duty held alongside the degree — safety officer, lab admin, etc. */
 .person .lab-role {
   display: inline-block;

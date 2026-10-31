@@ -92,6 +92,18 @@ automatically and writes a web-sized copy to `images/people/`.
 Only set `Photo:` in `info.txt` if the folder has more than one image and you
 need to pick which one.
 
+Photos are cropped to a square with the focus slightly above centre, which
+suits most portraits. If someone's crop sits wrong, nudge it for that person
+only:
+
+```
+Photo Focus: 50% 10%     # higher up the image
+Photo Focus: 50% 40%     # lower down
+```
+
+The first number is horizontal, the second vertical — both measured from the
+top-left of the photo.
+
 ### 3. Rebuild
 
 ```bash

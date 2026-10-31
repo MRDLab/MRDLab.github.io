@@ -54,6 +54,7 @@ FIELD_KEYS = {
     "scholar": "scholar", "google scholar": "scholar",
     "github": "github",
     "photo": "photo",
+    "photo focus": "photoFocus", "focus": "photoFocus",
 }
 
 # "File: <filename in this folder> | <link label>" — may be repeated.
@@ -239,14 +240,19 @@ def build_person(folder, display_name, default_role):
     name = info.get("name") or display_name
     slug = slugify(name)
 
-    # Most recent first, as the person listed them.
-    person = {"name": name, "roles": info.get("roles") or [default_role]}
+    # Most recent first, as the person listed them. "role" is kept alongside
+    # "roles" so an older cached copy of people-render.js still shows the
+    # primary degree instead of a blank line.
+    roles = info.get("roles") or [default_role]
+    person = {"name": name, "role": roles[0], "roles": roles}
 
     src = find_photo(folder, info.get("photo"))
     person["photo"] = publish_photo(src, slug) if src else ""
     if not src:
         warn(f"{display_name}: no photo yet — card will show initials")
 
+    if info.get("photoFocus"):
+        person["photoFocus"] = info["photoFocus"]
     if info.get("labRole"):
         person["labRole"] = info["labRole"]
     if info.get("blurb"):
@@ -383,6 +389,15 @@ def main():
     print(f"  alumni cards: {len(alumni_cards)}")
     print(f"  past members: {len(past)}")
     print(f"  total current members: {n_group + (1 if lead else 0)}")
+
+    # Re-stamp css/js URLs so a changed renderer can't be served from cache
+    # alongside freshly generated data.
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import stamp_assets
+        stamp_assets.main()
+    except Exception as exc:                                  # pragma: no cover
+        warn(f"could not stamp asset URLs: {exc}")
 
     if warnings:
         print("\nNotes:")

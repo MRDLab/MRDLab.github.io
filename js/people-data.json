@@ -1,6 +1,7 @@
 {
   "lead": {
     "name": "Timothy M. Kowalewski, Ph.D.",
+    "role": "Professor of Mechanical Engineering · Principal Investigator",
     "roles": [
       "Professor of Mechanical Engineering · Principal Investigator"
     ],
@@ -24,6 +25,7 @@
       "members": [
         {
           "name": "Amit Manicka",
+          "role": "Doctoral Student, Mechanical Engineering",
           "roles": [
             "Doctoral Student, Mechanical Engineering"
           ],
@@ -31,6 +33,7 @@
         },
         {
           "name": "Ethan Foley",
+          "role": "Doctoral Student, Mechanical Engineering",
           "roles": [
             "Doctoral Student, Mechanical Engineering"
           ],
@@ -46,6 +49,7 @@
         },
         {
           "name": "Rolando Gonzalez Alcocer",
+          "role": "Doctoral Student, Mechanical Engineering",
           "roles": [
             "Doctoral Student, Mechanical Engineering"
           ],
@@ -69,6 +73,7 @@
       "members": [
         {
           "name": "Nathan Harbinson",
+          "role": "M.S. Mechanical Engineering, 2026",
           "roles": [
             "M.S. Mechanical Engineering, 2026",
             "B.S. Mechanical Engineering, 2025"
@@ -78,6 +83,7 @@
         },
         {
           "name": "Tarun Sehgal",
+          "role": "Master's Student, Robotics (MnRI)",
           "roles": [
             "Master's Student, Robotics (MnRI)"
           ],
@@ -97,6 +103,7 @@
       "members": [
         {
           "name": "Gabriel Garso",
+          "role": "Undergraduate Researcher, Mechanical Engineering",
           "roles": [
             "Undergraduate Researcher, Mechanical Engineering"
           ],
@@ -111,6 +118,7 @@
         },
         {
           "name": "Neev Zeroni",
+          "role": "Undergraduate Researcher, Mechanical Engineering",
           "roles": [
             "Undergraduate Researcher, Mechanical Engineering"
           ],
@@ -135,6 +143,7 @@
         },
         {
           "name": "Sam Fisher",
+          "role": "Undergraduate Researcher, Electrical Engineering",
           "roles": [
             "Undergraduate Researcher, Electrical Engineering"
           ],
@@ -153,6 +162,7 @@
   "alumniCards": [
     {
       "name": "Jared Schultz",
+      "role": "M.S. Robotics (MnRI), 2026",
       "roles": [
         "M.S. Robotics (MnRI), 2026",
         "B.S. Computer Engineering, 2024"
@@ -168,6 +178,7 @@
     },
     {
       "name": "Ronak Narkhede",
+      "role": "M.S. Robotics (MnRI), 2026",
       "roles": [
         "M.S. Robotics (MnRI), 2026"
       ],
