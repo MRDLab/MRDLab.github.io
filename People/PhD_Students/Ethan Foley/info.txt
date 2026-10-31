@@ -15,6 +15,7 @@
 
 Name: Ethan Foley
 Role: Doctoral Student, Mechanical Engineering
+Lab Role: Lab Safety Officer
 Email:
 Website:
 LinkedIn:

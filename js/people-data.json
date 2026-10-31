@@ -21,9 +21,15 @@
       "title": "Doctoral Students",
       "members": [
         {
-          "name": "Ethan Foley",
+          "name": "Amit Manicka",
           "role": "Doctoral Student, Mechanical Engineering",
           "photo": ""
+        },
+        {
+          "name": "Ethan Foley",
+          "role": "Doctoral Student, Mechanical Engineering",
+          "photo": "",
+          "labRole": "Lab Safety Officer"
         },
         {
           "name": "Rolando Gonzalez",

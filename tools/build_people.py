@@ -43,6 +43,9 @@ GROUPS = [
 # Keys understood in info.txt. Everything after a "Bio:" line is the bio.
 FIELD_KEYS = {
     "name": "name", "role": "role", "title": "role",
+    # An extra duty held alongside the degree: "Lab Safety Officer",
+    # "Lab Administration", etc. Shown as a gold tag on the card.
+    "lab role": "labRole", "duty": "labRole",
     "degree": "degree",
     "email": "email",
     "website": "website", "site": "website", "homepage": "website",
@@ -152,12 +155,40 @@ def publish_photo(src, slug):
 
 
 def person_folders(group_dir):
+    """Folder names for a group, in display order.
+
+    If the group has an _order.txt, names listed there come first in that
+    order (use it for seniority). Anyone not listed follows alphabetically,
+    so forgetting to add a new person is never fatal."""
     if not os.path.isdir(group_dir):
         return []
-    return sorted(
+
+    found = sorted(
         d for d in os.listdir(group_dir)
         if os.path.isdir(os.path.join(group_dir, d)) and not d.startswith(("_", "."))
     )
+
+    order_file = os.path.join(group_dir, "_order.txt")
+    if not os.path.exists(order_file):
+        return found
+
+    remaining, ordered = list(found), []
+    with open(order_file, encoding="utf-8") as fh:
+        for line in fh:
+            wanted = line.strip()
+            if not wanted or wanted.startswith("#"):
+                continue
+            match = next((d for d in remaining if d.lower() == wanted.lower()), None)
+            if match:
+                ordered.append(match)
+                remaining.remove(match)
+            else:
+                warn(f"{order_file}: no folder named {wanted!r}")
+
+    if remaining:
+        warn(f"{os.path.basename(group_dir)}/_order.txt doesn't list "
+             f"{', '.join(remaining)} — appended alphabetically")
+    return ordered + remaining
 
 
 def build_person(folder, display_name, default_role):
@@ -174,6 +205,8 @@ def build_person(folder, display_name, default_role):
     if not src:
         warn(f"{display_name}: no photo yet — card will show initials")
 
+    if info.get("labRole"):
+        person["labRole"] = info["labRole"]
     if info.get("blurb"):
         person["blurb"] = info["blurb"]
     if info.get("email"):

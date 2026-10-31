@@ -1,0 +1,7 @@
+# Display order for Doctoral Students — most senior first.
+# One folder name per line. Anyone not listed here is appended
+# alphabetically, so a new student still shows up if you forget.
+
+Amit Manicka
+Ethan Foley
+Rolando Gonzalez

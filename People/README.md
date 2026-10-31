@@ -41,8 +41,20 @@ Ethan works on soft robotic actuators for minimally invasive procedures.
 He joined the lab in 2025 after finishing his B.S. at ...
 ```
 
-Recognized fields: **Name, Role, Email, Website, LinkedIn, Google Scholar,
-GitHub, Photo**. Anything after `Bio:` becomes their card text.
+Recognized fields: **Name, Role, Lab Role, Email, Website, LinkedIn,
+Google Scholar, GitHub, Photo**. Anything after `Bio:` becomes their card text.
+
+### Lab duties
+
+`Lab Role:` is for a job someone holds *alongside* their degree — it shows as a
+gold tag under their title:
+
+```
+Role: Doctoral Student, Mechanical Engineering
+Lab Role: Lab Safety Officer
+```
+
+Leave it out for everyone who doesn't hold such a role.
 
 ### 2. Drop in a photo
 
@@ -63,6 +75,28 @@ Then commit and push. That's it — no HTML or JavaScript to touch.
 
 > `js/people-data.json` is **generated**. Don't edit it by hand; the script
 > overwrites it every run.
+
+---
+
+## Ordering people within a group
+
+By default a group lists its people alphabetically. To control the order — by
+seniority, say — add an `_order.txt` to that group's folder:
+
+```
+# People/PhD_Students/_order.txt
+# Most senior first. One folder name per line.
+
+Amit Manicka
+Ethan Foley
+Rolando Gonzalez
+```
+
+Anyone you don't list is appended alphabetically after those you do, and the
+build script prints a reminder naming them — so forgetting to add a new
+student never drops them from the page.
+
+Any group can have an `_order.txt`; only `PhD_Students/` has one right now.
 
 ---
 

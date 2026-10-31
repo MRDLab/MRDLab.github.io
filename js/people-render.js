@@ -86,6 +86,8 @@
     var info = el('div', 'info');
     info.appendChild(el('h3', 'name', person.name));
     info.appendChild(el('p', 'role', person.role || ''));
+    // A duty held alongside the degree, e.g. Lab Safety Officer.
+    if (person.labRole) info.appendChild(el('p', 'lab-role', person.labRole));
     if (person.blurb) info.appendChild(el('p', 'blurb', person.blurb));
 
     var links = linksNode(person);

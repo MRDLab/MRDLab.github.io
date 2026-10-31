@@ -424,6 +424,21 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
 .person .info { padding: 18px 20px 22px; }
 .person .name { font-size: 1.06rem; font-weight: 700; color: var(--maroon-dark); margin: 0 0 3px; }
 .person .role { font-size: .85rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 8px; }
+/* A duty held alongside the degree — safety officer, lab admin, etc. */
+.person .lab-role {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--maroon-dark);
+  background: var(--gold-pale);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  padding: 3px 11px;
+  margin: 0 0 10px;
+}
+
 .person .blurb { font-size: .92rem; color: var(--ink-soft); margin: 0 0 10px; }
 .person .links { font-size: .88rem; }
 .person .links a { margin-right: 12px; text-decoration: none; font-weight: 600; }
