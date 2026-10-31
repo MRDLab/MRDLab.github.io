@@ -106,26 +106,34 @@ page needs the local server, since it loads its roster via JavaScript.
 
 ---
 
-## Publishing to GitHub Pages
+## Publishing
 
-Push this repo to GitHub under the `labmrd` account, then in the repo go to
-**Settings → Pages** and set:
+**Live at <https://labmrd.github.io>**
 
-- **Source:** Deploy from a branch
-- **Branch:** `main`, folder `/ (root)`
+This is a GitHub Pages *user site*, which means:
 
-Save, wait a minute, and the site goes live.
+- The repository is named exactly **`labmrd.github.io`** — that name is what
+  produces the root URL. Renaming the repo changes the site's address.
+- It must stay **public** (a private user site needs a paid GitHub plan).
+- **Settings → Pages** is set to deploy from branch `main`, folder `/ (root)`.
 
-**Which URL you get depends on the repository name:**
+### Updating the live site
 
-| Repo name | Live URL |
-|-----------|----------|
-| `labmrd.github.io` | `https://labmrd.github.io` |
-| `labmrdwebsite` (this name) | `https://labmrd.github.io/labmrdwebsite/` |
+```bash
+git add -A
+git commit -m "Describe the change"
+git push
+```
 
-If you want the short `labmrd.github.io` address, rename the repository to
-exactly `labmrd.github.io` on GitHub. All links here are relative, so the site
-works correctly either way — no code changes needed.
+Pages rebuilds automatically; the change is live in about a minute. If you
+don't see it, hard-reload (`Cmd+Shift+R`) — browsers cache CSS and JS
+aggressively.
+
+### Using a custom domain
+
+Add a file named `CNAME` at the repo root containing just the domain (e.g.
+`mrd.umn.edu`), then point a DNS CNAME record at `labmrd.github.io`. UMN's IT
+group has to make the DNS change for a `umn.edu` domain.
 
 ### Using a custom domain
 
