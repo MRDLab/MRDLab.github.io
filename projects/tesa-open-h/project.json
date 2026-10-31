@@ -35,7 +35,6 @@
       "caption": "Tracking: spline points along the wire, the tip, and the heading vector to the next subgoal."
     }
   ],
-  "publicationsLabel": "Relevant publications",
   "publications": [
     {
       "label": "Berg et al. — Vasculature Discretization and Search Space Simplification for Automating Catheter Navigation (DMD 2026)",
