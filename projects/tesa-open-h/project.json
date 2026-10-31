@@ -1,13 +1,12 @@
 {
   "title": "TESA — Telerobotic Endovascular Skills Assessment",
   "tagline": "Endovascular robotics · Open data and hardware",
-  "summary": "A low-cost open-source guidewire robot and standardized dataset for endovascular navigation, contributed to the Open-H Endoluminal initiative.",
+  "summary": "An open-source guidewire robot and standardized dataset for endovascular navigation, contributed to the Open-H Endoluminal initiative.",
   "body": [
     "Endovascular procedures such as mechanical thrombectomy depend on navigating flexible guidewires and catheters through intricate vascular networks. Modern soft-body physics simulators do not capture the edge cases or interaction dynamics these tools actually exhibit — the bending, buckling and torsion that accumulate under sustained torque and mechanical stress over many episodes.",
-    "TESA addresses that gap with scalable real-world data collection across a series of environments, or \"gyms\", spanning target poses from simple to nearly impossible. The lab is contributing two things to the Open-H Endoluminal ecosystem: a standardized endoluminal dataset (TESA-Data) and a low-cost open-source hardware platform (TESA-Bot). The model is the Fundamentals of Laparoscopic Surgery tasks, whose cheap standardized hardware reshaped the science of surgical skill assessment — we want the same for endovascular skills.",
-    "The platform is a 2-DOF guidewire and catheter driver with a bill of materials under $100, built around a custom PCB that accepts relative step commands of insertion and rotation, with synchronized motor encoders and an overhead camera acting as a simulated single-plane fluoroscopy view. Roughly ten 3D-printed vascular phantoms — some abstract bifurcations and aneurysms, others 2D projections of anatomy from the NIH 3D library — are backlit so the guidewire can be optically tracked inside the channels.",
-    "The target is 30 to 50 hours of synchronized robotic telemetry and vision tracking. Most of it is gathered by a model-free reinforcement learning agent (Soft Actor-Critic) navigating the gyms in real time, with human operators stepping in at bifurcations the agent cannot reach. Automated computer-vision checks detect motor slippage, re-establish the origin, and discard frames showing loops or buckling. Because every experiment uses benchtop phantoms derived from open anatomical models, the dataset carries no HIPAA or PHI constraints.",
-    "Everything generated under the project — algorithms, firmware, network weights, CAD, schematics, raw video and spatial metadata — is committed for public release under the OpenMDW-1.1 (Open Medical Data & Hardware) license."
+    "TESA addresses that gap by collecting real-world data across a series of physical environments, or \"gyms\", spanning target poses from straightforward to nearly impossible. The lab is contributing two things to the Open-H Endoluminal ecosystem: a standardized endoluminal dataset (TESA-Data) and a low-cost open-source hardware platform (TESA-Bot). The model is the Fundamentals of Laparoscopic Surgery tasks, whose inexpensive standardized hardware reshaped the science of surgical skill assessment — we want the same for endovascular skills.",
+    "The platform pairs a two-degree-of-freedom guidewire and catheter driver with synchronized motor telemetry and an overhead camera that stands in for a single-plane fluoroscopy view. A set of 3D-printed vascular phantoms — some abstract bifurcations and aneurysms, others projections of real anatomy — is backlit so the guidewire can be tracked optically inside the channels. Data collection is driven largely by a reinforcement learning agent navigating the gyms in real time, with human operators covering the geometry it cannot reach.",
+    "Because every experiment runs on benchtop phantoms derived from open anatomical models, the dataset carries no HIPAA or PHI constraints. Everything generated under the project — software, firmware, CAD, schematics, recordings and metadata — is committed for public release under the OpenMDW-1.1 (Open Medical Data & Hardware) license."
   ],
   "researchers": "Neev Zeroni, Tarun Sehgal, Sam Fisher, Gabriel Garso, Amit Manicka, Timothy M. Kowalewski",
   "media": [
@@ -27,7 +26,7 @@
       "type": "image",
       "file": "guidewire-driver.jpg",
       "alt": "Exploded CAD view of the guidewire driver showing gears, shafts, housing and motors",
-      "caption": "The 2-DOF guidewire driver, under $100 in parts and released as open hardware."
+      "caption": "The two-degree-of-freedom guidewire driver, released as open hardware."
     },
     {
       "type": "image",
@@ -35,11 +34,5 @@
       "alt": "Close-up of a guidewire in a vessel channel with spline points, tip position and the next subgoal marked",
       "caption": "Tracking: spline points along the wire, the tip, and the heading vector to the next subgoal."
     }
-  ],
-  "publications": [
-    { "label": "Poojari et al. — StrokeNav2D: A Skeleton Based Dataset for Cerebrovascular Imitation Learning (DMD 2026)", "url": "https://doi.org/10.1115/DMD2026-1063" },
-    { "label": "Berg et al. — Vasculature Discretization and Search Space Simplification for Automating Catheter Navigation (DMD 2026)", "url": "https://doi.org/10.1115/DMD2026-1054" },
-    { "label": "Cheng et al. — Towards Remote Thrombectomy with Telerobotically-Driven Guidewires (DMD 2026)", "url": "https://doi.org/10.1115/DMD2026-1079" },
-    { "label": "Open-H — community initiative for open healthcare datasets and models", "url": "https://www.open-h.org/" }
   ]
 }
