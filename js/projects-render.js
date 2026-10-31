@@ -201,6 +201,7 @@
       ok.forEach(function (e) {
         mount.appendChild(projectNode(e.slug, e.status, e.data));
       });
+      if (window.MRD && window.MRD.annotateLinks) window.MRD.annotateLinks();
     })
     .catch(function (err) {
       console.error(err);

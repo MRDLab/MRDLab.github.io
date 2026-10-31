@@ -44,17 +44,55 @@
     });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function () {
-      initNav();
-      initPhotoFallbacks();
+  /* ---- Tell people where a link goes ------------------------------------
+     Adds a hover tooltip naming the destination for links that leave the
+     site, and for mailto:/file downloads. Browsers show the raw URL in the
+     status bar, but that is easy to miss and gone on touch devices.      */
+  function annotateLinks() {
+    var here = location.host;
+
+    Array.prototype.forEach.call(document.querySelectorAll('a[href]'), function (a) {
+      if (a.dataset.linkAnnotated) return;
+      var href = a.getAttribute('href') || '';
+      var note = '';
+
+      if (/^mailto:/i.test(href)) {
+        note = 'Email ' + href.replace(/^mailto:/i, '').split('?')[0];
+      } else if (/^tel:/i.test(href)) {
+        note = 'Call ' + href.replace(/^tel:/i, '');
+      } else if (a.hasAttribute('download')) {
+        note = 'Download ' + href.split('/').pop();
+      } else if (/^https?:/i.test(href)) {
+        var u;
+        try { u = new URL(href); } catch (e) { return; }
+        if (u.host !== here) {
+          var where = u.host.replace(/^www\./, '') + (u.pathname === '/' ? '' : u.pathname);
+          if (where.length > 60) where = where.slice(0, 57) + '…';
+          note = 'Opens ' + where;
+        }
+      }
+
+      if (note) {
+        a.title = note;
+        a.dataset.linkAnnotated = '1';
+      }
     });
-  } else {
+  }
+
+  function start() {
     initNav();
     initPhotoFallbacks();
+    annotateLinks();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
   }
 
   // People page builds its cards after this file loads; let it re-run the hook.
   window.MRD = window.MRD || {};
   window.MRD.initPhotoFallbacks = initPhotoFallbacks;
+  window.MRD.annotateLinks = annotateLinks;
 })();

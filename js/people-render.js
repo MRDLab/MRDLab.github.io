@@ -158,6 +158,7 @@
 
   // Re-arm fallbacks for the <img> elements we just created.
   if (window.MRD && window.MRD.initPhotoFallbacks) window.MRD.initPhotoFallbacks();
+  if (window.MRD && window.MRD.annotateLinks) window.MRD.annotateLinks();
 
   }  /* end render() */
 
