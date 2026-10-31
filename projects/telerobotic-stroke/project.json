@@ -8,10 +8,16 @@
     "A first working prototype was demonstrated in November 2025, with Dr. Andrew Grande driving guidewires robotically from a phone while Medtronic's leadership watched. The partnership spans neurosurgery, mechanical engineering, and computer science, and involves more than fifteen graduate and undergraduate students across those departments."
   ],
   "links": [
-    { "label": "Try the interactive demo", "url": "https://telebot.cse.umn.edu" },
-    { "label": "Read the announcement", "url": "https://cse.umn.edu/mnri/news/mnri-partners-medtronic-remote-stroke-treatment-research" }
+    {
+      "label": "Try the interactive demo",
+      "url": "https://telebot.cse.umn.edu"
+    },
+    {
+      "label": "Read the announcement",
+      "url": "https://cse.umn.edu/mnri/news/mnri-partners-medtronic-remote-stroke-treatment-research"
+    }
   ],
-  "researchers": "Timothy M. Kowalewski",
+  "researchers": "Ronak Narkhede, Jared Schultz, Timothy M. Kowalewski",
   "media": [
     {
       "type": "image",

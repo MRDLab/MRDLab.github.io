@@ -13,7 +13,7 @@
 
 Name: Robert M. Sweet, MD, FACS
 Role: Professor of Urology and Surgery, University of Washington
-Website: https://urology.uw.edu/people/faculty/robert-sweet
+Profile: https://urology.uw.edu/people/faculty/robert-sweet
 
 Bio:
 Executive Director of the WWAMI Institute for Simulation in Healthcare (WISH)

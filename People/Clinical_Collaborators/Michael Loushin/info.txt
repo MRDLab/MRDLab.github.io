@@ -14,7 +14,7 @@
 Name: Michael Loushin, MD
 Role: Professor of Anesthesiology, University of Minnesota
 Lab Role: Visible Heart® Laboratories
-Website: https://med.umn.edu/bio/michael-loushin
+Profile: https://med.umn.edu/bio/michael-loushin
 
 Bio:
 Associate Director of the Visible Heart® Laboratories, working on cardiovascular

@@ -55,6 +55,9 @@ FIELD_KEYS = {
     "email": "email",
     "website": "website", "site": "website", "homepage": "website",
     "portfolio": "portfolio",
+    # An institutional faculty page — labelled differently from a
+    # personal portfolio site.
+    "profile": "profile", "faculty page": "profile",
     "linkedin": "linkedin",
     "scholar": "scholar", "google scholar": "scholar",
     "github": "github",
@@ -76,6 +79,7 @@ def warn(msg):
 
 # Degree and generational suffixes aren't part of a filename.
 SUFFIXES = {"phd", "md", "ms", "msme", "bs", "bsme", "dsc", "scd",
+            "facs", "facc", "frcs", "fhrs", "fieee", "mph", "do",
             "jr", "sr", "ii", "iii", "iv"}
 
 
@@ -161,10 +165,26 @@ def publish_photo(src, slug):
     out_name = slug + ".jpg"
     out_path = os.path.join(PHOTO_OUT, out_name)
 
+    # Never enlarge: scaling a small photo up to MAX_PHOTO_PX only softens it.
+    target = MAX_PHOTO_PX
+    try:
+        probe = subprocess.run(["sips", "-g", "pixelWidth", "-g", "pixelHeight", src],
+                               capture_output=True, text=True)
+        dims = [int(t.split(":")[1]) for t in probe.stdout.split("\n")
+                if "pixel" in t and ":" in t]
+        if dims:
+            longest = max(dims)
+            if longest < MAX_PHOTO_PX:
+                target = longest
+                warn(f"{os.path.basename(src)} is only {longest}px — published at "
+                     f"source size rather than upscaled")
+    except Exception:
+        pass
+
     if shutil.which("sips"):
         r = subprocess.run(
-            ["sips", "-s", "format", "jpeg", "-s", "formatOptions", "82",
-             "-Z", str(MAX_PHOTO_PX), src, "--out", out_path],
+            ["sips", "-s", "format", "jpeg", "-s", "formatOptions", "85",
+             "-Z", str(target), src, "--out", out_path],
             capture_output=True,
         )
         if r.returncode != 0 or not os.path.exists(out_path):
@@ -281,6 +301,7 @@ def build_person(folder, display_name, default_role):
         info.pop("website", None)
 
     for key, label in (("website", "Portfolio"), ("portfolio", "Portfolio"),
+                       ("profile", "Faculty profile"),
                        ("scholar", "Google Scholar"),
                        ("linkedin", "LinkedIn"), ("github", "GitHub")):
         if info.get(key):

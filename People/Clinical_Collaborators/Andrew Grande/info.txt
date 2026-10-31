@@ -13,7 +13,7 @@
 
 Name: Andrew W. Grande, MD
 Role: Professor of Neurosurgery, University of Minnesota
-Website: https://med.umn.edu/bio/andrew-grande
+Profile: https://med.umn.edu/bio/andrew-grande
 
 Bio:
 Cerebrovascular and endovascular neurosurgeon. Co-director of Neurosurgery and

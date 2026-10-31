@@ -14,7 +14,7 @@
 Name: Javier Navarro Rueda, PhD
 Role: Assistant Professor of Surgery, University of Minnesota
 Lab Role: Visible Heart® Laboratories
-Website: https://med.umn.edu/bio/javier-navarro-rueda
+Profile: https://med.umn.edu/bio/javier-navarro-rueda
 
 Bio:
 Works with the Visible Heart® Laboratories on cardiovascular anatomy and

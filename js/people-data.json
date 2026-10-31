@@ -182,11 +182,11 @@
           "roles": [
             "Professor of Neurosurgery, University of Minnesota"
           ],
-          "photo": "",
+          "photo": "andrew-w-grande.jpg",
           "blurb": "Cerebrovascular and endovascular neurosurgeon. Co-director of Neurosurgery and associate director of the residency programme, and co-director of the Earl Grande Stroke, Stem Cell and Neuroimaging Laboratory. Provides the clinical guidance behind the lab's endovascular navigation work.",
           "links": [
             {
-              "label": "Portfolio",
+              "label": "Faculty profile",
               "url": "https://med.umn.edu/bio/andrew-grande"
             }
           ]
@@ -197,12 +197,12 @@
           "roles": [
             "Professor of Anesthesiology, University of Minnesota"
           ],
-          "photo": "",
+          "photo": "michael-loushin.jpg",
           "labRole": "Visible Heart® Laboratories",
           "blurb": "Associate Director of the Visible Heart® Laboratories, working on cardiovascular physiology and anatomy, 3D anatomical modelling, medical device development, and hands-on clinical education.",
           "links": [
             {
-              "label": "Portfolio",
+              "label": "Faculty profile",
               "url": "https://med.umn.edu/bio/michael-loushin"
             }
           ]
@@ -213,12 +213,12 @@
           "roles": [
             "Assistant Professor of Surgery, University of Minnesota"
           ],
-          "photo": "",
+          "photo": "javier-navarro-rueda.jpg",
           "labRole": "Visible Heart® Laboratories",
           "blurb": "Works with the Visible Heart® Laboratories on cardiovascular anatomy and device research.",
           "links": [
             {
-              "label": "Portfolio",
+              "label": "Faculty profile",
               "url": "https://med.umn.edu/bio/javier-navarro-rueda"
             }
           ]
@@ -229,11 +229,11 @@
           "roles": [
             "Professor of Urology and Surgery, University of Washington"
           ],
-          "photo": "",
+          "photo": "robert-m-sweet.jpg",
           "blurb": "Executive Director of the WWAMI Institute for Simulation in Healthcare (WISH) and Director of the Center for Research in Education and Simulation Technologies (CREST), and Chief of the Division of Healthcare Simulation Science. A long-time collaborator on surgical simulation and skills assessment.",
           "links": [
             {
-              "label": "Portfolio",
+              "label": "Faculty profile",
               "url": "https://urology.uw.edu/people/faculty/robert-sweet"
             }
           ]

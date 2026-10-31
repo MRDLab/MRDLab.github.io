@@ -593,7 +593,9 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
 }
 .badge-past {
   background: var(--paper-grey);
-  color: var(--ink-faint);
+  /* --ink-faint here measured 3.93:1 against this background, under the
+     4.5:1 WCAG AA minimum for text this size. --ink-soft gives ~6:1. */
+  color: var(--ink-soft);
   border: 1px solid var(--rule);
 }
 
@@ -1007,4 +1009,62 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
 @media print {
   .topbar, .nav, .nav-toggle { display: none; }
   body { font-size: 11pt; }
+}
+
+/* ---------------------------------------------------- commercialization -- */
+
+.venture-list { display: grid; gap: 30px; }
+
+.venture {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--maroon);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* These logos are white-on-transparent, so each plate takes the company's
+   own background colour, sampled from their site, rather than our maroon. */
+.venture .logo {
+  display: grid;
+  place-items: center;
+  padding: 30px 34px;
+  min-height: 190px;
+  background-color: var(--plate, var(--maroon-dark));
+  background-image:
+    repeating-linear-gradient(135deg,
+      rgba(255, 255, 255, .035) 0px,
+      rgba(255, 255, 255, .035) 1px,
+      transparent 1px,
+      transparent 7px),
+    linear-gradient(160deg, rgba(255, 255, 255, .07) 0%, rgba(0, 0, 0, .18) 100%);
+}
+.venture .logo.csats     { --plate: #173440; }  /* csats.com */
+.venture .logo.lightside { --plate: #081927; }  /* lightsidesurgical.com */
+/* height:auto matters — without it the img's height attribute wins once
+   max-width shrinks the element, and the logo distorts. */
+.venture .logo img { max-width: 100%; max-height: 120px; width: auto; height: auto; }
+.venture .logo:hover img { opacity: .85; }
+
+.venture-body { padding: 28px 32px; }
+.venture-body h2 { font-size: 1.4rem; margin-bottom: .25em; }
+.venture-body .meta {
+  font-size: .78rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+.venture-body p { font-size: .97rem; }
+.venture-links { margin: 18px 0 0; }
+
+@media (max-width: 760px) {
+  .venture { grid-template-columns: 1fr; }
+  .venture .logo { min-height: 150px; padding: 24px 26px; }
+  .venture .logo img { max-height: 92px; }
+  .venture-body { padding: 22px 22px 24px; }
 }

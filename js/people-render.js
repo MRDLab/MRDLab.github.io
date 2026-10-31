@@ -13,7 +13,7 @@
   var FRESH = { cache: 'no-cache' };
 
   // Degree and generational suffixes are not part of the name.
-  var SUFFIXES = /^(phd|md|ms|msme|bs|bsme|dsc|scd|jr|sr|ii|iii|iv)$/i;
+  var SUFFIXES = /^(phd|md|ms|msme|bs|bsme|dsc|scd|facs|facc|frcs|fhrs|fieee|mph|do|jr|sr|ii|iii|iv)$/i;
 
   function initials(name) {
     var parts = String(name)
