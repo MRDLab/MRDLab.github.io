@@ -9,8 +9,15 @@
 
   var PHOTO_DIR = 'images/people/';
 
+  // Degree and generational suffixes are not part of the name.
+  var SUFFIXES = /^(phd|md|ms|msme|bs|bsme|dsc|scd|jr|sr|ii|iii|iv)$/i;
+
   function initials(name) {
-    var parts = String(name).replace(/[^A-Za-z\s'-]/g, '').trim().split(/\s+/);
+    var parts = String(name)
+      .split(/[\s,]+/)
+      .map(function (p) { return p.replace(/[^A-Za-z'-]/g, ''); })
+      .filter(function (p) { return p && !SUFFIXES.test(p); });
+
     if (!parts.length) return '?';
     var first = parts[0].charAt(0);
     var last = parts.length > 1 ? parts[parts.length - 1].charAt(0) : '';
