@@ -714,7 +714,9 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
   border-bottom: 1px solid var(--rule);
   display: grid;
   place-items: center;
-  padding: 18px 22px;
+  /* Tight padding so a wide logo still fills the plate rather than
+     shrinking to a stamp in the middle of it. */
+  padding: 16px 20px;
 }
 .collab .logo img {
   max-height: 100%;
