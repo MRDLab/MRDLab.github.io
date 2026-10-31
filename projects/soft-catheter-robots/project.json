@@ -21,12 +21,37 @@
     }
   ],
   "publications": [
-    { "label": "Gilbertson et al. — Computational Inverse Design (2018)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2018ComputationalInverseDesign.pdf" },
-    { "label": "Gilbertson et al. — Inverse Design Methodology (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2017InverseDesignMethodology.pdf" },
-    { "label": "Gilbertson et al. — Serially Actuated Locomotion (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2017SeriallyActuatedLocomotion.pdf" },
-    { "label": "Gilbertson et al. — Force Analysis and Modelling (2016)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2016ForceAnalysisAndModelling.pdf" },
-    { "label": "Gilbertson et al. — Soft Passive Valves (2016)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2016SoftPassiveValves.pdf" },
-    { "label": "Awasthi et al. — Generalized Kinematics of Deformable Robots (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Awasthi2017GeneralizedKinematicsDeformable.pdf" },
-    { "label": "IROS 2017 traction poster", "url": "http://www.me.umn.edu/labs/mrd/pdfs/IROS_2017_Poster_Traction.pdf" }
+    {
+      "label": "Gotthelf, Farhat Ullah, Narkhede, Fick, Kowalewski — Estimating the Non-parametric Jacobian of a Tendon-driven Soft Robot (DMD 2026)",
+      "url": "https://doi.org/10.1115/DMD2026-1076"
+    },
+    {
+      "label": "Gilbertson et al. — Computational Inverse Design (2018)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2018ComputationalInverseDesign.pdf"
+    },
+    {
+      "label": "Gilbertson et al. — Inverse Design Methodology (2017)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2017InverseDesignMethodology.pdf"
+    },
+    {
+      "label": "Gilbertson et al. — Serially Actuated Locomotion (2017)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2017SeriallyActuatedLocomotion.pdf"
+    },
+    {
+      "label": "Gilbertson et al. — Force Analysis and Modelling (2016)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2016ForceAnalysisAndModelling.pdf"
+    },
+    {
+      "label": "Gilbertson et al. — Soft Passive Valves (2016)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2016SoftPassiveValves.pdf"
+    },
+    {
+      "label": "Awasthi et al. — Generalized Kinematics of Deformable Robots (2017)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Awasthi2017GeneralizedKinematicsDeformable.pdf"
+    },
+    {
+      "label": "IROS 2017 traction poster",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/IROS_2017_Poster_Traction.pdf"
+    }
   ]
 }
