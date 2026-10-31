@@ -895,6 +895,11 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
   .grid-4 { grid-template-columns: repeat(3, 1fr); }
   .project-grid { grid-template-columns: 1fr; gap: 24px; }
   .contact-grid { grid-template-columns: 1fr; }
+
+  /* Hero stacks: the mark's column is wider than a narrow viewport allows. */
+  .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+  .hero-mark { justify-self: start; padding: 24px 28px; }
+  .hero-mark img { width: 280px; }
   .alumni-list { columns: 2; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .person-lead { grid-template-columns: 1fr; }
@@ -932,8 +937,26 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
   }
   .nav a[aria-current="page"] { border-left-color: var(--gold-deep); }
 
-  .hero { padding: 52px 0 56px; }
+  .hero { padding: 44px 0 48px; }
   section { padding: 44px 0; }
+
+  /* Stacked hero buttons read better matched than ragged */
+  .hero-text .btn { display: block; text-align: center; }
+  .hero-text .btn + .btn { margin-top: 10px; }
+
+  /* Let the mark size to the card rather than a fixed 330px */
+  .hero-mark {
+    justify-self: stretch;
+    padding: 20px 22px;
+    border-bottom-width: 4px;
+  }
+  .hero-mark img { width: 100%; max-width: 280px; margin: 0 auto; }
+
+  /* Shorter plates so a card isn't mostly logo on a small screen */
+  .collab .logo { height: 118px; padding: 14px 16px; }
+
+  .footer-umn { padding-bottom: 14px; }
+  .footer-umn img { width: 240px; max-width: 78%; }
 
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .alumni-list { columns: 1; }
