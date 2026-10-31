@@ -6,13 +6,14 @@ Logos for the Collaborators strip at the bottom of the home page.
 |---|---|---|
 | `visible-heart-laboratory.jpg` | Visible Heart® Laboratories (UMN) | their site's banner photo |
 | `rpm-lab.jpg` | Robotics: Perception and Manipulation Lab (MnRI) | their Fall 2025 group photo |
-| `medtronic.png` *(not present)* | Medtronic | — wordmark shown instead |
+| `medtronic.svg` | Medtronic | Wikimedia Commons (vector, brand blue #224a87) |
 
 **Why photos and not logos:** neither UMN lab publishes a standalone logo —
 the RPM Lab has only a 32x32 favicon and Visible Heart uses the University
-wordmark — so their cards use a picture from their own home page. Medtronic's
-site blocks automated requests and their logo is a corporate trademark, so
-that card shows a wordmark until someone supplies an approved file.
+wordmark — so their cards use a picture from their own home page. Medtronic's own
+site blocks automated requests, so their logo came from Wikimedia Commons,
+where it is in the public domain for copyright (simple geometry) but is still
+flagged **trademarked** — see the permission note below.
 
 A card marked `class="logo photo"` in `index.html` crops its image to fill the
 plate; a plain `class="logo"` fits a logo inside it with padding. Switch the

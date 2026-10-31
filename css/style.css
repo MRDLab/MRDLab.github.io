@@ -153,22 +153,30 @@ p { margin: 0 0 1.1em; }
   color: var(--maroon);
   letter-spacing: -.005em;
 }
+/* Official University wordmark + unit name, the way UMN brands its units.
+   The department has no standalone banner image — its own site sets the unit
+   name as text beside the campus wordmark, so this mirrors that. */
 .brand .sub {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 8px;
+  min-width: 0;
+}
+.brand .sub img {
+  height: 23px;
+  width: auto;
+  flex: none;
+}
+.brand .sub .dept {
   font-size: .76rem;
   letter-spacing: .11em;
   text-transform: uppercase;
   color: var(--ink-faint);
   font-weight: 600;
-  margin-top: 5px;
-}
-.brand .sub::before {
-  content: "";
-  display: inline-block;
-  width: 26px;
-  height: 3px;
-  background: var(--gold);
-  vertical-align: middle;
-  margin-right: 9px;
+  padding-left: 11px;
+  border-left: 2px solid var(--gold);
+  line-height: 1.2;
 }
 
 /* Lab logo, pinned top-right on every page */
@@ -261,6 +269,25 @@ p { margin: 0 0 1.1em; }
   padding: 72px 0 78px;
   border-bottom: 4px solid var(--gold);
 }
+/* Text left, lab mark right — fills the empty half of the banner.
+   The logo's own letters are maroon, so it sits on a light plate rather
+   than directly on the maroon ground where it would disappear. */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 56px;
+  align-items: center;
+}
+.hero-mark {
+  flex: none;
+  background: var(--paper);
+  border-radius: 8px;
+  border-bottom: 5px solid var(--gold);
+  padding: 30px 34px;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, .28);
+}
+.hero-mark img { width: 330px; height: auto; }
+
 .hero h1 { color: #fff; max-width: 17ch; }
 .hero .kicker {
   display: inline-block;
@@ -879,8 +906,13 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
 
   .masthead .wrap { padding-top: 13px; padding-bottom: 13px; gap: 14px; }
   .brand .title { font-size: 1.05rem; }
-  .brand .sub { font-size: .66rem; letter-spacing: .08em; }
-  .brand .sub::before { width: 16px; margin-right: 6px; }
+  .brand .sub { gap: 7px; margin-top: 6px; flex-wrap: wrap; }
+  .brand .sub img { height: 17px; }
+  .brand .sub .dept {
+    font-size: .6rem;
+    letter-spacing: .07em;
+    padding-left: 7px;
+  }
   .brand-logo img { height: 50px; }
 
   .nav-toggle { display: block; }
