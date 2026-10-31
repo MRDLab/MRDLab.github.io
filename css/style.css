@@ -1,0 +1,668 @@
+/* ==========================================================================
+   Medical Robotics and Devices Lab — University of Minnesota
+   Palette and type pulled from the previous site (UMN "Folwell" theme).
+   ========================================================================== */
+
+:root {
+  /* UMN brand colors, sampled from the old mrd.umn.edu stylesheet */
+  --maroon:        #7a0019;
+  --maroon-dark:   #4d0010;
+  --maroon-mid:    #900021;
+  --maroon-light:  #a10021;
+  --gold:          #ffcc33;
+  --gold-deep:     #ffb71e;
+  --gold-pale:     #ffde7a;
+
+  /* Neutrals */
+  --ink:           #333333;
+  --ink-soft:      #5a5a5a;
+  --ink-faint:     #777677;
+  --rule:          #d5d6d2;
+  --paper:         #ffffff;
+  --paper-warm:    #f9f7f6;
+  --paper-grey:    #f0efee;
+
+  --wrap:          1160px;
+  --radius:        4px;
+  --shadow:        0 1px 3px rgba(0, 0, 0, .10), 0 6px 18px rgba(0, 0, 0, .05);
+  --shadow-lift:   0 2px 6px rgba(0, 0, 0, .13), 0 14px 32px rgba(0, 0, 0, .10);
+
+  --sans: "Open Sans", Helvetica, "Helvetica Neue", Verdana, Geneva, sans-serif;
+  --serif: Georgia, Times, "Times New Roman", serif;
+}
+
+/* --------------------------------------------------------------- reset -- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--maroon); }
+a:hover { color: var(--maroon-light); }
+
+h1, h2, h3, h4 {
+  font-family: var(--sans);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--maroon-dark);
+  margin: 0 0 .5em;
+}
+
+h1 { font-size: 2.45rem; }
+h2 { font-size: 1.85rem; }
+h3 { font-size: 1.22rem; }
+
+p { margin: 0 0 1.1em; }
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  background: var(--gold);
+  color: var(--maroon-dark);
+  padding: 10px 18px;
+  font-weight: 700;
+  z-index: 100;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+/* ------------------------------------------------------- texture utils -- */
+
+/* Fine diagonal weave laid over maroon fields — carries the "texture" of the
+   old site's banner without needing an image file. */
+.textured {
+  position: relative;
+  background-color: var(--maroon);
+  background-image:
+    repeating-linear-gradient(135deg,
+      rgba(255, 255, 255, .035) 0px,
+      rgba(255, 255, 255, .035) 1px,
+      transparent 1px,
+      transparent 6px),
+    radial-gradient(ellipse at 18% 0%,
+      rgba(255, 204, 51, .16) 0%,
+      transparent 58%),
+    linear-gradient(160deg, var(--maroon-mid) 0%, var(--maroon-dark) 100%);
+}
+
+/* ---------------------------------------------------------- top banner -- */
+
+.topbar {
+  background: var(--maroon-dark);
+  color: #fff;
+  font-size: .78rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.topbar .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 34px;
+  gap: 16px;
+}
+.topbar a { color: var(--gold-pale); text-decoration: none; }
+.topbar a:hover { color: #fff; text-decoration: underline; }
+
+/* Light plate so the maroon/gold logo keeps its contrast */
+.masthead {
+  background-color: var(--paper);
+  background-image:
+    repeating-linear-gradient(135deg,
+      rgba(122, 0, 25, .022) 0px,
+      rgba(122, 0, 25, .022) 1px,
+      transparent 1px,
+      transparent 7px),
+    linear-gradient(180deg, #fff 0%, var(--paper-warm) 100%);
+  border-bottom: 1px solid var(--rule);
+}
+.masthead .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  min-width: 0;
+}
+.brand .title {
+  font-size: 1.42rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--maroon);
+  letter-spacing: -.005em;
+}
+.brand .sub {
+  font-size: .76rem;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 600;
+  margin-top: 5px;
+}
+.brand .sub::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 3px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 9px;
+}
+
+/* Lab logo, pinned top-right on every page */
+.brand-logo {
+  flex: none;
+  display: block;
+  line-height: 0;
+}
+.brand-logo img {
+  height: 72px;
+  width: auto;
+}
+
+/* ----------------------------------------------------------- nav (4 up) - */
+
+.navbar {
+  background-color: var(--maroon);
+  background-image:
+    repeating-linear-gradient(135deg,
+      rgba(255, 255, 255, .04) 0px,
+      rgba(255, 255, 255, .04) 1px,
+      transparent 1px,
+      transparent 6px),
+    linear-gradient(90deg, var(--maroon-dark) 0%, var(--maroon) 46%, var(--maroon-mid) 100%);
+  border-bottom: 4px solid var(--gold);
+}
+.navbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font: inherit;
+  font-weight: 700;
+  font-size: .9rem;
+  padding: 7px 14px;
+  margin: 9px 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2px;
+}
+.nav a {
+  display: block;
+  padding: 15px 22px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .95rem;
+  letter-spacing: .03em;
+  border-bottom: 4px solid transparent;
+  margin-bottom: -4px;
+}
+.nav a:hover {
+  background: rgba(0, 0, 0, .20);
+  color: var(--gold);
+}
+.nav a[aria-current="page"] {
+  color: var(--maroon-dark);
+  background: var(--gold);
+  border-bottom-color: var(--gold-deep);
+}
+
+/* ---------------------------------------------------------------- hero -- */
+
+.hero {
+  color: #fff;
+  padding: 72px 0 78px;
+  border-bottom: 4px solid var(--gold);
+}
+.hero h1 { color: #fff; max-width: 17ch; }
+.hero .kicker {
+  display: inline-block;
+  font-size: .78rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.hero .lede {
+  font-size: 1.16rem;
+  max-width: 62ch;
+  color: rgba(255, 255, 255, .93);
+  margin-bottom: 1.6em;
+}
+
+/* page header for interior pages */
+.page-head {
+  color: #fff;
+  padding: 48px 0 52px;
+  border-bottom: 4px solid var(--gold);
+}
+.page-head h1 { color: #fff; margin-bottom: .25em; }
+.page-head p {
+  max-width: 64ch;
+  color: rgba(255, 255, 255, .9);
+  margin: 0;
+}
+
+/* -------------------------------------------------------------- button -- */
+
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  font-weight: 700;
+  font-size: .95rem;
+  letter-spacing: .03em;
+  text-decoration: none;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  transition: transform .12s ease, background-color .12s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--maroon-dark);
+  border-color: var(--gold);
+}
+.btn-gold:hover { background: var(--gold-deep); color: var(--maroon-dark); }
+
+.btn-ghost {
+  border-color: rgba(255, 255, 255, .6);
+  color: #fff;
+}
+.btn-ghost:hover { background: rgba(255, 255, 255, .12); color: #fff; }
+
+.btn-maroon {
+  background: var(--maroon);
+  color: #fff;
+  border-color: var(--maroon);
+}
+.btn-maroon:hover { background: var(--maroon-light); color: #fff; }
+
+/* ------------------------------------------------------------ sections -- */
+
+section { padding: 62px 0; }
+section.tight { padding: 44px 0; }
+section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+
+.section-head { margin-bottom: 34px; max-width: 68ch; }
+.section-head h2 { margin-bottom: .3em; }
+.section-head h2::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: var(--gold);
+  margin-top: 14px;
+}
+.section-head p { color: var(--ink-soft); margin: 0; }
+
+/* ---------------------------------------------------------- grid/cards -- */
+
+.grid { display: grid; gap: 26px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--maroon);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .16s ease, transform .16s ease;
+}
+.card:hover { box-shadow: var(--shadow-lift); transform: translateY(-2px); }
+.card .card-body { padding: 24px; flex: 1; }
+.card h3 { margin-bottom: .45em; }
+.card p { color: var(--ink-soft); font-size: .96rem; margin-bottom: 0; }
+
+/* Stat / focus tiles on the home page */
+.tile {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-left: 5px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.tile h3 { font-size: 1.05rem; margin-bottom: .4em; }
+.tile p { font-size: .94rem; color: var(--ink-soft); margin: 0; }
+
+/* -------------------------------------------------------- people cards -- */
+
+.person {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: box-shadow .16s ease, transform .16s ease;
+}
+.person:hover { box-shadow: var(--shadow-lift); transform: translateY(-2px); }
+
+.person .photo {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: var(--paper-grey);
+  overflow: hidden;
+}
+.person .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Shown when no photo file is present yet */
+.person .photo .placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .02em;
+  background-color: var(--maroon);
+  background-image:
+    repeating-linear-gradient(135deg,
+      rgba(255, 255, 255, .05) 0px,
+      rgba(255, 255, 255, .05) 1px,
+      transparent 1px,
+      transparent 7px),
+    linear-gradient(160deg, var(--maroon-mid) 0%, var(--maroon-dark) 100%);
+}
+
+.person .info { padding: 18px 20px 22px; }
+.person .name { font-size: 1.06rem; font-weight: 700; color: var(--maroon-dark); margin: 0 0 3px; }
+.person .role { font-size: .85rem; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 8px; }
+.person .blurb { font-size: .92rem; color: var(--ink-soft); margin: 0 0 10px; }
+.person .links { font-size: .88rem; }
+.person .links a { margin-right: 12px; text-decoration: none; font-weight: 600; }
+.person .links a:hover { text-decoration: underline; }
+
+/* PI gets a wide, two-column treatment */
+.person-lead {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  border-top: 4px solid var(--maroon);
+}
+.person-lead .photo { aspect-ratio: auto; height: 100%; min-height: 260px; }
+.person-lead .info { padding: 30px 32px; }
+.person-lead .name { font-size: 1.5rem; }
+
+/* Alumni: compact list, no photos */
+.alumni-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 3;
+  column-gap: 32px;
+}
+.alumni-list li {
+  break-inside: avoid;
+  padding: 7px 0 7px 14px;
+  border-left: 3px solid var(--gold);
+  margin-bottom: 8px;
+  font-size: .95rem;
+}
+.alumni-list .yr { color: var(--ink-faint); font-size: .86rem; display: block; }
+
+/* ------------------------------------------------------ project blocks -- */
+
+.project {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 0;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 34px;
+}
+.project:nth-child(even) .project-media { order: 2; }
+
+.project-media {
+  position: relative;
+  min-height: 280px;
+  background: var(--paper-grey);
+}
+.project-media img { width: 100%; height: 100%; object-fit: cover; }
+.project-media .placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 24px;
+  color: rgba(255, 255, 255, .85);
+  font-size: .85rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background-color: var(--maroon);
+  background-image:
+    repeating-linear-gradient(135deg,
+      rgba(255, 255, 255, .05) 0px,
+      rgba(255, 255, 255, .05) 1px,
+      transparent 1px,
+      transparent 7px),
+    linear-gradient(160deg, var(--maroon-mid) 0%, var(--maroon-dark) 100%);
+}
+
+.project-body { padding: 32px 36px; }
+.project-body h3 { font-size: 1.4rem; }
+.project-body .tagline {
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.project-body p { font-size: .97rem; }
+.project-body .researchers {
+  font-size: .88rem;
+  color: var(--ink-faint);
+  border-top: 1px solid var(--rule);
+  padding-top: 14px;
+  margin: 18px 0 0;
+}
+.project-body .researchers strong { color: var(--ink-soft); }
+
+/* --------------------------------------------------------- contact bits - */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.contact-cta {
+  border-radius: var(--radius);
+  padding: 40px;
+  color: #fff;
+  text-align: center;
+}
+.contact-cta h2 { color: #fff; }
+.contact-cta p { color: rgba(255, 255, 255, .92); max-width: 46ch; margin-left: auto; margin-right: auto; }
+.contact-cta .email {
+  display: inline-block;
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+  margin: 6px 0 22px;
+  word-break: break-word;
+}
+.contact-cta .email:hover { text-decoration: underline; color: var(--gold-pale); }
+
+.info-block {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--maroon);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 30px;
+  margin-bottom: 24px;
+}
+.info-block h3 { margin-bottom: .6em; }
+
+.detail-list { list-style: none; margin: 0; padding: 0; }
+.detail-list li {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: .95rem;
+}
+.detail-list li:last-child { border-bottom: 0; }
+.detail-list .label {
+  font-weight: 700;
+  color: var(--maroon-dark);
+  font-size: .8rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding-top: 3px;
+}
+.detail-list address { font-style: normal; }
+
+/* -------------------------------------------------------------- footer -- */
+
+.site-footer {
+  color: rgba(255, 255, 255, .82);
+  padding: 46px 0 28px;
+  border-top: 4px solid var(--gold);
+  font-size: .92rem;
+}
+.site-footer h4 {
+  color: var(--gold);
+  font-size: .8rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .9em;
+}
+.site-footer a { color: rgba(255, 255, 255, .88); text-decoration: none; }
+.site-footer a:hover { color: var(--gold); text-decoration: underline; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; }
+.site-footer li { margin-bottom: 7px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.4fr;
+  gap: 40px;
+  padding-bottom: 28px;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, .18);
+  padding-top: 20px;
+  font-size: .84rem;
+  color: rgba(255, 255, 255, .62);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------- responsive --- */
+
+@media (max-width: 980px) {
+  .grid-4 { grid-template-columns: repeat(3, 1fr); }
+  .project { grid-template-columns: 1fr; }
+  .project:nth-child(even) .project-media { order: 0; }
+  .project-media { min-height: 220px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .alumni-list { columns: 2; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .person-lead { grid-template-columns: 1fr; }
+  .person-lead .photo { min-height: 300px; }
+}
+
+@media (max-width: 760px) {
+  body { font-size: 16px; }
+  h1 { font-size: 1.95rem; }
+  h2 { font-size: 1.55rem; }
+
+  .masthead .wrap { padding-top: 13px; padding-bottom: 13px; gap: 14px; }
+  .brand .title { font-size: 1.05rem; }
+  .brand .sub { font-size: .66rem; letter-spacing: .08em; }
+  .brand .sub::before { width: 16px; margin-right: 6px; }
+  .brand-logo img { height: 50px; }
+
+  .nav-toggle { display: block; }
+  .nav {
+    flex-basis: 100%;
+    display: none;
+  }
+  .nav.open { display: block; }
+  .nav ul { flex-direction: column; gap: 0; padding-bottom: 8px; }
+  .nav a {
+    border-bottom: 1px solid rgba(255, 255, 255, .14);
+    border-left: 4px solid transparent;
+    margin-bottom: 0;
+    padding: 13px 10px;
+  }
+  .nav a[aria-current="page"] { border-left-color: var(--gold-deep); }
+
+  .hero { padding: 52px 0 56px; }
+  section { padding: 44px 0; }
+
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .alumni-list { columns: 1; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .project-body { padding: 26px 24px; }
+  .contact-cta { padding: 30px 22px; }
+  .detail-list li { grid-template-columns: 1fr; gap: 2px; }
+}
+
+/* People grid sizing — auto-fit so rows stay even as the roster changes */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 26px;
+}
+
+@media print {
+  .topbar, .nav, .nav-toggle { display: none; }
+  body { font-size: 11pt; }
+}

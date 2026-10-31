@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Medical Robotics and Devices Lab</title>
+<meta name="description" content="Active research projects in the Medical Robotics and Devices Lab: bioprinting, soft catheter robots, shared control, surgical skill evaluation, tissue identification, and tissue characterization.">
+<link rel="icon" href="images/shared/mrd-logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>University of Minnesota &middot; Twin Cities</span>
+    <span><a href="contact.html">Join the lab &rarr;</a></span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="title">Medical Robotics &amp; Devices Lab</span>
+      <span class="sub">Department of Mechanical Engineering</span>
+    </a>
+    <a class="brand-logo" href="index.html" aria-label="MRD Lab home">
+      <img src="images/shared/mrd-logo.png" alt="Medical Robotics and Devices Lab logo">
+    </a>
+  </div>
+</header>
+
+<div class="navbar">
+  <div class="wrap">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main id="main">
+
+  <div class="page-head textured">
+    <div class="wrap">
+      <h1>Research Projects</h1>
+      <p>
+        Six active lines of research, spanning soft robotic hardware, smart
+        surgical instruments, and the data science of surgical performance.
+      </p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+
+      <!-- ===================================================== bioprinting -->
+      <article class="project" id="bioprinting">
+        <div class="project-media">
+          <img src="images/projects/bioprinting.jpg" alt="3D bioprinting onto moving anatomy"
+               loading="lazy"
+               data-fallback-text="Add images/projects/bioprinting.jpg">
+        </div>
+        <div class="project-body">
+          <p class="tagline">Additive manufacturing &middot; Tissue engineering</p>
+          <h3>3D Bioprinting Directly Onto Moving Human Anatomy</h3>
+          <p>
+            Organ transplantation has saved countless lives, but supply remains the
+            limiting factor. Combining tissue engineering with additive manufacturing
+            offers a route to building organ scaffolds directly &mdash; if the printer
+            can cope with a target that will not hold still.
+          </p>
+          <p>
+            We investigate the possibility of 3D printing directly onto unpredictably
+            moving human anatomy. The objective is to let surgeons print tissue onto
+            other tissue &mdash; for example, printing a skin graft directly onto a
+            patient without limiting the patient's range of motion. The core challenges
+            are motion tracking, depositing material accurately on non-rigid moving
+            surfaces, and trading print speed against print accuracy.
+          </p>
+          <p class="researchers">
+            <strong>Previous researchers:</strong> Rebecca Smith, Reed Johnson,
+            John O'Neill, Rodney Dockter, Anna French
+          </p>
+        </div>
+      </article>
+
+      <!-- =========================================== soft catheter robots -->
+      <article class="project" id="soft-catheter-robots">
+        <div class="project-media">
+          <img src="images/projects/soft-catheter-robots.jpg" alt="Soft catheter robot"
+               loading="lazy"
+               data-fallback-text="Add images/projects/soft-catheter-robots.jpg">
+        </div>
+        <div class="project-body">
+          <p class="tagline">Soft robotics &middot; Inverse design</p>
+          <h3>Soft Catheter Robots</h3>
+          <p>
+            The research objective of this work is to establish and validate a
+            mathematical framework for the inverse design of universal soft robots:
+            robots that deliver exceptional force and power densities, and that can be
+            produced by robotic, automated manufacturing via 3D printed materials
+            exploiting highly anisotropic elastomers, inextensible fibers, and beam
+            elements.
+          </p>
+          <p>
+            The method is multiscale inverse design &mdash; generating actuator geometry
+            fitted to a specific patient anatomy taken from CT. Anatomy centerlines are
+            computed automatically via VMTK, convex blending maps the initial centerline
+            to the desired one as a function of joint angle, and a Frenet&ndash;Serret
+            parametrization fits the actuator surface to those centerlines.
+          </p>
+          <p class="researchers">
+            <strong>Previous researchers:</strong> Mark Gilbertson, Gillian McDonald
+          </p>
+        </div>
+      </article>
+
+      <!-- ================================================== shared control -->
+      <article class="project" id="shared-control">
+        <div class="project-media">
+          <img src="images/projects/shared-control.jpg" alt="Shared control of a surgical robot"
+               loading="lazy"
+               data-fallback-text="Add images/projects/shared-control.jpg">
+        </div>
+        <div class="project-body">
+          <p class="tagline">Controls &middot; Human&ndash;robot interaction</p>
+          <h3>Shared Control</h3>
+          <p>
+            Despite the wealth of sensory data available during robot-assisted surgery,
+            current surgical operations do not use that data. We are developing
+            intelligent surgical robots that blend control inputs from both the robot
+            and the surgeon, rather than treating the robot as a purely passive
+            teleoperated tool.
+          </p>
+          <p>
+            A central focus is shared control of tissue grasping: holding the grasping
+            force in an optimal range throughout a robotic procedure, even when the
+            surgeon receives no force feedback at all.
+          </p>
+          <p class="researchers">
+            <strong>Previous researchers:</strong> Trevor Stephens
+          </p>
+        </div>
+      </article>
+
+      <!-- ======================================= surgical skill evaluation -->
+      <article class="project" id="surgical-skill-evaluation">
+        <div class="project-media">
+          <img src="images/projects/surgical-skill-evaluation.jpg" alt="Surgical skill evaluation data"
+               loading="lazy"
+               data-fallback-text="Add images/projects/surgical-skill-evaluation.jpg">
+        </div>
+        <div class="project-body">
+          <p class="tagline">Surgical data science &middot; Machine learning</p>
+          <h3>Surgical Skill Evaluation</h3>
+          <p>
+            How can technical surgical skill be quantified? We propose features for
+            automated skill evaluation that stay relevant regardless of which surgical
+            training task the tools are performing, and that can diagnose skill without
+            requiring the complete time series of data from a given trial.
+          </p>
+          <p>
+            Open questions driving the work: how much does tool-motion trajectory tell
+            us relative to full video? Which aspects of tool-motion dynamics separate
+            skilled from unskilled performance? And what feedback most efficiently
+            improves a trainee's ability? We also study the importance of pre-procedural
+            warm-up in surgery, via the Robotic Readiness Study.
+          </p>
+          <p class="researchers">
+            <strong>Previous researchers:</strong> Jason Kelly
+          </p>
+        </div>
+      </article>
+
+      <!-- ============================================ tissue identification -->
+      <article class="project" id="tissue-identification">
+        <div class="project-media">
+          <img src="images/projects/tissue-identification.jpg" alt="Sensorized laparoscopic grasper"
+               loading="lazy"
+               data-fallback-text="Add images/projects/tissue-identification.jpg">
+        </div>
+        <div class="project-body">
+          <p class="tagline">Smart instruments &middot; Sensing</p>
+          <h3>Tissue Identification</h3>
+          <p>
+            Given the lack of force feedback available to clinicians performing
+            laparoscopic and robot-assisted surgeries, it is often difficult to
+            determine how much force to apply to a tissue &mdash; or even to tell which
+            tissue is in the jaws.
+          </p>
+          <p>
+            We developed a laparoscopic grasper instrumented with force and displacement
+            sensors that recognizes tissue in real time and relays that information back
+            to the surgeon. Because measuring force directly at the grasping site is
+            difficult, a parallel effort estimates grip force for da Vinci surgical tools
+            from backend sensors using machine learning methods such as neural networks.
+          </p>
+          <p class="researchers">
+            <strong>Previous researchers:</strong> Trevor Stephens, Rodney Dockter,
+            Nathan Kong, Astrini Sie, Michael Winek
+          </p>
+        </div>
+      </article>
+
+      <!-- ========================================= tissue characterization -->
+      <article class="project" id="tissue-characterization">
+        <div class="project-media">
+          <img src="images/projects/tissue-characterization.jpg" alt="In-vivo tissue characterization"
+               loading="lazy"
+               data-fallback-text="Add images/projects/tissue-characterization.jpg">
+        </div>
+        <div class="project-body">
+          <p class="tagline">Biomechanics &middot; Simulation</p>
+          <h3>In-vivo and Ex-vivo Tissue Characterization</h3>
+          <p>
+            Accurate properties of living biological tissues are critically important to
+            the advancement of medical simulation science. Two gaps stand in the way:
+            there is no sufficient database of human tissue properties for surgical
+            simulators to draw on, and there are few robotic tools able to measure
+            in-vivo tissue characteristics in the first place.
+          </p>
+          <p>
+            We build both. A further thread examines how tissue properties shift between
+            the living and ex-vivo states &mdash; accounting for perfusion, temperature,
+            and related factors &mdash; so that the large body of existing ex-vivo data
+            can be made useful for simulator development.
+          </p>
+          <p class="researchers">
+            <strong>Contributors:</strong> Luis E. Morales Tenorio, Kelsey J. Devine,
+            Jayme Lee, Timothy M. Kowalewski, Victor H. Barocas, Trevor K. Stephens,
+            Kelsey A. Harper, Mark J. Brown
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================== CTA -->
+  <section class="tight alt">
+    <div class="wrap">
+      <div class="contact-cta textured">
+        <h2>Want to collaborate?</h2>
+        <p>
+          If any of this overlaps with your own work &mdash; clinical, industrial, or
+          academic &mdash; we would be glad to talk.
+        </p>
+        <a class="email" href="mailto:timk@umn.edu">timk@umn.edu</a><br>
+        <a class="btn btn-gold" href="contact.html">Contact the lab</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer textured">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Medical Robotics &amp; Devices Lab</h4>
+        <p style="margin:0 0 10px;">
+          Advancing the emerging field of computational surgery at the
+          University of Minnesota.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <ul>
+          <li>Mechanical Engineering, Room ME 261</li>
+          <li>111 Church St. SE, Minneapolis, MN 55455</li>
+          <li><a href="mailto:timk@umn.edu">timk@umn.edu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> Medical Robotics and Devices Lab, University of Minnesota.</span>
+      <span>Driven to Discover&reg;</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

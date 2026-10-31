@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>People | Medical Robotics and Devices Lab</title>
+<meta name="description" content="Faculty, students, and alumni of the Medical Robotics and Devices Lab at the University of Minnesota.">
+<link rel="icon" href="images/shared/mrd-logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>University of Minnesota &middot; Twin Cities</span>
+    <span><a href="contact.html">Join the lab &rarr;</a></span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="title">Medical Robotics &amp; Devices Lab</span>
+      <span class="sub">Department of Mechanical Engineering</span>
+    </a>
+    <a class="brand-logo" href="index.html" aria-label="MRD Lab home">
+      <img src="images/shared/mrd-logo.png" alt="Medical Robotics and Devices Lab logo">
+    </a>
+  </div>
+</header>
+
+<div class="navbar">
+  <div class="wrap">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html" aria-current="page">People</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<main id="main">
+
+  <div class="page-head textured">
+    <div class="wrap">
+      <h1>People</h1>
+      <p>
+        The faculty, staff, and students who design, build, and test the lab's
+        robots, instruments, and algorithms.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===================================================== lead faculty -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Lead Faculty</h2>
+      </div>
+      <div id="lead-faculty"></div>
+    </div>
+  </section>
+
+  <!-- ====================================================== lab members -->
+  <section class="alt">
+    <div class="wrap">
+      <div id="people-groups"></div>
+    </div>
+  </section>
+
+  <!-- =========================================================== alumni -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Lab Alumni</h2>
+        <p>Former members of the lab and the degrees they earned here.</p>
+      </div>
+      <ul class="alumni-list" id="alumni-list"></ul>
+    </div>
+  </section>
+
+  <!-- ============================================================== CTA -->
+  <section class="tight">
+    <div class="wrap">
+      <div class="contact-cta textured">
+        <h2>Join the lab</h2>
+        <p>
+          We are always glad to hear from prospective graduate students and
+          undergraduates looking for research experience.
+        </p>
+        <a class="email" href="mailto:timk@umn.edu">timk@umn.edu</a><br>
+        <a class="btn btn-gold" href="contact.html">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer textured">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Medical Robotics &amp; Devices Lab</h4>
+        <p style="margin:0 0 10px;">
+          Advancing the emerging field of computational surgery at the
+          University of Minnesota.
+        </p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <ul>
+          <li>Mechanical Engineering, Room ME 261</li>
+          <li>111 Church St. SE, Minneapolis, MN 55455</li>
+          <li><a href="mailto:timk@umn.edu">timk@umn.edu</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> Medical Robotics and Devices Lab, University of Minnesota.</span>
+      <span>Driven to Discover&reg;</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+<script src="js/people-data.js"></script>
+<script src="js/people-render.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
