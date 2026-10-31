@@ -6,7 +6,7 @@
     "Despite the wealth of sensory data available during robot-assisted surgery, current surgical operations do not use that data. This project developed intelligent surgical robots that blend control inputs from both the robot and the surgeon, rather than treating the robot as a purely passive teleoperated tool.",
     "A central focus was shared control of tissue grasping: holding the grasping force in an optimal range throughout a robotic procedure, even when the surgeon receives no force feedback at all."
   ],
-  "researchers": "Trevor Stephens",
+  "researchers": "Yusra Farhat Ullah, Trevor Stephens",
   "media": [
     {
       "type": "image",

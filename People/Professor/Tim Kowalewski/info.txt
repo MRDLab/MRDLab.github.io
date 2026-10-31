@@ -1,0 +1,42 @@
+# ──────────────────────────────────────────────────────────────────
+#  Tim Kowalewski
+# ──────────────────────────────────────────────────────────────────
+#  Pre-filled from https://cse.umn.edu/me/tim-kowalewski and the
+#  Google Scholar profile. Edit anything that's out of date.
+#
+#  NOTE ON TITLE: the CSE department page still lists "Associate
+#  Professor" (promoted 2020), but his own Google Scholar profile
+#  says "Professor of Mechanical Engineering". Scholar is used below
+#  since it's self-maintained — please confirm which is current.
+#
+#  PHOTO: tim-kowalewski.jpg in this folder is the official UMN
+#  faculty photo. Replace it with any other image to change it.
+#
+#  WHEN DONE:   python3 tools/build_people.py
+# ──────────────────────────────────────────────────────────────────
+
+Name: Timothy M. Kowalewski, Ph.D.
+Role: Professor of Mechanical Engineering · Principal Investigator
+Email: timk@umn.edu
+Website: https://cse.umn.edu/me/tim-kowalewski
+Google Scholar: https://scholar.google.com/citations?user=cNrTOccAAAAJ&hl=en
+
+Bio:
+Dr. Kowalewski directs the Medical Robotics and Devices Lab in the Department
+of Mechanical Engineering at the University of Minnesota, where he has been on
+the faculty since 2012 — first as the Richard and Barbara Nelson Assistant
+Professor, and from 2020 as Associate Professor.
+
+His research advances the emerging field of computational surgery, and centers
+on four threads: instrumented surgical tools that make operating-room technique
+quantitative; custom surgical robots that automate patient access and extract
+procedural information; surgical simulation using virtual reality and realistic
+tissues; and the Surgical Genome Project, a collaborative database of surgical
+procedures with tool-tracking and sensor data.
+
+He holds a Ph.D. (2012), M.S. (2009), and B.S. (2003) in Electrical Engineering
+from the University of Washington, Seattle, where his doctoral work in the
+Biorobotics Lab addressed quantifying surgical skill. He was a research
+scientist on DARPA's "Trauma Pod: Operating Room of the Future" program, and
+co-founded CSATS Inc., acquired by Johnson & Johnson in 2018. He is a recipient
+of an NSF CAREER award and a McKnight Presidential Fellow.

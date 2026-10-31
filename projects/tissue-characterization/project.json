@@ -6,7 +6,7 @@
     "Accurate properties of living biological tissues are critically important to the advancement of medical simulation science. Two gaps stood in the way: there was no sufficient database of human tissue properties for surgical simulators to draw on, and there were few robotic tools able to measure in-vivo tissue characteristics in the first place.",
     "This project built both. A further thread examined how tissue properties shift between the living and ex-vivo states — accounting for perfusion, temperature, and related factors — so that the large body of existing ex-vivo data could be made useful for simulator development."
   ],
-  "researchers": "Luis E. Morales Tenorio, Kelsey J. Devine, Jayme Lee, Timothy M. Kowalewski, Victor H. Barocas, Trevor K. Stephens, Kelsey A. Harper, Mark J. Brown",
+  "researchers": "Timothy M. Kowalewski, Trevor Stephens",
   "media": [
     {
       "type": "video",
@@ -24,7 +24,13 @@
     }
   ],
   "publications": [
-    { "label": "Tenorio et al. — Biomechanics of Human Tissue (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Tenorio2017Biomechanicsofhuman.pdf" },
-    { "label": "Stephens et al. — Decay of Tissue Mechanical Properties (2016)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Stephens2016DecayTissueMechanical.pdf" }
+    {
+      "label": "Tenorio et al. — Biomechanics of Human Tissue (2017)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Tenorio2017Biomechanicsofhuman.pdf"
+    },
+    {
+      "label": "Stephens et al. — Decay of Tissue Mechanical Properties (2016)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Stephens2016DecayTissueMechanical.pdf"
+    }
   ]
 }

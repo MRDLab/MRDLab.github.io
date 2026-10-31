@@ -1,0 +1,47 @@
+# Past lab members who don't have their own folder — just a name and degree.
+#
+# One per line:   Name | Degree
+# A missing degree is fine; leave the part after the | blank.
+# Lines starting with # are ignored. Order here is the order on the page.
+#
+# Anyone who should get a full card with a photo and bio gets their own
+# folder in People/Alumni/ instead, with an info.txt — same as current members.
+
+# ---- Recently graduated (degrees per the lab; graduation years still TBD) ----
+Chaitanya Awasthi   | Ph.D. Mechanical Engineering
+Yusra Farhat Ullah  | Ph.D. Mechanical Engineering
+Travis Beckerle     | Ph.D. Mechanical Engineering
+Nate Davies         | Ph.D. Mechanical Engineering
+Mandi Lye           | Ph.D. Mechanical Engineering
+Matthew Kubala      | Ph.D. Mechanical Engineering
+Adarsh Somayaji     | Ph.D. Mechanical Engineering
+Emily Goldberg      | M.S. Robotics (MnRI)
+Aditya Koratkar     | M.S. Robotics (MnRI)
+Sarah Hanson        | M.S. Robotics (MnRI)
+Faizan Malik        | M.S. Robotics (MnRI)
+Charles Feng        | B.S. Mechanical Engineering
+Khoi Nguyen         | B.S. Computer Science
+Bradley Drahos      | Lab Coordinator
+
+# ---- Earlier alumni, with degrees on record ----
+Orla Gotthelf       | Ph.D. 2024
+Gillian McDonald    | Ph.D. 2021
+Ben Hamlen          | B.S.M.E. 2020
+Rebecca Smith       | Ph.D. 2020
+Jason Kelly         | Ph.D. 2020
+Bin Fu              | M.S. 2020
+Mark Gilbertson     | Ph.D. 2019
+Amer Safdari        | M.S. 2019
+Trevor Stephens     | Ph.D. 2019
+Catherine Ling      | M.S.M.E. 2019
+Anna French         | Ph.D. 2018
+Darrin Beekman      | Ph.D. 2017
+John O'Neill        | Ph.D. 2017
+Rodney Dockter      | Ph.D. 2017
+Alex Win            | M.S.M.E. 2015
+Cory Schaffhausen   | Ph.D. 2015
+Sachin Bijadi       | M.S.M.E. 2014
+Kevin Ruda          | M.S.M.E. 2014
+Michael Winek       | M.S.M.E. 2014
+Jalal Rana          | M.S.M.E. 2013
+Astrini Sie         | M.S.M.E. 2013

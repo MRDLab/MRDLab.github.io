@@ -1,33 +1,12 @@
 # people/
 
-Headshots for the People page (`people.html`).
+**Generated — don't add files here by hand.**
 
-## How to add someone's photo
+`python3 tools/build_people.py` writes these headshots, resized for the web,
+from the original photos in each person's folder under `People/`.
 
-1. Save the photo here as `firstname-lastname.jpg` (all lowercase, hyphenated).
-2. Open `js/people-data.js` and set that person's `photo:` field to the
-   filename, e.g. `photo: 'tim-kowalewski.jpg'`.
+To change someone's photo: drop a new image into their folder in `People/`
+(any size, any filename) and rebuild. Photos of people no longer in `People/`
+are removed from here automatically on the next run.
 
-That's it — the page builds itself from that file.
-
-## If there's no photo yet
-
-Leave `photo: ''`. The card shows a maroon tile with the person's initials
-instead, so the page still looks finished. The same tile appears automatically
-if a filename is wrong or the file is missing, so a typo never breaks the layout.
-
-## Format
-
-- **Square crops**, roughly 600x600. Non-square images get center-cropped.
-- Head and shoulders, face in the upper-middle of the frame.
-- JPEG, under ~300 KB. Resize with:
-
-      sips -Z 600 original.jpg --out firstname-lastname.jpg
-
-## Expected filenames
-
-`js/people-data.js` currently refers to:
-
-- `tim-kowalewski.jpg` — lead faculty
-
-Everyone else is a placeholder awaiting the current roster.
+See `People/README.md` for the full workflow.

@@ -6,7 +6,7 @@
     "Organ transplantation has saved countless lives, but supply remains the limiting factor. Combining tissue engineering with additive manufacturing offers a route to building organ scaffolds directly — if the printer can cope with a target that will not hold still.",
     "This project investigated the possibility of 3D printing directly onto unpredictably moving human anatomy. The objective was to let surgeons print tissue onto other tissue — for example, printing a skin graft directly onto a patient without limiting the patient's range of motion. The core challenges were motion tracking, depositing material accurately on non-rigid moving surfaces, and trading print speed against print accuracy."
   ],
-  "researchers": "Rebecca Smith, Reed Johnson, John O'Neill, Rodney Dockter, Anna French",
+  "researchers": "Rebecca Smith, John O'Neill, Rodney Dockter, Anna French",
   "media": [
     {
       "type": "image",
@@ -21,12 +21,33 @@
     }
   ],
   "publications": [
-    { "label": "O'Neill et al. — 3D Bioprinting Directly Onto Moving Human Anatomy (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/oneill20173DBioprintingDirectly.pdf" },
-    { "label": "Smith et al. — Towards Robotic Bioprinting (2018)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Smith2018TowardsRoboticBioprinting.pdf" },
-    { "label": "French et al. — Dynamic Additive Manufacturing (2018)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/French2018DynamicAdditiveManufacturing.pdf" },
-    { "label": "French et al. — Design for Dynamic Additive Manufacturing (2016)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/French2016DesignDynamicAdditive.pdf" },
-    { "label": "Johnson et al. — Toward Inkjet Additive Manufacturing (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Johnson2017TowardInkjetAdditive.pdf" },
-    { "label": "Johnson et al. — Comparison of Bio-Inks (2018)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Johnson2018ComparisonBioInks.pdf" },
-    { "label": "IROS 2017 Imaging Workshop poster", "url": "http://www.me.umn.edu/labs/mrd/pdfs/IROS2017_Imaging_Workshop_Poster_2.pdf" }
+    {
+      "label": "O'Neill et al. — 3D Bioprinting Directly Onto Moving Human Anatomy (2017)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/oneill20173DBioprintingDirectly.pdf"
+    },
+    {
+      "label": "Smith et al. — Towards Robotic Bioprinting (2018)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Smith2018TowardsRoboticBioprinting.pdf"
+    },
+    {
+      "label": "French et al. — Dynamic Additive Manufacturing (2018)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/French2018DynamicAdditiveManufacturing.pdf"
+    },
+    {
+      "label": "French et al. — Design for Dynamic Additive Manufacturing (2016)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/French2016DesignDynamicAdditive.pdf"
+    },
+    {
+      "label": "Johnson et al. — Toward Inkjet Additive Manufacturing (2017)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Johnson2017TowardInkjetAdditive.pdf"
+    },
+    {
+      "label": "Johnson et al. — Comparison of Bio-Inks (2018)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Johnson2018ComparisonBioInks.pdf"
+    },
+    {
+      "label": "IROS 2017 Imaging Workshop poster",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/IROS2017_Imaging_Workshop_Poster_2.pdf"
+    }
   ]
 }

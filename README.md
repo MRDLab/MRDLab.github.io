@@ -2,7 +2,9 @@
 
 Website for the Medical Robotics and Devices Lab, Department of Mechanical
 Engineering, University of Minnesota. Static HTML/CSS/JS, built to be hosted on
-GitHub Pages. No build step, no frameworks — edit a file, commit, done.
+GitHub Pages. No frameworks and nothing to install — edit a file, commit, done.
+The one script, `tools/build_people.py`, regenerates the People page from the
+`People/` folder and needs only Python 3.
 
 Colors and typography follow the previous site (`mrd.umn.edu`, UMN "Folwell"
 theme): maroon `#7a0019`, gold `#ffcc33`, Open Sans.
@@ -40,9 +42,18 @@ parameter to filter those out.
 │   └── style.css           All styling, including the maroon/gold palette
 ├── js/
 │   ├── site.js             Mobile nav + automatic photo fallbacks
-│   ├── people-data.js      <-- THE ROSTER. Edit to update People.
-│   ├── people-render.js    Builds the People page from the roster
+│   ├── people-data.js      GENERATED from People/ — do not edit
+│   ├── people-render.js    Builds the People page from that data
 │   └── projects-render.js  Builds the Projects page from projects/
+├── People/                 <-- ONE FOLDER PER PERSON
+│   ├── README.md           How to add or update someone
+│   ├── Professor/ PhD_Students/ Masters_Students/ ...
+│   │   └── <Person Name>/
+│   │       ├── info.txt    Their details + bio (paste what they send you)
+│   │       └── photo.jpg   Any size; resized on build
+│   └── Alumni/_past-members.txt   Long roster: just names + degrees
+├── tools/
+│   └── build_people.py     People/ -> js/people-data.js + images/people/
 ├── projects/               <-- ONE FOLDER PER PROJECT
 │   ├── README.md           How to add or edit a project
 │   ├── index.json          Project order and active/past status
@@ -53,7 +64,7 @@ parameter to filter those out.
 │   ├── README.md           Image conventions
 │   ├── shared/             Logo (used on every page)
 │   ├── home/               Home page imagery
-│   └── people/             Headshots
+│   └── people/             GENERATED headshots — do not edit
 └── .nojekyll               Tells GitHub Pages to serve files as-is
 ```
 
@@ -63,25 +74,26 @@ parameter to filter those out.
 
 ### Update the people roster
 
-Edit **`js/people-data.js`** only. Each person is one object:
+Everyone has a folder under **`People/`** holding an `info.txt` and their
+photo. Three steps:
 
-```js
-{
-  name:  'Jane Doe',
-  role:  'Doctoral Student',
-  photo: 'jane-doe.jpg',        // file in images/people/ — or '' for none
-  email: 'doe0001@umn.edu',     // optional
-  blurb: 'Works on soft catheter robots.'   // optional
-}
+1. Paste what they sent you into their `info.txt` (under `Bio:`).
+2. Drop a photo into their folder — **any size, any filename**.
+3. Run `python3 tools/build_people.py`, then commit.
+
+```
+People/PhD_Students/Ethan Foley/
+├── info.txt          Name, Role, Email, links, Bio
+└── ethan.jpg         any size — resized automatically
 ```
 
-Add the photo to `images/people/`, add the entry, commit. If the photo is
-missing or the filename is wrong, the card falls back to a maroon tile with the
-person's initials — the layout never breaks.
+The script writes `js/people-data.js` and web-sized copies into
+`images/people/`. **Both are generated — never edit them by hand.** Someone
+without a photo gets a maroon tile with their initials, so the layout never
+breaks while you're collecting images.
 
-Entries currently marked `// TODO` are placeholders for the current roster.
-Everyone previously listed as a current member has been moved to the `alumni`
-array; their degrees and graduation years still need filling in.
+Full instructions, including adding people and moving them to alumni, are in
+**`People/README.md`**.
 
 ### Update a project, or mark one active/past
 
@@ -97,11 +109,13 @@ section hides itself entirely until something is marked `"active"`.
 Full instructions, including how to add media and new projects, are in
 **`projects/README.md`**.
 
-### Add people photos
+### Where images go
 
-See `images/README.md` and the README inside each image folder — they list the
-exact filenames each page is looking for. Project media does *not* go in
-`images/`; it goes in that project's own folder.
+| What | Where |
+|------|-------|
+| Headshots | `People/<Group>/<Person>/` — generated into `images/people/` |
+| Project figures and video | `projects/<slug>/` |
+| Logo, home page | `images/shared/`, `images/home/` |
 
 ### Change the contact email
 
@@ -157,12 +171,6 @@ Add a file named `CNAME` at the repo root containing just the domain (e.g.
 `mrd.umn.edu`), then point a DNS CNAME record at `labmrd.github.io`. UMN's IT
 group has to make the DNS change for a `umn.edu` domain.
 
-### Using a custom domain
-
-Add a file named `CNAME` at the repo root containing just the domain (e.g.
-`mrd.umn.edu`), then point a DNS CNAME record at `labmrd.github.io`. UMN's IT
-group has to make the DNS change for a `umn.edu` domain.
-
 ---
 
 ## Notes
@@ -182,3 +190,10 @@ group has to make the DNS change for a `umn.edu` domain.
 - Alumni degrees were supplied from memory and still need graduation years.
   The master's and undergraduate degrees in particular were given tentatively —
   confirm them before treating the list as authoritative.
+- Project researcher credits list only people cross-listed on the lab's own
+  people page. Paper co-authors from other groups (e.g. collaborators on the
+  tissue-characterization publications) were removed from those credits, though
+  they remain in the linked publication titles.
+- The PI's title is shown as "Professor of Mechanical Engineering", following
+  his Google Scholar profile. The CSE department page still says "Associate
+  Professor" — worth confirming which is current.

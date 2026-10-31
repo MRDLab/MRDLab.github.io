@@ -6,7 +6,7 @@
     "Given the lack of force feedback available to clinicians performing laparoscopic and robot-assisted surgeries, it is often difficult to determine how much force to apply to a tissue — or even to tell which tissue is in the jaws.",
     "This project produced a laparoscopic grasper instrumented with force and displacement sensors that recognizes tissue in real time and relays that information back to the surgeon. Because measuring force directly at the grasping site is difficult, a parallel effort estimated grip force for da Vinci surgical tools from backend sensors using machine learning methods such as neural networks."
   ],
-  "researchers": "Trevor Stephens, Rodney Dockter, Nathan Kong, Astrini Sie, Michael Winek",
+  "researchers": "Trevor Stephens, Rodney Dockter, Astrini Sie, Michael Winek",
   "media": [
     {
       "type": "video",
@@ -17,14 +17,41 @@
     }
   ],
   "publications": [
-    { "label": "Stephens et al. — Tissue Identification Through Back End Sensors (2015)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Stephens2015TissueIdentificationThrough.pdf" },
-    { "label": "Stephens et al. — Impact of Jaw Orientation (2018)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Stephens2018ImpactJawOrientation.pdf" },
-    { "label": "Stephens et al. — Conditions for Tissue Identification (2018)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/stephens2018conditions.pdf" },
-    { "label": "Dockter et al. — Feasibility of Tissue Classification (2016)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Dockter2016FeasibilityTissueClassification.pdf" },
-    { "label": "Kong et al. — Design of a Portable Dynamic Indenter (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Kong2017DesignPortableDynamic.pdf" },
-    { "label": "Kong et al. — ISMR 2018", "url": "http://www.me.umn.edu/labs/mrd/pdfs/KongISMR2018.pdf" },
-    { "label": "O'Neill et al. — Evaluation of Torque Measurements (2018)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/ONeill2018EvaluationTorqueMeasurements.pdf" },
-    { "label": "Brown et al. — Effects of Grasp Frequency (2016)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Brown2016EffectsGraspFrequency.pdf" },
-    { "label": "Sie et al. — Online Identification of Abdominal Tissue (2013)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Sie2013onlineidentificationabdominal.pdf" }
+    {
+      "label": "Stephens et al. — Tissue Identification Through Back End Sensors (2015)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Stephens2015TissueIdentificationThrough.pdf"
+    },
+    {
+      "label": "Stephens et al. — Impact of Jaw Orientation (2018)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Stephens2018ImpactJawOrientation.pdf"
+    },
+    {
+      "label": "Stephens et al. — Conditions for Tissue Identification (2018)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/stephens2018conditions.pdf"
+    },
+    {
+      "label": "Dockter et al. — Feasibility of Tissue Classification (2016)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Dockter2016FeasibilityTissueClassification.pdf"
+    },
+    {
+      "label": "Kong et al. — Design of a Portable Dynamic Indenter (2017)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Kong2017DesignPortableDynamic.pdf"
+    },
+    {
+      "label": "Kong et al. — ISMR 2018",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/KongISMR2018.pdf"
+    },
+    {
+      "label": "O'Neill et al. — Evaluation of Torque Measurements (2018)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/ONeill2018EvaluationTorqueMeasurements.pdf"
+    },
+    {
+      "label": "Brown et al. — Effects of Grasp Frequency (2016)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Brown2016EffectsGraspFrequency.pdf"
+    },
+    {
+      "label": "Sie et al. — Online Identification of Abdominal Tissue (2013)",
+      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Sie2013onlineidentificationabdominal.pdf"
+    }
   ]
 }

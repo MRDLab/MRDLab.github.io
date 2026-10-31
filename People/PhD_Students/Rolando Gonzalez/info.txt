@@ -1,0 +1,24 @@
+# ──────────────────────────────────────────────────────────────────
+#  Rolando Gonzalez
+# ──────────────────────────────────────────────────────────────────
+#  Paste whatever this person sent you into the Bio section at the
+#  bottom — as many lines as you like. It becomes their card text.
+#
+#  Fill in any fields you have. Leave the rest blank; blank fields
+#  are simply skipped. Lines starting with # are ignored.
+#
+#  PHOTO: just drop an image file into this folder. Any size, any
+#  filename — the build script finds it and makes a web-sized copy.
+#
+#  WHEN DONE:   python3 tools/build_people.py
+# ──────────────────────────────────────────────────────────────────
+
+Name: Rolando Gonzalez
+Role: Doctoral Student, Mechanical Engineering
+Email:
+Website:
+LinkedIn:
+Google Scholar:
+GitHub:
+
+Bio:

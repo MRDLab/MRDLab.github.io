@@ -117,7 +117,17 @@
     });
   }
 
-  /* ---- Alumni ----------------------------------------------------------- */
+  /* ---- Alumni with their own folder get a full card --------------------- */
+  var alumniCardMount = document.getElementById('alumni-cards');
+  if (alumniCardMount && (data.alumniCards || []).length) {
+    var grid = el('div', 'people-grid');
+    data.alumniCards.forEach(function (a) { grid.appendChild(personCard(a, false)); });
+    alumniCardMount.appendChild(grid);
+  } else if (alumniCardMount) {
+    alumniCardMount.hidden = true;
+  }
+
+  /* ---- Everyone else: compact name + degree list ------------------------ */
   var alumniMount = document.getElementById('alumni-list');
   if (alumniMount && data.alumni) {
     data.alumni.forEach(function (a) {
