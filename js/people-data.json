@@ -28,9 +28,22 @@
           "name": "Amit Manicka",
           "role": "Doctoral Student, Mechanical Engineering",
           "roles": [
-            "Doctoral Student, Mechanical Engineering"
+            "Doctoral Student, Mechanical Engineering",
+            "Master's Student, Electrical Engineering"
           ],
-          "photo": ""
+          "photo": "amit-manicka.jpg",
+          "blurb": "Interested in Medical Devices Research and Development, Autonomous Surgery, and Artificial Intelligence for Medical Decision Making.",
+          "links": [
+            {
+              "label": "LinkedIn",
+              "url": "https://www.linkedin.com/in/amit-manicka-697275257/"
+            },
+            {
+              "label": "CV",
+              "url": "files/people/amit-manicka-cv.pdf",
+              "download": true
+            }
+          ]
         },
         {
           "name": "Ethan Foley",

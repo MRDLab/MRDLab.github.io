@@ -15,10 +15,13 @@
 
 Name: Amit Manicka
 Role: Doctoral Student, Mechanical Engineering
+Role: Master's Student, Electrical Engineering
 Email:
 Website:
-LinkedIn:
+LinkedIn: https://www.linkedin.com/in/amit-manicka-697275257/
 Google Scholar:
 GitHub:
+File: Amit_CV.pdf | CV
+Interests: Medical Devices Research and Development, Autonomous Surgery, and Artificial Intelligence for Medical Decision Making.
 
 Bio:

@@ -41,9 +41,13 @@ Ethan works on soft robotic actuators for minimally invasive procedures.
 He joined the lab in 2025 after finishing his B.S. at ...
 ```
 
-Recognized fields: **Name, Role, Lab Role, Email, Website, Portfolio,
-LinkedIn, Google Scholar, GitHub, Photo, File**. Anything after `Bio:` becomes
-their card text.
+Recognized fields: **Name, Role, Lab Role, Interests, Email, Website,
+Portfolio, LinkedIn, Google Scholar, GitHub, Photo, Photo Focus, File**.
+Anything after `Bio:` becomes their card text.
+
+`Interests:` is a shortcut — "Interests: robotics, controls" renders as
+"Interested in robotics, controls." If you give both `Interests:` and a `Bio:`,
+the interests sentence leads and the bio follows.
 
 ### Degrees: lab only
 

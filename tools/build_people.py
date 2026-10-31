@@ -46,6 +46,7 @@ FIELD_KEYS = {
     # An extra duty held alongside the degree: "Lab Safety Officer",
     # "Lab Administration", etc. Shown as a gold tag on the card.
     "lab role": "labRole", "duty": "labRole",
+    "interests": "interests", "research interests": "interests",
     "degree": "degree",
     "email": "email",
     "website": "website", "site": "website", "homepage": "website",
@@ -76,7 +77,7 @@ SUFFIXES = {"phd", "md", "ms", "msme", "bs", "bsme", "dsc", "scd",
 
 def slugify(name):
     parts = []
-    for chunk in re.split(r"[\s,]+", name.lower()):
+    for chunk in re.split(r"[\s,_\-]+", name.lower()):
         word = re.sub(r"[^a-z0-9]", "", chunk)
         if word and word not in SUFFIXES:
             parts.append(word)
@@ -181,13 +182,13 @@ def publish_doc(src, slug, original_name):
     os.makedirs(out_dir, exist_ok=True)
 
     stem, ext = os.path.splitext(original_name)
-    stem_slug = slugify(stem)
-    # Avoid "neev-zeroni-neev-zeroni-resume.pdf" when the file is already
-    # named after the person.
-    if stem_slug.startswith(slug + "-"):
-        out_name = f"{stem_slug}{ext.lower()}"
-    else:
-        out_name = f"{slug}-{stem_slug}{ext.lower()}"
+    # Drop parts of the filename that just repeat the person's name, so
+    # "Amit_CV.pdf" becomes amit-manicka-cv.pdf rather than
+    # amit-manicka-amit-cv.pdf.
+    own = set(slug.split("-"))
+    kept = [t for t in slugify(stem).split("-") if t and t not in own]
+    suffix = "-".join(kept) or slugify(stem)
+    out_name = f"{slug}-{suffix}{ext.lower()}"
     shutil.copy2(src, os.path.join(out_dir, out_name))
 
     size = os.path.getsize(src)
@@ -255,8 +256,16 @@ def build_person(folder, display_name, default_role):
         person["photoFocus"] = info["photoFocus"]
     if info.get("labRole"):
         person["labRole"] = info["labRole"]
+    # "Interests: X" renders as "Interested in X.", matching the house style
+    # of the hand-written bios. If both are given, it leads the bio.
+    parts = []
+    if info.get("interests"):
+        text = info["interests"].rstrip(". ")
+        parts.append(f"Interested in {text}.")
     if info.get("blurb"):
-        person["blurb"] = info["blurb"]
+        parts.append(info["blurb"])
+    if parts:
+        person["blurb"] = " ".join(parts)
     if info.get("email"):
         person["email"] = info["email"]
 
