@@ -17,7 +17,7 @@
       "url": "https://cse.umn.edu/mnri/news/mnri-partners-medtronic-remote-stroke-treatment-research"
     }
   ],
-  "researchers": "Ronak Narkhede, Jared Schultz, Timothy M. Kowalewski",
+  "researchers": "Ronak Narkhede, Jared Schultz, Nathan Harbinson, Sam Fisher, Timothy M. Kowalewski",
   "media": [
     {
       "type": "image",
@@ -36,6 +36,16 @@
       "file": "bench-demo.jpg",
       "alt": "The benchtop guidewire robot and laptop set up in a meeting room with observers around it",
       "caption": "The benchtop setup used for the demonstration."
+    }
+  ],
+  "publications": [
+    {
+      "label": "Cheng, Narkhede, Rajala, Schultz et al. — Towards Remote Thrombectomy with Telerobotically-Driven Guidewires (DMD 2026)",
+      "url": "https://doi.org/10.1115/DMD2026-1079"
+    },
+    {
+      "label": "Schultz et al. — Friction Characterization of a Roller-Drive Mechanism for Robotic Motion Control of Guidewires (DMD 2026)",
+      "url": "https://doi.org/10.1115/DMD2026-1086"
     }
   ]
 }
