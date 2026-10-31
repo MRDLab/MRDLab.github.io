@@ -1011,6 +1011,60 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
   body { font-size: 11pt; }
 }
 
+/* ------------------------------------------------- research at a glance -- */
+
+/* These four labels were previously baked into one banner image. Keeping
+   them as real text satisfies WCAG 1.4.5 and lets them scale and translate. */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.research-item {
+  margin: 0;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--maroon);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.research-item .shot {
+  display: block;
+  height: 200px;
+  padding: 14px;
+  background: #fff;
+}
+/* object-fit:contain on a filled box letterboxes reliably; max-height alone
+   did not resolve against the padded box and the tall panels clipped. */
+.research-item .shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.research-item figcaption {
+  border-top: 1px solid var(--rule);
+  background: var(--paper-warm);
+  padding: 13px 16px;
+  font-size: .88rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .research-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .research-item .shot { height: 150px; padding: 12px; }
+  .research-item figcaption { font-size: .78rem; padding: 11px 10px; }
+}
+
 /* ---------------------------------------------------- commercialization -- */
 
 .venture-list { display: grid; gap: 30px; }

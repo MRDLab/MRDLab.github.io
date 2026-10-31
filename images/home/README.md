@@ -2,9 +2,15 @@
 
 Images for the home page (`index.html`).
 
-| File | Purpose |
+| Path | Purpose |
 |------|---------|
-| `research-banner.png` | The "Research at a glance" strip, carried over from the previous site. |
+| `research/*.jpg`, `research/skill-evaluation.png` | The four "Research at a glance" panels |
+
+The original `research-banner.png` was a single image with the four section
+labels baked into the pixels, which fails **WCAG 1.4.5 (Images of Text)**. It
+was split into four panels; the labels are real text in `index.html`. If you
+replace a panel, keep its label as HTML text rather than burning it into the
+image.
 
 ## Adding a hero photo
 

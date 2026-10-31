@@ -7,7 +7,7 @@
 <meta name="description" content="The Medical Robotics and Devices Lab at the University of Minnesota advances the emerging field of computational surgery — surgical robotics, medical devices, simulation, and smart instrumentation.">
 <link rel="icon" href="images/shared/mrd-logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=e532e581">
+<link rel="stylesheet" href="css/style.css?v=6757a9a8">
 </head>
 <body>
 
@@ -152,9 +152,42 @@
         <h2>Research at a glance</h2>
         <p>Four threads that run through nearly everything we build.</p>
       </div>
-      <img src="images/home/research-banner.png"
-           alt="Lab research areas: surgical robotics, simulation, smart tools, and skill evaluation"
-           style="width:100%; border:1px solid var(--rule); border-radius:var(--radius); background:#fff;">
+      <!-- The four labels used to be baked into a single banner image, which
+           fails WCAG 1.4.5 (Images of Text). They are real text now. -->
+      <div class="research-grid">
+        <figure class="research-item">
+          <span class="shot">
+            <img src="images/home/research/surgical-robotics.jpg" width="425" height="520"
+                 alt="A da Vinci surgical robot with four articulated instrument arms" loading="lazy">
+          </span>
+          <figcaption>Surgical Robotics</figcaption>
+        </figure>
+        <figure class="research-item">
+          <span class="shot">
+            <img src="images/home/research/simulation.jpg" width="388" height="520"
+                 alt="A benchtop laparoscopic simulation trainer with instruments and a laptop display"
+                 loading="lazy">
+          </span>
+          <figcaption>Simulation</figcaption>
+        </figure>
+        <figure class="research-item">
+          <span class="shot">
+            <img src="images/home/research/smart-tools.jpg" width="520" height="417"
+                 alt="A hand holding an instrumented surgical tool with a lit sensor tip against soft tissue"
+                 loading="lazy">
+          </span>
+          <figcaption>Smart Tools</figcaption>
+        </figure>
+        <figure class="research-item">
+          <span class="shot">
+            <img src="images/home/research/skill-evaluation.png" width="271" height="520"
+                 alt="Two 3D plots of surgical tool trajectories, one labelled novice and one experienced, the novice paths visibly more scattered"
+                 loading="lazy">
+          </span>
+          <figcaption>Skill Evaluation</figcaption>
+        </figure>
+      </div>
+
       <p style="margin-top:28px;">
         <a class="btn btn-maroon" href="projects.html">See current projects</a>
       </p>
