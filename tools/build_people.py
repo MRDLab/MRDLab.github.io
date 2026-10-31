@@ -49,11 +49,17 @@ FIELD_KEYS = {
     "degree": "degree",
     "email": "email",
     "website": "website", "site": "website", "homepage": "website",
+    "portfolio": "portfolio",
     "linkedin": "linkedin",
     "scholar": "scholar", "google scholar": "scholar",
     "github": "github",
     "photo": "photo",
 }
+
+# "File: <filename in this folder> | <link label>" — may be repeated.
+# Used for resumes, portfolios, posters: anything downloadable.
+DOC_EXTS = (".pdf",)
+DOC_OUT_REL = "files/people"
 
 warnings = []
 
@@ -102,6 +108,17 @@ def parse_info(path):
                 if val:
                     bio_lines.append(val)
                 continue
+            # Repeatable: someone can hold more than one degree with the lab
+            # (e.g. a B.S. here followed by an M.S. here).
+            if key in ("role", "title") and val:
+                data.setdefault("roles", []).append(val)
+                continue
+            # "File: resume.pdf | Resume" — repeatable, so collect into a list.
+            if key == "file" and val:
+                fname, _, label = val.partition("|")
+                data.setdefault("files", []).append(
+                    {"file": fname.strip(), "label": label.strip()})
+                continue
             if key in FIELD_KEYS and val:
                 data[FIELD_KEYS[key]] = val
 
@@ -130,27 +147,51 @@ def find_photo(folder, declared):
 
 
 def publish_photo(src, slug):
-    """Copy a web-sized version into images/people/. Returns the filename."""
+    """Write a web-sized JPEG into images/people/. Returns the filename.
+
+    Headshots are always published as JPEG regardless of the source format —
+    a PNG photo is several times larger for no visible gain."""
     os.makedirs(PHOTO_OUT, exist_ok=True)
-    ext = ".jpg" if not src.lower().endswith(".png") else ".png"
-    out_name = slug + ext
+    out_name = slug + ".jpg"
     out_path = os.path.join(PHOTO_OUT, out_name)
 
     if shutil.which("sips"):
         r = subprocess.run(
-            ["sips", "-Z", str(MAX_PHOTO_PX), src, "--out", out_path],
+            ["sips", "-s", "format", "jpeg", "-s", "formatOptions", "82",
+             "-Z", str(MAX_PHOTO_PX), src, "--out", out_path],
             capture_output=True,
         )
         if r.returncode != 0 or not os.path.exists(out_path):
-            warn(f"{src}: sips failed, copied original instead")
+            warn(f"{os.path.basename(src)}: sips failed, copied original instead")
             shutil.copy2(src, out_path)
     else:
         warn("sips not available — photos copied at original size")
         shutil.copy2(src, out_path)
 
     size = os.path.getsize(out_path)
-    if size > 600_000:
+    if size > 400_000:
         warn(f"{out_name} is {size//1024} KB — consider a smaller source image")
+    return out_name
+
+
+def publish_doc(src, slug, original_name):
+    """Copy a downloadable file into files/people/ under a URL-safe name."""
+    out_dir = os.path.join(ROOT, *DOC_OUT_REL.split("/"))
+    os.makedirs(out_dir, exist_ok=True)
+
+    stem, ext = os.path.splitext(original_name)
+    stem_slug = slugify(stem)
+    # Avoid "neev-zeroni-neev-zeroni-resume.pdf" when the file is already
+    # named after the person.
+    if stem_slug.startswith(slug + "-"):
+        out_name = f"{stem_slug}{ext.lower()}"
+    else:
+        out_name = f"{slug}-{stem_slug}{ext.lower()}"
+    shutil.copy2(src, os.path.join(out_dir, out_name))
+
+    size = os.path.getsize(src)
+    if size > 3_000_000:
+        warn(f"{out_name} is {size//1024//1024} MB — large for a web download")
     return out_name
 
 
@@ -198,7 +239,8 @@ def build_person(folder, display_name, default_role):
     name = info.get("name") or display_name
     slug = slugify(name)
 
-    person = {"name": name, "role": info.get("role") or default_role}
+    # Most recent first, as the person listed them.
+    person = {"name": name, "roles": info.get("roles") or [default_role]}
 
     src = find_photo(folder, info.get("photo"))
     person["photo"] = publish_photo(src, slug) if src else ""
@@ -213,10 +255,29 @@ def build_person(folder, display_name, default_role):
         person["email"] = info["email"]
 
     links = []
-    for key, label in (("website", "Website"), ("scholar", "Google Scholar"),
+    for key, label in (("website", "Website"), ("portfolio", "Portfolio"),
+                       ("scholar", "Google Scholar"),
                        ("linkedin", "LinkedIn"), ("github", "GitHub")):
         if info.get(key):
-            links.append({"label": label, "url": info[key]})
+            url = info[key]
+            # People paste bare domains; make them real links.
+            if not re.match(r"^(https?:|mailto:)", url):
+                url = "https://" + url.lstrip("/")
+            links.append({"label": label, "url": url})
+
+    # Downloadable documents (resume, portfolio PDF, poster).
+    for doc in info.get("files", []):
+        src = os.path.join(folder, doc["file"])
+        if not os.path.exists(src):
+            warn(f"{display_name}: File: {doc['file']!r} not found in their folder")
+            continue
+        out_name = publish_doc(src, slug, doc["file"])
+        links.append({
+            "label": doc["label"] or os.path.splitext(doc["file"])[0],
+            "url": DOC_OUT_REL + "/" + out_name,
+            "download": True,
+        })
+
     if links:
         person["links"] = links
 
@@ -283,9 +344,10 @@ def main():
 
     # Remove published photos for people no longer in People/ — otherwise
     # images/people/ accumulates headshots of folks who have left.
-    wanted = {p["photo"] for p in
-              ([lead] if lead else []) + alumni_cards +
-              [m for g in groups for m in g["members"]] if p.get("photo")}
+    everyone = ([lead] if lead else []) + alumni_cards + \
+               [m for g in groups for m in g["members"]]
+
+    wanted = {p["photo"] for p in everyone if p.get("photo")}
     if os.path.isdir(PHOTO_OUT):
         for f in sorted(os.listdir(PHOTO_OUT)):
             if f.startswith(".") or f == "README.md":
@@ -293,6 +355,19 @@ def main():
             if f not in wanted:
                 os.remove(os.path.join(PHOTO_OUT, f))
                 print(f"  removed stale photo images/people/{f}")
+
+    # Same for downloadable documents.
+    wanted_docs = {l["url"].rsplit("/", 1)[-1]
+                   for p in everyone for l in p.get("links", [])
+                   if l.get("download")}
+    doc_dir = os.path.join(ROOT, *DOC_OUT_REL.split("/"))
+    if os.path.isdir(doc_dir):
+        for f in sorted(os.listdir(doc_dir)):
+            if f.startswith(".") or f == "README.md":
+                continue
+            if f not in wanted_docs:
+                os.remove(os.path.join(doc_dir, f))
+                print(f"  removed stale file {DOC_OUT_REL}/{f}")
 
     data["_generated"] = "GENERATED FILE — do not edit. Source: People/. " \
                          "Rebuild: python3 tools/build_people.py"

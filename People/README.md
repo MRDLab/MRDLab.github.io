@@ -41,8 +41,35 @@ Ethan works on soft robotic actuators for minimally invasive procedures.
 He joined the lab in 2025 after finishing his B.S. at ...
 ```
 
-Recognized fields: **Name, Role, Lab Role, Email, Website, LinkedIn,
-Google Scholar, GitHub, Photo**. Anything after `Bio:` becomes their card text.
+Recognized fields: **Name, Role, Lab Role, Email, Website, Portfolio,
+LinkedIn, Google Scholar, GitHub, Photo, File**. Anything after `Bio:` becomes
+their card text.
+
+### Degrees: lab only
+
+`Role:` lists the degree earned (or being earned) **with this lab** — not prior
+degrees from other institutions. Those belong on the person's LinkedIn, which
+is linked on the card anyway. This keeps cards uniform and short.
+
+Someone who earned more than one degree here gets a `Role:` line for each,
+most recent first:
+
+```
+Role: M.S. Robotics (MnRI), 2026
+Role: B.S. Computer Engineering, 2024
+```
+
+### Downloadable files
+
+Drop a PDF in the person's folder and point at it. Repeat for more than one:
+
+```
+File: Engineering Portfolio.pdf | Portfolio
+File: resume.pdf | Resume
+```
+
+The text after `|` is the link label. The build script copies the file into
+`files/people/` under a URL-safe name and marks the link as a download.
 
 ### Lab duties
 

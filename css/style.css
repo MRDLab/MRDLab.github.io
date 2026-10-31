@@ -440,9 +440,21 @@ section.alt { background: var(--paper-warm); border-top: 1px solid var(--rule); 
 }
 
 .person .blurb { font-size: .92rem; color: var(--ink-soft); margin: 0 0 10px; }
-.person .links { font-size: .88rem; }
-.person .links a { margin-right: 12px; text-decoration: none; font-weight: 600; }
+.person .links {
+  font-size: .88rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+}
+.person .links a { text-decoration: none; font-weight: 600; }
 .person .links a:hover { text-decoration: underline; }
+
+/* Downloadable file (resume, portfolio PDF) — marked with a down arrow */
+.person .links a.dl::before {
+  content: "⤓";
+  margin-right: 5px;
+  font-weight: 700;
+}
 
 /* PI gets a wide, two-column treatment */
 .person-lead {

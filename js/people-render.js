@@ -68,8 +68,12 @@
 
     var wrap = el('p', 'links');
     list.forEach(function (l) {
-      var a = el('a', null, l.label);
+      var a = el('a', l.download ? 'dl' : null, l.label);
       a.href = l.url;
+      if (l.download) {
+        // Served from our own origin, so hand it over as a download.
+        a.setAttribute('download', '');
+      }
       if (!/^mailto:/.test(l.url)) {
         a.target = '_blank';
         a.rel = 'noopener';
@@ -85,7 +89,10 @@
 
     var info = el('div', 'info');
     info.appendChild(el('h3', 'name', person.name));
-    info.appendChild(el('p', 'role', person.role || ''));
+    // One line per degree earned with the lab, most recent first.
+    (person.roles || [person.role || '']).forEach(function (r) {
+      if (r) info.appendChild(el('p', 'role', r));
+    });
     // A duty held alongside the degree, e.g. Lab Safety Officer.
     if (person.labRole) info.appendChild(el('p', 'lab-role', person.labRole));
     if (person.blurb) info.appendChild(el('p', 'blurb', person.blurb));

@@ -1,7 +1,9 @@
 {
   "lead": {
     "name": "Timothy M. Kowalewski, Ph.D.",
-    "role": "Professor of Mechanical Engineering · Principal Investigator",
+    "roles": [
+      "Professor of Mechanical Engineering · Principal Investigator"
+    ],
     "photo": "timothy-m-kowalewski.jpg",
     "blurb": "Dr. Kowalewski directs the Medical Robotics and Devices Lab in the Department of Mechanical Engineering at the University of Minnesota, where he has been on the faculty since 2012 — first as the Richard and Barbara Nelson Assistant Professor, and from 2020 as Associate Professor. His research advances the emerging field of computational surgery, and centers on four threads: instrumented surgical tools that make operating-room technique quantitative; custom surgical robots that automate patient access and extract procedural information; surgical simulation using virtual reality and realistic tissues; and the Surgical Genome Project, a collaborative database of surgical procedures with tool-tracking and sensor data. He holds a Ph.D. (2012), M.S. (2009), and B.S. (2003) in Electrical Engineering from the University of Washington, Seattle, where his doctoral work in the Biorobotics Lab addressed quantifying surgical skill. He was a research scientist on DARPA's \"Trauma Pod: Operating Room of the Future\" program, and co-founded CSATS Inc., acquired by Johnson & Johnson in 2018. He is a recipient of an NSF CAREER award and a McKnight Presidential Fellow.",
     "email": "timk@umn.edu",
@@ -22,19 +24,43 @@
       "members": [
         {
           "name": "Amit Manicka",
-          "role": "Doctoral Student, Mechanical Engineering",
+          "roles": [
+            "Doctoral Student, Mechanical Engineering"
+          ],
           "photo": ""
         },
         {
           "name": "Ethan Foley",
-          "role": "Doctoral Student, Mechanical Engineering",
-          "photo": "",
-          "labRole": "Lab Safety Officer"
+          "roles": [
+            "Doctoral Student, Mechanical Engineering"
+          ],
+          "photo": "ethan-foley.jpg",
+          "labRole": "Lab Safety Officer",
+          "blurb": "Interested in medical robotic navigation and emergent medical robotic workflows.",
+          "links": [
+            {
+              "label": "LinkedIn",
+              "url": "https://www.linkedin.com/in/ethan-foley-9331491b7/"
+            }
+          ]
         },
         {
-          "name": "Rolando Gonzalez",
-          "role": "Doctoral Student, Mechanical Engineering",
-          "photo": ""
+          "name": "Rolando Gonzalez Alcocer",
+          "roles": [
+            "Doctoral Student, Mechanical Engineering"
+          ],
+          "photo": "rolando-gonzalez-alcocer.jpg",
+          "blurb": "Interested in assistive medical robotics and control systems. Builds the physical testing setup for catheter navigation.",
+          "links": [
+            {
+              "label": "Portfolio",
+              "url": "https://riceuni.my.canva.site/rolandogzzalc"
+            },
+            {
+              "label": "LinkedIn",
+              "url": "https://www.linkedin.com/in/rolandogzzalc/"
+            }
+          ]
         }
       ]
     },
@@ -43,13 +69,26 @@
       "members": [
         {
           "name": "Nathan Harbinson",
-          "role": "Master's Student, Mechanical Engineering",
-          "photo": ""
+          "roles": [
+            "M.S. Mechanical Engineering, 2026",
+            "B.S. Mechanical Engineering, 2025"
+          ],
+          "photo": "nathan-harbinson.jpg",
+          "blurb": "Interested in mechanical design, control systems, and robotics. Works on 2D vasculature phantoms, simulation gym environments, and a catheter deployment device."
         },
         {
           "name": "Tarun Sehgal",
-          "role": "Master's Student, Robotics (MnRI)",
-          "photo": ""
+          "roles": [
+            "Master's Student, Robotics (MnRI)"
+          ],
+          "photo": "tarun-sehgal.jpg",
+          "blurb": "Interested in robotics, product design, and electrical systems. Works on design, servo motors, and simulation in Isaac Sim.",
+          "links": [
+            {
+              "label": "LinkedIn",
+              "url": "https://www.linkedin.com/in/tarun-sehgal-909906112"
+            }
+          ]
         }
       ]
     },
@@ -58,18 +97,55 @@
       "members": [
         {
           "name": "Gabriel Garso",
-          "role": "Undergraduate Researcher, Mechanical Engineering",
-          "photo": ""
+          "roles": [
+            "Undergraduate Researcher, Mechanical Engineering"
+          ],
+          "photo": "gabriel-garso.jpg",
+          "blurb": "Interested in robotics R&D. Works on mechatronic design and 3D anatomy integration.",
+          "links": [
+            {
+              "label": "LinkedIn",
+              "url": "https://www.linkedin.com/in/gabriel-garso-851204244/"
+            }
+          ]
         },
         {
           "name": "Neev Zeroni",
-          "role": "Undergraduate Researcher, Mechanical Engineering",
-          "photo": ""
+          "roles": [
+            "Undergraduate Researcher, Mechanical Engineering"
+          ],
+          "photo": "neev-zeroni.jpg",
+          "blurb": "Interested in mechatronics, automated systems, and impactful, lifesaving devices. Works on anatomical setting recitation and mechanical robotic platform design and manufacturing.",
+          "links": [
+            {
+              "label": "LinkedIn",
+              "url": "https://www.linkedin.com/in/neev-zeroni"
+            },
+            {
+              "label": "Portfolio",
+              "url": "files/people/neev-zeroni-engineering-portfolio.pdf",
+              "download": true
+            },
+            {
+              "label": "Resume",
+              "url": "files/people/neev-zeroni-resume.pdf",
+              "download": true
+            }
+          ]
         },
         {
           "name": "Sam Fisher",
-          "role": "Undergraduate Researcher, Mechanical Engineering",
-          "photo": ""
+          "roles": [
+            "Undergraduate Researcher, Electrical Engineering"
+          ],
+          "photo": "sam-fisher.jpg",
+          "blurb": "Interested in robotics and mechatronics engineering. Works on PCB and mechatronic design.",
+          "links": [
+            {
+              "label": "LinkedIn",
+              "url": "https://www.linkedin.com/in/samuel-lawrence-fisher/"
+            }
+          ]
         }
       ]
     }
@@ -77,13 +153,32 @@
   "alumniCards": [
     {
       "name": "Jared Schultz",
-      "role": "M.S. Robotics (MnRI), 2026",
-      "photo": "jared-schultz.jpg"
+      "roles": [
+        "M.S. Robotics (MnRI), 2026",
+        "B.S. Computer Engineering, 2024"
+      ],
+      "photo": "jared-schultz.jpg",
+      "blurb": "Interested in automation and robotics R&D. Worked on mechatronic design for the TRUST automated stroke robot.",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://jaredschultz214.github.io/"
+        }
+      ]
     },
     {
       "name": "Ronak Narkhede",
-      "role": "M.S. Robotics (MnRI), 2026",
-      "photo": ""
+      "roles": [
+        "M.S. Robotics (MnRI), 2026"
+      ],
+      "photo": "ronak-narkhede.jpg",
+      "blurb": "Interested in robots, control systems, and their underlying software. Worked on an online teleoperation platform, electromagnetic-based catheter navigation, and simulations.",
+      "links": [
+        {
+          "label": "Portfolio",
+          "url": "https://ronsys11.github.io/RonakNarkhede.github.io/"
+        }
+      ]
     }
   ],
   "alumni": [
@@ -93,7 +188,7 @@
     },
     {
       "name": "Yusra Farhat Ullah",
-      "degree": "Ph.D. Mechanical Engineering"
+      "degree": "Ph.D. Mechanical Engineering, 2026"
     },
     {
       "name": "Travis Beckerle",

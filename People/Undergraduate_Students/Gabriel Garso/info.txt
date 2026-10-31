@@ -1,24 +1,25 @@
 # ──────────────────────────────────────────────────────────────────
 #  Gabriel Garso
 # ──────────────────────────────────────────────────────────────────
-#  Paste whatever this person sent you into the Bio section at the
-#  bottom — as many lines as you like. It becomes their card text.
+#  Role    = the degree they are earning / earned WITH THIS LAB.
+#            Prior degrees from elsewhere are deliberately not listed;
+#            their LinkedIn carries the full history.
+#  Bio     = a sentence or two: interests + what they work on here.
+#  File:   = a downloadable file in this folder. Repeat the line for
+#            more than one.  File: resume.pdf | Resume
 #
-#  Fill in any fields you have. Leave the rest blank; blank fields
-#  are simply skipped. Lines starting with # are ignored.
-#
-#  PHOTO: just drop an image file into this folder. Any size, any
-#  filename — the build script finds it and makes a web-sized copy.
-#
+#  PHOTO: any image in this folder is picked up and resized.
 #  WHEN DONE:   python3 tools/build_people.py
 # ──────────────────────────────────────────────────────────────────
 
 Name: Gabriel Garso
 Role: Undergraduate Researcher, Mechanical Engineering
-Email:
-Website:
-LinkedIn:
-Google Scholar:
-GitHub:
+Email: 
+Website: 
+Portfolio: 
+LinkedIn: https://www.linkedin.com/in/gabriel-garso-851204244/
+Google Scholar: 
+GitHub: 
 
 Bio:
+Interested in robotics R&D. Works on mechatronic design and 3D anatomy integration.

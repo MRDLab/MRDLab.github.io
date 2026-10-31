@@ -9,7 +9,7 @@
 
 # ---- Recently graduated (degrees per the lab; graduation years still TBD) ----
 Chaitanya Awasthi   | Ph.D. Mechanical Engineering
-Yusra Farhat Ullah  | Ph.D. Mechanical Engineering
+Yusra Farhat Ullah  | Ph.D. Mechanical Engineering, 2026
 Travis Beckerle     | Ph.D. Mechanical Engineering
 Nate Davies         | Ph.D. Mechanical Engineering
 Mandi Lye           | Ph.D. Mechanical Engineering
