@@ -37,14 +37,6 @@
   ],
   "publications": [
     {
-      "label": "Berg et al. — Vasculature Discretization and Search Space Simplification for Automating Catheter Navigation (DMD 2026)",
-      "url": "https://doi.org/10.1115/DMD2026-1054"
-    },
-    {
-      "label": "Poojari et al. — StrokeNav2D: A Skeleton Based Dataset for Cerebrovascular Imitation Learning (DMD 2026)",
-      "url": "https://doi.org/10.1115/DMD2026-1063"
-    },
-    {
       "label": "Cheng et al. — Towards Remote Thrombectomy with Telerobotically-Driven Guidewires (DMD 2026)",
       "url": "https://doi.org/10.1115/DMD2026-1079"
     }
