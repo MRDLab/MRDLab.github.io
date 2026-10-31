@@ -4,10 +4,9 @@
 #  Pre-filled from https://cse.umn.edu/me/tim-kowalewski and the
 #  Google Scholar profile. Edit anything that's out of date.
 #
-#  NOTE ON TITLE: the CSE department page still lists "Associate
-#  Professor" (promoted 2020), but his own Google Scholar profile
-#  says "Professor of Mechanical Engineering". Scholar is used below
-#  since it's self-maintained — please confirm which is current.
+#  TITLE: Associate Professor (since 2020), jointly appointed in
+#  Mechanical Engineering and Electrical Engineering. Note his Google
+#  Scholar profile says just "Professor" — the title below is correct.
 #
 #  PHOTO: tim-kowalewski.jpg in this folder is the official UMN
 #  faculty photo. Replace it with any other image to change it.
@@ -16,7 +15,8 @@
 # ──────────────────────────────────────────────────────────────────
 
 Name: Timothy M. Kowalewski, Ph.D.
-Role: Professor of Mechanical Engineering · Principal Investigator
+Role: Associate Professor, Mechanical Engineering & Electrical Engineering
+Role: Principal Investigator
 Email: timk@umn.edu
 Website: https://cse.umn.edu/me/tim-kowalewski
 Google Scholar: https://scholar.google.com/citations?user=cNrTOccAAAAJ&hl=en
@@ -27,7 +27,8 @@ of Mechanical Engineering at the University of Minnesota, where he has been on
 the faculty since 2012 — first as the Richard and Barbara Nelson Assistant
 Professor, and from 2020 as Associate Professor.
 
-His research advances the emerging field of computational surgery, and centers
+He holds a joint appointment in Electrical Engineering. His research advances
+the emerging field of computational surgery, and centers
 on four threads: instrumented surgical tools that make operating-room technique
 quantitative; custom surgical robots that automate patient access and extract
 procedural information; surgical simulation using virtual reality and realistic

@@ -194,6 +194,6 @@ group has to make the DNS change for a `umn.edu` domain.
   people page. Paper co-authors from other groups (e.g. collaborators on the
   tissue-characterization publications) were removed from those credits, though
   they remain in the linked publication titles.
-- The PI's title is shown as "Professor of Mechanical Engineering", following
-  his Google Scholar profile. The CSE department page still says "Associate
-  Professor" — worth confirming which is current.
+- The PI's title is "Associate Professor, Mechanical Engineering & Electrical
+  Engineering" — he holds a joint appointment. His Google Scholar profile says
+  only "Professor"; the site is correct and Scholar is not.

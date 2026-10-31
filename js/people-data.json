@@ -1,12 +1,13 @@
 {
   "lead": {
     "name": "Timothy M. Kowalewski, Ph.D.",
-    "role": "Professor of Mechanical Engineering · Principal Investigator",
+    "role": "Associate Professor, Mechanical Engineering & Electrical Engineering",
     "roles": [
-      "Professor of Mechanical Engineering · Principal Investigator"
+      "Associate Professor, Mechanical Engineering & Electrical Engineering",
+      "Principal Investigator"
     ],
     "photo": "timothy-m-kowalewski.jpg",
-    "blurb": "Dr. Kowalewski directs the Medical Robotics and Devices Lab in the Department of Mechanical Engineering at the University of Minnesota, where he has been on the faculty since 2012 — first as the Richard and Barbara Nelson Assistant Professor, and from 2020 as Associate Professor. His research advances the emerging field of computational surgery, and centers on four threads: instrumented surgical tools that make operating-room technique quantitative; custom surgical robots that automate patient access and extract procedural information; surgical simulation using virtual reality and realistic tissues; and the Surgical Genome Project, a collaborative database of surgical procedures with tool-tracking and sensor data. He holds a Ph.D. (2012), M.S. (2009), and B.S. (2003) in Electrical Engineering from the University of Washington, Seattle, where his doctoral work in the Biorobotics Lab addressed quantifying surgical skill. He was a research scientist on DARPA's \"Trauma Pod: Operating Room of the Future\" program, and co-founded CSATS Inc., acquired by Johnson & Johnson in 2018. He is a recipient of an NSF CAREER award and a McKnight Presidential Fellow.",
+    "blurb": "Dr. Kowalewski directs the Medical Robotics and Devices Lab in the Department of Mechanical Engineering at the University of Minnesota, where he has been on the faculty since 2012 — first as the Richard and Barbara Nelson Assistant Professor, and from 2020 as Associate Professor. He holds a joint appointment in Electrical Engineering. His research advances the emerging field of computational surgery, and centers on four threads: instrumented surgical tools that make operating-room technique quantitative; custom surgical robots that automate patient access and extract procedural information; surgical simulation using virtual reality and realistic tissues; and the Surgical Genome Project, a collaborative database of surgical procedures with tool-tracking and sensor data. He holds a Ph.D. (2012), M.S. (2009), and B.S. (2003) in Electrical Engineering from the University of Washington, Seattle, where his doctoral work in the Biorobotics Lab addressed quantifying surgical skill. He was a research scientist on DARPA's \"Trauma Pod: Operating Room of the Future\" program, and co-founded CSATS Inc., acquired by Johnson & Johnson in 2018. He is a recipient of an NSF CAREER award and a McKnight Presidential Fellow.",
     "email": "timk@umn.edu",
     "links": [
       {
