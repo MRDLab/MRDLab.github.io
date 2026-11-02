@@ -25,12 +25,10 @@
   ],
   "publications": [
     {
-      "label": "Tenorio et al. — Biomechanics of Human Tissue (2017)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Tenorio2017Biomechanicsofhuman.pdf"
+      "label": "L. E. Morales Tenorio, K. J. Devine, J. Lee, T. M. Kowalewski, V. H. Barocas. Biomechanics of Human Parietal Pleura in Uniaxial Extension. Journal of the Mechanical Behavior of Biomedical Materials, 75:330–335, 2017."
     },
     {
-      "label": "Stephens et al. — Decay of Tissue Mechanical Properties (2016)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Stephens2016DecayTissueMechanical.pdf"
+      "label": "T. K. Stephens, K. A. Harper, M. J. Brown, T. M. Kowalewski. Decay of Tissue Mechanical Properties over a 24-hr Period. ASME Journal of Medical Devices, 10(3):030950, 2016."
     }
   ]
 }

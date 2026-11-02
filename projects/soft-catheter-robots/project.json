@@ -26,32 +26,25 @@
       "url": "https://doi.org/10.1115/DMD2026-1076"
     },
     {
-      "label": "Gilbertson et al. — Computational Inverse Design (2018)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2018ComputationalInverseDesign.pdf"
+      "label": "M. D. Gilbertson, G. J. McDonald, C. Awasthi, R. Faizer, T. M. Kowalewski. Computational Inverse Design of Anatomy-Specific Soft Robot Actuators with Physically-Realizable Material Conditions. The Hamlyn Symposium on Medical Robotics, 2018."
     },
     {
-      "label": "Gilbertson et al. — Inverse Design Methodology (2017)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2017InverseDesignMethodology.pdf"
+      "label": "M. D. Gilbertson, J. D. Van de Ven, T. M. Kowalewski. Inverse Design Methodology for Patient Specific Soft Robotics. ICRA 2017 Workshop C4 Surgical Robots: Compliant, Continuum, Cognitive, and Collaborative, 2017."
     },
     {
-      "label": "Gilbertson et al. — Serially Actuated Locomotion (2017)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2017SeriallyActuatedLocomotion.pdf"
+      "label": "M. D. Gilbertson, G. McDonald, G. Korinek, J. D. Van de Ven, T. M. Kowalewski. Serially Actuated Locomotion for Soft Robots in Tube-Like Environments. IEEE Robotics and Automation Letters, 2(2):1140–1147, 2017."
     },
     {
-      "label": "Gilbertson et al. — Force Analysis and Modelling (2016)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2016ForceAnalysisAndModelling.pdf"
+      "label": "M. Gilbertson, D. Beekman, B. Mohanty, S. Hashemi, S. Lee, J. D. Van de Ven, T. M. Kowalewski. Force Analysis and Modelling of Soft Actuators for Catheter Robots. ASME 2016 Dynamic Systems and Control Conference, 2016."
     },
     {
-      "label": "Gilbertson et al. — Soft Passive Valves (2016)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Gilbertson2016SoftPassiveValves.pdf"
+      "label": "M. D. Gilbertson, G. McDonald, G. Korinek, J. D. Van de Ven, T. M. Kowalewski. Soft Passive Valves for Serial Actuation in a Soft Hydraulic Robotic Catheter. ASME Journal of Medical Devices, 10(3):030931, 2016."
     },
     {
-      "label": "Awasthi et al. — Generalized Kinematics of Deformable Robots (2017)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Awasthi2017GeneralizedKinematicsDeformable.pdf"
+      "label": "C. Awasthi, G. McDonald, M. D. Gilbertson, J. D. Van de Ven, T. M. Kowalewski. Generalized Kinematics for Deformable Patient-Specific Soft Robots. IEEE IROS Workshop on Continuum Robots in Medicine, 2017."
     },
     {
-      "label": "IROS 2017 traction poster",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/IROS_2017_Poster_Traction.pdf"
+      "label": "G. McDonald, A. Safdari, J. D. Van de Ven, T. M. Kowalewski. Traction of Helical Soft Continuum Actuators for Endoluminal Robots. IEEE IROS Workshop on Continuum Robots in Medicine, 2017 (poster)."
     }
   ]
 }

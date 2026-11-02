@@ -141,11 +141,15 @@
       var ul = el('ul');
       data.publications.forEach(function (p) {
         var li = document.createElement('li');
-        var a = el('a', null, p.label);
-        a.href = p.url;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        li.appendChild(a);
+        if (p.url) {
+          var a = el('a', null, p.label);
+          a.href = p.url;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          li.appendChild(a);
+        } else {
+          li.appendChild(document.createTextNode(p.label));
+        }
         ul.appendChild(li);
       });
       details.appendChild(ul);

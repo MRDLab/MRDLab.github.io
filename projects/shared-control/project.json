@@ -16,6 +16,8 @@
     }
   ],
   "publications": [
-    { "label": "Stephens et al. — Blended Shared Control (2018)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/stephens2018blended.pdf" }
+    {
+      "label": "T. K. Stephens, N. J. Kong, R. L. Dockter, J. J. O'Neill, R. M. Sweet, T. M. Kowalewski. Blended Shared Control Utilizing Online Identification. International Journal of Computer Assisted Radiology and Surgery, 13(6):769–776, 2018."
+    }
   ]
 }

@@ -22,32 +22,25 @@
   ],
   "publications": [
     {
-      "label": "O'Neill et al. — 3D Bioprinting Directly Onto Moving Human Anatomy (2017)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/oneill20173DBioprintingDirectly.pdf"
+      "label": "J. J. O'Neill, R. A. Johnson, R. L. Dockter, T. M. Kowalewski. 3D Bioprinting Directly onto Moving Human Anatomy. 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pp. 934–940, 2017."
     },
     {
-      "label": "Smith et al. — Towards Robotic Bioprinting (2018)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Smith2018TowardsRoboticBioprinting.pdf"
+      "label": "R. G. Smith, R. A. Johnson, G. Shull, D. Sorby, C. J. Modl, A. Panoskaltsis-Mortari, T. M. Kowalewski. Towards Robotic Bioprinting Directly onto Moving, Stretching Anatomy. The Hamlyn Symposium on Medical Robotics, 2018."
     },
     {
-      "label": "French et al. — Dynamic Additive Manufacturing (2018)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/French2018DynamicAdditiveManufacturing.pdf"
+      "label": "A. French, J. O'Neill, R. Madson, T. M. Kowalewski. Dynamic Additive Manufacturing onto Free-moving Human Anatomy via Temporal Coarse/Fine Control. 2018 International Symposium on Medical Robotics (ISMR), pp. 1–6, 2018."
     },
     {
-      "label": "French et al. — Design for Dynamic Additive Manufacturing (2016)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/French2016DesignDynamicAdditive.pdf"
+      "label": "A. French, J. O'Neill, T. M. Kowalewski. Design of a Dynamic Additive Manufacturing System for Use on Free-moving Human Anatomy. ASME Journal of Medical Devices, 10(2):020941, 2016."
     },
     {
-      "label": "Johnson et al. — Toward Inkjet Additive Manufacturing (2017)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Johnson2017TowardInkjetAdditive.pdf"
+      "label": "R. A. Johnson, J. J. O'Neill, R. L. Dockter, T. M. Kowalewski. Toward Inkjet Additive Manufacturing Directly onto Human Anatomy. 2017 Design of Medical Devices Conference, 2017."
     },
     {
-      "label": "Johnson et al. — Comparison of Bio-Inks (2018)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Johnson2018ComparisonBioInks.pdf"
+      "label": "R. A. Johnson, J. J. O'Neill, R. L. Dockter, C. J. Modl, D. Sorby, A. Panoskaltsis-Mortari, T. M. Kowalewski. Comparison of Bio-Inks for Free-Hand 3D Bioprinting Directly onto Moving Human Anatomy. The Hamlyn Symposium on Medical Robotics, 2018."
     },
     {
-      "label": "IROS 2017 Imaging Workshop poster",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/IROS2017_Imaging_Workshop_Poster_2.pdf"
+      "label": "R. Smith, J. O'Neill, T. M. Kowalewski. 3D Bioprinting Directly onto Unpredictably-Moving Human Anatomy: Can Dynamic Vision Sensors Improve Performance? IEEE IROS Workshop on Continuum Robots in Medicine, 2017 (poster)."
     }
   ]
 }

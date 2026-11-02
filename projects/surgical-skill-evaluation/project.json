@@ -28,14 +28,32 @@
     }
   ],
   "publications": [
-    { "label": "Kelly et al. — Video Playback Perception (2019)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Kelly2019VideoPlaybackPerception.pdf" },
-    { "label": "Dockter et al. — Minimally Acceptable Classification (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Dockter2017MinimallyAcceptableClassification.pdf" },
-    { "label": "French et al. — Laparoscopic Skill Classification (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/French2017LaparoscopicSkillClassification.pdf" },
-    { "label": "French et al. — Predicting Surgical Skill (2017)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/french2017predicting.pdf" },
-    { "label": "Lendvay et al. — Virtual Reality Robotic Surgery Warm-up (2013)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Lendvay2013Virtualrealityrobotic.pdf" },
-    { "label": "Lendvay et al. — Crowd-Sourced Assessment (2014)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Lendvay2014CrowdSourcedAssessment.pdf" },
-    { "label": "Lendvay et al. — Crowdsourcing (2015)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/lendvay2015crowdsourcing.pdf" },
-    { "label": "Chen et al. — Crowd-Sourced Assessment (2013)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/Chen2013CrowdSourcedAssessment.pdf" },
-    { "label": "White et al. — Crowd-Sourced Assessment (2014)", "url": "http://www.me.umn.edu/labs/mrd/pdfs/White2014CROWDSOURCEDASSESSMENT.pdf" }
+    {
+      "label": "J. D. Kelly, A. Petersen, T. S. Lendvay, T. M. Kowalewski. The Effect of Video Playback Speed on Surgeon Technical Skill Perception. International Journal of Computer Assisted Radiology and Surgery, 15(5):739–747, 2020."
+    },
+    {
+      "label": "R. L. Dockter, T. S. Lendvay, R. M. Sweet, T. M. Kowalewski. The Minimally Acceptable Classification Criterion for Surgical Skill: Intent Vectors and Separability of Raw Motion Data. International Journal of Computer Assisted Radiology and Surgery, 12(7):1151–1159, 2017."
+    },
+    {
+      "label": "A. French, T. M. Kowalewski. Laparoscopic Skill Classification Using the Two-Third Power Law and the Isogony Principle. 2017 Design of Medical Devices Conference, 2017."
+    },
+    {
+      "label": "A. French, T. S. Lendvay, R. M. Sweet, T. M. Kowalewski. Predicting Surgical Skill from the First N Seconds of a Task: Value over Task Time Using the Isogony Principle. International Journal of Computer Assisted Radiology and Surgery, 12(7):1161–1170, 2017."
+    },
+    {
+      "label": "T. S. Lendvay, T. C. Brand, L. White, T. Kowalewski, S. Jonnadula, L. D. Mercer, D. Khorsand, J. Andros, B. Hannaford, R. M. Satava. Virtual Reality Robotic Surgery Warm-up Improves Task Performance in a Dry Laboratory Environment: A Prospective Randomized Controlled Study. Journal of the American College of Surgeons, 216(6):1181–1192, 2013."
+    },
+    {
+      "label": "T. Lendvay, B. Comstock, T. Averch, G. Box, B. Knudsen, T. Brand, M. Ferrandino, J. Kaouk, J. Landman, B. Lee, E. McDougall, A. Menhadji, B. Schwartz, R. Sweet, T. Kowalewski. Crowd-Sourced Assessment of Technical Skills (C-SATS): Validation Through the Basic Laparoscopic Urologic Surgery (BLUS) Curriculum. Journal of Endourology (conference abstract), 28:A249–A250, 2014."
+    },
+    {
+      "label": "T. S. Lendvay, L. White, T. Kowalewski. Crowdsourcing to Assess Surgical Skill. JAMA Surgery, 150(11):1086–1087, 2015."
+    },
+    {
+      "label": "C. Chen, L. White, T. Kowalewski, R. Aggarwal, C. Lintott, B. Comstock, K. Kuksenok, C. Aragon, D. Holst, T. Lendvay. Crowd-Sourced Assessment of Technical Skills: A Novel Method to Evaluate Surgical Performance. Journal of Surgical Research, 187(1):65–71, 2013."
+    },
+    {
+      "label": "L. W. White, T. M. Kowalewski, T. C. Brand, J. D. Harper, B. Comstock, B. Hannaford, T. S. Lendvay. Crowd-Sourced Assessment of Technical Skills: Fast, Economical and Accurate Assessment of Robotic Surgery. The Journal of Urology, vol. 191, 2014 (conference abstract)."
+    }
   ]
 }

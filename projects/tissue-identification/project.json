@@ -18,40 +18,31 @@
   ],
   "publications": [
     {
-      "label": "Stephens et al. — Tissue Identification Through Back End Sensors (2015)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Stephens2015TissueIdentificationThrough.pdf"
+      "label": "T. K. Stephens, Z. C. Meier, R. M. Sweet, T. M. Kowalewski. Tissue Identification Through Back End Sensing on da Vinci EndoWrist Surgical Tool. ASME Journal of Medical Devices, 9(3):030939, 2015."
     },
     {
-      "label": "Stephens et al. — Impact of Jaw Orientation (2018)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Stephens2018ImpactJawOrientation.pdf"
+      "label": "T. K. Stephens, J. J. O'Neill, N. J. Kong, T. M. Kowalewski. Impact of Jaw Orientation on Grip Force Estimation for a da Vinci EndoWrist Surgical Tool. The Hamlyn Symposium on Medical Robotics, 2018."
     },
     {
-      "label": "Stephens et al. — Conditions for Tissue Identification (2018)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/stephens2018conditions.pdf"
+      "label": "T. K. Stephens, J. J. O'Neill, N. J. Kong, M. V. Mazzeo, J. E. Norfleet, R. M. Sweet, T. M. Kowalewski. Conditions for Reliable Grip Force and Jaw Angle Estimation of da Vinci Surgical Tools. International Journal of Computer Assisted Radiology and Surgery, 2018."
     },
     {
-      "label": "Dockter et al. — Feasibility of Tissue Classification (2016)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Dockter2016FeasibilityTissueClassification.pdf"
+      "label": "R. L. Dockter, J. J. O'Neill, T. K. Stephens, T. M. Kowalewski. Feasibility of Tissue Classification via da Vinci EndoWrist Surgical Tool. The Hamlyn Symposium on Medical Robotics, pp. 64–65, 2016."
     },
     {
-      "label": "Kong et al. — Design of a Portable Dynamic Indenter (2017)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Kong2017DesignPortableDynamic.pdf"
+      "label": "N. J. Kong, T. K. Stephens, J. J. O'Neill, T. M. Kowalewski. Design of a Portable Dynamic Calibration Instrument for da Vinci Si Tools. 2017 Design of Medical Devices Conference, 2017."
     },
     {
-      "label": "Kong et al. — ISMR 2018",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/KongISMR2018.pdf"
+      "label": "N. J. Kong, T. K. Stephens, T. M. Kowalewski. Da Vinci Tool Torque Mapping Over 50,000 Grasps and Its Implications on Grip Force Estimation Accuracy. 2018 International Symposium on Medical Robotics (ISMR), pp. 1–6, 2018."
     },
     {
-      "label": "O'Neill et al. — Evaluation of Torque Measurements (2018)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/ONeill2018EvaluationTorqueMeasurements.pdf"
+      "label": "J. J. O'Neill, T. K. Stephens, T. M. Kowalewski. Evaluation of Torque Measurement Surrogates as Applied to Grip Torque and Jaw Angle Estimation of Robotic Surgical Tools. IEEE Robotics and Automation Letters, 3(4):3027–3034, 2018."
     },
     {
-      "label": "Brown et al. — Effects of Grasp Frequency (2016)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Brown2016EffectsGraspFrequency.pdf"
+      "label": "M. J. Brown, T. K. Stephens, J. J. O'Neill, T. M. Kowalewski. Effects of Grasp Frequency on the Dynamics of a Robotic Surgical Grasper. ASME Journal of Medical Devices, 10(3):030957, 2016."
     },
     {
-      "label": "Sie et al. — Online Identification of Abdominal Tissue (2013)",
-      "url": "http://www.me.umn.edu/labs/mrd/pdfs/Sie2013onlineidentificationabdominal.pdf"
+      "label": "A. Sie, M. Winek, T. M. Kowalewski. Online Identification of Abdominal Tissues in Vivo for Tissue-Aware and Injury-Avoiding Surgical Robots. 2014 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pp. 2036–2042, 2014."
     }
   ]
 }
