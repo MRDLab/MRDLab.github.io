@@ -10,6 +10,7 @@ People/
 │   └── Tim Kowalewski/
 │       ├── info.txt
 │       └── tim-kowalewski.jpg
+├── Clinical_Collaborators/
 ├── PhD_Students/
 │   ├── Ethan Foley/info.txt
 │   └── Rolando Gonzalez/info.txt
@@ -164,6 +165,7 @@ list near the top of `tools/build_people.py` with a title and a default role.
 | Folder | Section heading | Default Role |
 |--------|-----------------|--------------|
 | `Professor/` | Lead Faculty | Lead Faculty / Principal Investigator |
+| `Clinical_Collaborators/` | Clinical Collaborators | Clinical Collaborator |
 | `PhD_Students/` | Doctoral Students | Doctoral Student, Mechanical Engineering |
 | `Masters_Students/` | Master's Students | Master's Student, Robotics (MnRI) |
 | `Undergraduate_Students/` | Undergraduate Researchers | Undergraduate Researcher, Mechanical Engineering |

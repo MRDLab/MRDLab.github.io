@@ -31,16 +31,16 @@ IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp", ".heic")
 # someone in that group. Order here is the order of sections on the page.
 GROUPS = [
     ("Professor",             {"kind": "lead"}),
+    # External clinicians the lab works with — listed as people, not as an
+    # organisation on the home page's collaborator strip.
+    ("Clinical_Collaborators", {"kind": "group", "title": "Clinical Collaborators",
+                                "role": "Clinical Collaborator"}),
     ("PhD_Students",          {"kind": "group", "title": "Doctoral Students",
                                "role": "Doctoral Student, Mechanical Engineering"}),
     ("Masters_Students",      {"kind": "group", "title": "Master's Students",
                                "role": "Master's Student, Robotics (MnRI)"}),
     ("Undergraduate_Students", {"kind": "group", "title": "Undergraduate Researchers",
                                 "role": "Undergraduate Researcher, Mechanical Engineering"}),
-    # External clinicians the lab works with — listed as people, not as an
-    # organisation on the home page's collaborator strip.
-    ("Clinical_Collaborators", {"kind": "group", "title": "Clinical Collaborators",
-                                "role": "Clinical Collaborator"}),
     ("Alumni",                {"kind": "alumni"}),
 ]
 
