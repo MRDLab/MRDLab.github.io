@@ -148,11 +148,11 @@ files directly will show those pages empty.
 
 ## Publishing
 
-**Live at <https://labmrd.github.io>**
+**Live at <https://mrdlab.github.io>**
 
-This is a GitHub Pages *user site*, which means:
+This is a GitHub Pages *organization site* (owned by the [MRDLab](https://github.com/MRDLab) org), which means:
 
-- The repository is named exactly **`labmrd.github.io`** — that name is what
+- The repository is named exactly **`MRDLab.github.io`** — that name is what
   produces the root URL. Renaming the repo changes the site's address.
 - It must stay **public** (a private user site needs a paid GitHub plan).
 - **Settings → Pages** is set to deploy from branch `main`, folder `/ (root)`.
@@ -172,7 +172,7 @@ aggressively.
 ### Using a custom domain
 
 Add a file named `CNAME` at the repo root containing just the domain (e.g.
-`mrd.umn.edu`), then point a DNS CNAME record at `labmrd.github.io`. UMN's IT
+`mrd.umn.edu`), then point a DNS CNAME record at `mrdlab.github.io`. UMN's IT
 group has to make the DNS change for a `umn.edu` domain.
 
 ---
