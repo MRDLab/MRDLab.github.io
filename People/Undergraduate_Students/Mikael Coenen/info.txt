@@ -1,0 +1,25 @@
+# ──────────────────────────────────────────────────────────────────
+#  Mikael Coenen
+# ──────────────────────────────────────────────────────────────────
+#  Role    = the degree they are earning / earned WITH THIS LAB.
+#            Prior degrees from elsewhere are deliberately not listed;
+#            their LinkedIn carries the full history.
+#  Bio     = a sentence or two: interests + what they work on here.
+#  File:   = a downloadable file in this folder. Repeat the line for
+#            more than one.  File: resume.pdf | Resume
+#
+#  PHOTO: any image in this folder is picked up and resized.
+#  WHEN DONE:   python3 tools/build_people.py
+# ──────────────────────────────────────────────────────────────────
+
+Name: Mikael Coenen
+Role: Undergraduate Researcher, Mechanical Engineering
+Email: 
+Website: 
+Portfolio: 
+LinkedIn: https://www.linkedin.com/in/mikael-coenen/
+Google Scholar: 
+GitHub: 
+
+Bio:
+Interested in medical device R&D and mechatronics. Works on designing improvements to catheter driver device.
