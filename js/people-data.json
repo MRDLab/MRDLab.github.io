@@ -199,6 +199,21 @@
           ]
         },
         {
+          "name": "Mikael Coenen",
+          "role": "Undergraduate Researcher, Mechanical Engineering",
+          "roles": [
+            "Undergraduate Researcher, Mechanical Engineering"
+          ],
+          "photo": "mikael-coenen.jpg",
+          "blurb": "Interested in medical device R&D and mechatronics. Works on designing improvements to catheter driver device.",
+          "links": [
+            {
+              "label": "LinkedIn",
+              "url": "https://www.linkedin.com/in/mikael-coenen/"
+            }
+          ]
+        },
+        {
           "name": "Neev Zeroni",
           "role": "Undergraduate Researcher, Mechanical Engineering",
           "roles": [
