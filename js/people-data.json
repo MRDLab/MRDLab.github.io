@@ -184,6 +184,21 @@
       "title": "Undergraduate Researchers",
       "members": [
         {
+          "name": "Daanish Hindustani",
+          "role": "Undergraduate Researcher, Computer Science",
+          "roles": [
+            "Undergraduate Researcher, Computer Science"
+          ],
+          "photo": "daanish-hindustani.jpg",
+          "blurb": "Contributed to autonomous catheter navigation, reinforcement learning pipeline, and computer vision. Previously worked on distributed systems at Medtronic.",
+          "links": [
+            {
+              "label": "Portfolio",
+              "url": "https://daanish-hindustani.dev/"
+            }
+          ]
+        },
+        {
           "name": "Gabriel Garso",
           "role": "Undergraduate Researcher, Mechanical Engineering",
           "roles": [

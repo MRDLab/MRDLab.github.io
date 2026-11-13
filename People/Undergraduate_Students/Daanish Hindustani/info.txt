@@ -1,0 +1,6 @@
+Name: Daanish Hindustani
+Role: Undergraduate Researcher, Computer Science
+Website: https://daanish-hindustani.dev/
+
+Bio:
+Contributed to autonomous catheter navigation, reinforcement learning pipeline, and computer vision. Previously worked on distributed systems at Medtronic.
