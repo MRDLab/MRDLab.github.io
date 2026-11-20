@@ -12,8 +12,8 @@ People/
 │       └── tim-kowalewski.jpg
 ├── Clinical_Collaborators/
 ├── PhD_Students/
-│   ├── Ethan Foley/info.txt
-│   └── Rolando Gonzalez/info.txt
+│   ├── Amit Manicka/info.txt
+│   └── Ethan Foley/info.txt
 ├── Masters_Students/
 ├── Undergraduate_Students/
 └── Alumni/
@@ -133,7 +133,6 @@ seniority, say — add an `_order.txt` to that group's folder:
 
 Amit Manicka
 Ethan Foley
-Rolando Gonzalez
 ```
 
 Anyone you don't list is appended alphabetically after those you do, and the

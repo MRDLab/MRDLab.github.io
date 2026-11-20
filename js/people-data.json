@@ -127,26 +127,6 @@
               "url": "https://www.linkedin.com/in/ethan-foley-9331491b7/"
             }
           ]
-        },
-        {
-          "name": "Rolando Gonzalez Alcocer",
-          "role": "Doctoral Student, Mechanical Engineering",
-          "roles": [
-            "Doctoral Student, Mechanical Engineering"
-          ],
-          "photo": "rolando-gonzalez-alcocer.jpg",
-          "photoFocus": "50% 65%",
-          "blurb": "Interested in assistive medical robotics and control systems. Builds the physical testing setup for catheter navigation.",
-          "links": [
-            {
-              "label": "Portfolio",
-              "url": "https://riceuni.my.canva.site/rolandogzzalc"
-            },
-            {
-              "label": "LinkedIn",
-              "url": "https://www.linkedin.com/in/rolandogzzalc/"
-            }
-          ]
         }
       ]
     },

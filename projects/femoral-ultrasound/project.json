@@ -1,0 +1,55 @@
+{
+  "title": "Simulated Ultrasound for Robotic Femoral Access",
+  "tagline": "Robotic ultrasound · Deformable tissue simulation",
+  "summary": "A GPU physics simulation of a probe pressing a femoral leg, with the ultrasound image rendered live, as a training ground for autonomous femoral vascular access.",
+  "body": [
+    "In emergency medicine and resuscitation, clinicians often need fast access to the common femoral vein and artery. Ultrasound shows both vessels, and pressing the probe tells them apart: the thin-walled vein collapses while the artery holds its shape. A robot doing this on its own has to learn that cue. Its probe deforms the tissue, which in turn changes the image it uses to decide its next move.",
+    "This project builds a simulator fast enough for that loop. Running on a single GPU in NVIDIA's Isaac Sim for Healthcare, it models the leg as soft tissue, presses it with a virtual probe, and ray-traces the ultrasound image of the deforming anatomy at about 18 frames per second. The settings were tuned to cut the solver's time per frame by a factor of almost 1,000 while staying within about one percentage point of the finest reference simulation.",
+    "The model was validated against a benchtop phantom pressed by a robot arm. It predicted the artery's cross-section within 5 percentage points at every depth and matched the vein closely through the first part of the press. Seeded with literature tissue properties, the full leg model reproduces the clinical signal: the vein collapses well before the artery."
+  ],
+  "links": [
+    {
+      "label": "Code, videos and paper on GitHub",
+      "url": "https://github.com/MRDLab/femoral-sim-calibration"
+    },
+    {
+      "label": "Watch the full 2-minute video",
+      "url": "https://github.com/MRDLab/femoral-sim-calibration/blob/main/clips/submission/ismr2027_submission_video.mp4"
+    }
+  ],
+  "researchers": "Amit Manicka",
+  "media": [
+    {
+      "type": "video",
+      "file": "probe-press.mp4",
+      "poster": "probe-press-poster.jpg",
+      "alt": "A simulated probe presses a cut-open leg model; beside it, the simulated ultrasound image shows the vein collapsing while the artery stays round",
+      "caption": "As the probe presses in, the simulated vein collapses while the artery holds its shape."
+    },
+    {
+      "type": "video",
+      "file": "live-run.mp4",
+      "poster": "live-run-poster.jpg",
+      "alt": "The probe sweeps around a simulated thigh segment and presses in, with the live ultrasound image and vessel-size readouts alongside",
+      "caption": "A live run: the probe sweeps around the limb, then presses in steps, with the ultrasound rendered at each frame."
+    },
+    {
+      "type": "image",
+      "file": "sim-vs-benchtop.jpg",
+      "alt": "Top: the digital simulation of the phantom and its ultrasound image. Bottom: the physical benchtop phantom pressed by a robot-held probe and its real ultrasound image",
+      "caption": "The digital simulation (top) next to the physical benchtop phantom pressed by a robot arm (bottom)."
+    },
+    {
+      "type": "image",
+      "file": "vein-vs-artery.png",
+      "alt": "Plot of vessel cross-section against probe depth: the artery stays above 80 percent of its resting size while the vein falls to about 28 percent",
+      "caption": "In the leg model, the vein shrinks to about 28% of its resting size by 25 mm of probe depth, while the artery stays above 80%."
+    }
+  ],
+  "publications": [
+    {
+      "label": "Manicka et al. — Simulating Vein Compressibility for Ultrasound-Guided Femoral Access: Speed, Accuracy, and Phantom Validation (submitted to ISMR 2027)",
+      "url": "https://github.com/MRDLab/femoral-sim-calibration/blob/main/main.pdf"
+    }
+  ]
+}
